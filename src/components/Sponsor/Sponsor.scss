@@ -1,0 +1,23 @@
+.Sponsor {
+  position: relative;
+  margin-top: 60px;
+  .SponsorPrize {
+    margin-top: 60px;
+    h2 {
+      text-align: center;
+    }
+    .Row {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      .Column {
+        width: 120px;
+        .Title {
+          margin-bottom: 12px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
