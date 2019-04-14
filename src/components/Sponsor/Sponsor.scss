@@ -1,4 +1,5 @@
 @import 'src/styles/variable';
+@import 'src/styles/mixin';
 
 .Sponsor {
   position: relative;
@@ -30,6 +31,16 @@
         .Desc {
           font-size: 18px;
           text-align: left;
+        }
+      }
+      @include mobile {
+        flex-flow: column;
+        .Column {
+          width: 100%;
+          .Desc {
+            width: 160px;
+            margin: 0 auto;
+          }
         }
       }
     }
