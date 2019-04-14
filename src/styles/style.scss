@@ -1,5 +1,11 @@
-@import '_global.scss';
+@import 'variable.scss';
+@import 'global.scss';
+@import '~normalize.css/normalize.css';
 
 html, body {
+  font-family: $font-family;
+}
 
+h1, h2, h3, p {
+  margin: 0;
 }

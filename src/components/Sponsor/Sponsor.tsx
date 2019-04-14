@@ -16,43 +16,49 @@ const Sponsor: React.FC<Props> = () => {
           <span>Diamond (7,000,000)</span><br/>
           <span>Platinum (5,000,000)</span><br/>
           <span>Gold (3,000,000)</span><br/>
+        </p>
+        <p>
           <span>기타: 현물, 서비스 등 기타 후원일 경우 제안 부탁드립니다.</span><br/>
           <span>기존 후원사일 경우 후원 금액 10% 할인 해 드립니다.</span><br/>
         </p>
 
         <div className={css.SponsorPrize}>
-          <h2>스폰서 혜택</h2>
+          <h2>!! 스폰서 혜택 !!</h2>
           <div className={css.Row}>
             <div className={css.Column}>
-              <div className={css.Title}>
+              <p className={css.Title}>
                 Diamond
+              </p>
+              <div className={css.Desc}>
+                <span>* 개별 홍보 시간 10분</span><br/>
+                <span>* Booth 현수막 로고</span><br/>
+                <span>* X Banner logo</span><br/>
+                <span>* 홈페이지 로고</span><br/>
+                <span>* 초대권 10장</span><br/>
               </div>
-              <span>개별 홍보 시간 10분</span><br/>
-              <span>Booth</span><br/>
-              <span>현수막 로고</span><br/>
-              <span>X Banner logo</span><br/>
-              <span>홈페이지 로고</span><br/>
-              <span>초대권 10장</span><br/>
             </div>
 
             <div className={css.Column}>
-              <div className={css.Title}>
+              <p className={css.Title}>
                 Platinum
+              </p>
+              <div className={css.Desc}>
+                <span>* Booth 현수막 로고</span><br/>
+                <span>* X Banner logo</span><br/>
+                <span>* 홈페이지 로고</span><br/>
+                <span>* 초대권 5장</span><br/>
               </div>
-              <span>Booth</span><br/>
-              <span>현수막 로고</span><br/>
-              <span>X Banner logo</span><br/>
-              <span>홈페이지 로고</span><br/>
-              <span>초대권 5장</span><br/>
             </div>
 
             <div className={css.Column}>
-              <div className={css.Title}>
+              <p className={css.Title}>
                 Gold
+              </p>
+              <div className={css.Desc}>
+                <span>* X Banner logo</span><br/>
+                <span>* 홈페이지 로고</span><br/>
+                <span>* 초대권 3장</span><br/>
               </div>
-              <span>X Banner logo</span><br/>
-              <span>홈페이지 로고</span><br/>
-              <span>초대권 3장</span><br/>
             </div>
           </div>
         </div>

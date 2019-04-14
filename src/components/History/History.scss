@@ -1,4 +1,15 @@
+@import 'src/styles/variable';
+
 .History {
   position: relative;
-  margin-top: 60px;
+  padding: 24px 0;
+  h2 {
+    margin: 12px 0;
+    font-size: $sub-font-sz;
+    font-weight: bold;
+  }
+  p {
+    font-size: $p-font-sz;
+    padding: 12px 0;
+  }
 }

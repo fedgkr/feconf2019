@@ -1,4 +1,9 @@
+@import 'src/styles/variable';
+
 .Footer {
   position: relative;
-  margin-top: 60px;
+  padding: 40px;
+  p {
+    font-size: $p-font-sz;
+  }
 }
