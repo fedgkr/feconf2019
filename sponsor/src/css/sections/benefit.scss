@@ -48,6 +48,9 @@
     text-decoration: none;
     outline: none;
     background-color: rgba(0, 0, 0, 0.1);
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
   }
   &.active {
     h1 {
