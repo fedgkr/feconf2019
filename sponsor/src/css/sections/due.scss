@@ -1,0 +1,23 @@
+#due-section {
+  color: white;
+  text-align: center;
+  background: #1a3a5c;
+  h1 {
+    margin: 0;
+    opacity: 0;
+  }
+  h1:nth-child(1) {
+    margin-bottom: 24px;
+  }
+  h1:nth-child(2) {
+    font-weight: 400;
+  }
+  &.active {
+    h1:nth-child(1) {
+      animation: fadeInUp20 .9s $easeOutCubic .6s forwards;
+    }
+    h1:nth-child(2) {
+      animation: fadeInUp20 .9s $easeOutCubic .8s forwards;
+    }
+  }
+}

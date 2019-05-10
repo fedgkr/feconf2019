@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'ui';
+@import 'section';
+@import 'effectors';
+
+@import 'sections/intro';
+@import 'sections/info';
+@import 'sections/due';
+@import 'sections/pricing';
+@import 'sections/benefit';
+
+* {
+  font-family: "Spoqa Han Sans";
+}
