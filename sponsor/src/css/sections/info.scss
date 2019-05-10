@@ -26,14 +26,12 @@
       transition: opacity .4s $easeOutCubic;
     }
   }
-  .modal {
-    max-width: 1024px;
+  .square {
     margin: auto;
     pointer-events: none;
     opacity: 0;
     transition: opacity .4s $easeOutCubic;
-    .square {
-      position: absolute;
+    .modal {
       top: 50%;
       padding-bottom: 100%;
       transform: translateY(-50%);
@@ -101,6 +99,17 @@
       }
       .link:nth-child(2) {
         animation: fadeInUp20 .9s $easeOutCubic .9s forwards;
+      }
+    }
+  }
+  @media (max-width: $small-device) {
+    .square {
+      .modal {
+        .close-btn {
+          left: auto;
+          right: 24px;
+          top: 0;
+        }
       }
     }
   }

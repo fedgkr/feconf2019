@@ -35,6 +35,9 @@ new fullpage('#fullpage', {
 document.querySelectorAll('a.support-btn').forEach(item =>
   item.setAttribute('href', SUPPORT_URL));
 
+window.addEventListener('resize', onResize);
+onResize();
+
 function updateNav(targetIdx) {
   const nav = document.querySelector('.nav');
   for (let i = 0; i < nav.children.length; i++) {
@@ -50,4 +53,10 @@ function activateSupportBtn(idx) {
   } else {
     btn.classList.remove('active');
   }
+}
+
+function onResize() {
+  const style = document.getElementById('square-style');
+  const template = `.square {max-width: ${Math.min(window.innerHeight, 1024)}px;}`;
+  style.innerHTML = template;
 }

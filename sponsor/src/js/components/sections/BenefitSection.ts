@@ -9,14 +9,14 @@ const benefits = [
   },
   {
     desc: `
-      개별 홍보 시간 10분, Booth, 현수막 로고 <br/>
-      X Banner logo, 홈페이지 로고 노출, 초대권 5장
+      Booth, 현수막 로고 , X Banner logo<br/> 
+      홈페이지 로고 노출, 초대권 5장
     `
   },
   {
     desc: `
-      개별 홍보 시간 10분, Booth, 현수막 로고 <br/>
-      X Banner logo, 홈페이지 로고 노출, 초대권 2장
+      현수막 로고 , X Banner logo<br/>
+      홈페이지 로고 노출, 초대권 3장
     `
   },
 ];

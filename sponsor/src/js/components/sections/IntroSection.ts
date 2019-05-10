@@ -1,6 +1,8 @@
 import Section from "./Section"
 
 export default class IntroSection extends Section {
+  timeout: number;
+
   render() {
     return `
       <div class="intro-words">
@@ -18,11 +20,12 @@ export default class IntroSection extends Section {
   }
 
   onLoad() {
-    setTimeout(() =>
+    this.timeout = setTimeout(() =>
       this.wrap.classList.add('phase-2'), 600);
   }
 
   onLeave() {
+    clearTimeout(this.timeout);
     this.wrap.classList.remove('phase-2');
   }
 }

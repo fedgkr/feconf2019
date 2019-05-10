@@ -3,24 +3,25 @@ import Section from "./Section"
 const infoList = [
   {
     title: 'FEConf 2017',
-    location: '롯데타워 SKY31 컨벤션(400여명 규모)',
+    location: '마루 180(150여명 규모)',
     website: 'https://2017.feconf.kr/',
-    videos: 'https://youtu.be/psIees_xuEY',
-    other: 'FEConf 2018'
+    videos: 'https://youtu.be/lmVqI04Aj0o',
+    other: 'FEConf 2018',
   },
   {
     title: 'FEConf 2018',
     location: '롯데타워 SKY31 컨벤션(400여명 규모)',
     website: 'https://2018.feconf.kr/',
     videos: 'https://youtu.be/psIees_xuEY',
-    other: 'FEConf 2017',
+    other: 'FEConf 2017'
   },
 ];
 
 export default class InfoSection extends Section {
   page: HTMLDivElement;
-  modal: HTMLDivElement;
+  square: HTMLDivElement;
   content: HTMLDivElement;
+  timeout: number;
 
   render() {
     return `
@@ -40,8 +41,8 @@ export default class InfoSection extends Section {
           </div>
         </div>
       </div>
-      <div class="modal extended">
-        <div class="square extended">
+      <div class="square extended">
+        <div class="modal extended">
           <div class="content extended">
             <a href="#" class="close-btn"></a>
             <h1 class="ft-title"></h1>
@@ -81,31 +82,35 @@ export default class InfoSection extends Section {
       this.closeModal();
     });
     this.page = this.wrap.querySelector('.page');
-    this.modal = this.wrap.querySelector('.modal');
+    this.square = this.wrap.querySelector('.square');
     this.content = this.wrap.querySelector('.content');
+  }
+
+  onLeave() {
+    clearTimeout(this.timeout);
   }
 
   private openModal(title) {
     const info = infoList.find(i => i.title === title);
     this.page.classList.add('hide');
-    this.modal.classList.add('open');
+    this.square.classList.add('open');
     this.renderContent(info);
   }
 
   private closeModal() {
     this.page.classList.remove('hide');
-    this.modal.classList.remove('open');
+    this.square.classList.remove('open');
   }
 
   private renderContent(info) {
     this.content.classList.remove('active');
-    setTimeout(() =>
+    this.timeout = setTimeout(() =>
       this.content.classList.add('active'), 100);
-    const title = this.modal.querySelector('h1');
-    const location = this.modal.querySelector('.modal-location');
-    const website = this.modal.querySelector('.modal-website');
-    const videos = this.modal.querySelector('.modal-videos');
-    const other = this.modal.querySelector('.modal-other');
+    const title = this.square.querySelector('h1');
+    const location = this.square.querySelector('.modal-location');
+    const website = this.square.querySelector('.modal-website');
+    const videos = this.square.querySelector('.modal-videos');
+    const other = this.square.querySelector('.modal-other');
 
     title.innerText = info.title;
     location.innerHTML = info.location;

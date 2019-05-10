@@ -7,7 +7,7 @@ export default class PricingSection extends Section {
       
       <div>      
         <h2 class="ft-sub">Diamond (5,000,000 원)</h2>
-        <h2 class="ft-sub">Platinum (3,000,000 원)</h2>
+        <h2 class="ft-sub">Platinum (3,500,000 원)</h2>
         <h2 class="ft-sub">Gold (2,000,000 원)</h2>
       </div>
 
