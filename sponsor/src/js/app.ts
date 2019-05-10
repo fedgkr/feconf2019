@@ -56,7 +56,12 @@ function activateSupportBtn(idx) {
 }
 
 function onResize() {
-  const style = document.getElementById('square-style');
+  let style = document.getElementById('square-style');
+  if (!style) {
+    style = document.createElement('style');
+    style.id = 'square-style';
+    document.head.appendChild(style);
+  }
   const template = `.square {max-width: ${Math.min(window.innerHeight, 1024)}px;}`;
   style.innerHTML = template;
 }
