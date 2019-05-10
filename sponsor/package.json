@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "move": "cp -R dist ../out/ && rm -rf ../out/sponsor && mv ../out/dist ../out/sponsor",
+    "deploy": "yarn build && yarn move"
   },
   "dependencies": {
     "fullpage.js": "^3.0.5"

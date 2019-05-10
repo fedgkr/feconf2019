@@ -32,7 +32,6 @@ module.exports = withPlugins([
   exportPathMap: function () {
     return {
       '/': { page: '/' },
-      '/sponsor': { page: '/sponsor' },
     }
   }
 });
