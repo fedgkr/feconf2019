@@ -1,4 +1,5 @@
 import Section from "./Section"
+import { UI } from "../UI"
 
 const infoList = [
   {
@@ -22,6 +23,10 @@ export default class InfoSection extends Section {
   square: HTMLDivElement;
   content: HTMLDivElement;
   timeout: number;
+
+  constructor(id, private ui: UI) {
+    super(id);
+  }
 
   render() {
     return `
@@ -88,18 +93,21 @@ export default class InfoSection extends Section {
 
   onLeave() {
     clearTimeout(this.timeout);
+    this.ui.show();
   }
 
   private openModal(title) {
     const info = infoList.find(i => i.title === title);
     this.page.classList.add('hide');
     this.square.classList.add('open');
+    this.ui.hide();
     this.renderContent(info);
   }
 
   private closeModal() {
     this.page.classList.remove('hide');
     this.square.classList.remove('open');
+    this.ui.show();
   }
 
   private renderContent(info) {

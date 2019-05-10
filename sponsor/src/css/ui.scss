@@ -1,6 +1,8 @@
-.ui {
+#ui {
   margin: auto;
+  opacity: 1;
   pointer-events: none;
+  transition: opacity .4s $easeOutCubic .3s;
   .wrap {
     position: relative;
     top: 50%;
@@ -10,7 +12,7 @@
       position: absolute;
       top: 60px;
       right: 60px;
-      font-size: 12px;
+      font-size: 16px;
       opacity: 0;
       color: white;
       text-decoration: none;
@@ -37,11 +39,13 @@
       right: 60px;
       transform: translateY(-50%);
       .item {
+        display: block;
         width: 12px;
         height: 12px;
         border-radius: 50%;
         background-color: #d8d8d8;
         opacity: .2;
+        pointer-events: all;
         transition: opacity .4s .1s;
         &:not(:last-child) {
           margin-bottom: 8px;
@@ -51,6 +55,10 @@
         }
       }
     }
+  }
+  &.hide {
+    opacity: 0;
+    transition: opacity .4s $easeOutCubic;
   }
   @media (max-width: $small-device) {
     .wrap {
