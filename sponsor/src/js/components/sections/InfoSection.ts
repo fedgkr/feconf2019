@@ -33,7 +33,7 @@ export default class InfoSection extends Section {
       <div class="page">
         <h1 class="ft-title">When & Where?</h1>
         <p class="ft-desc">
-          FE Conf는 2019년 9월~10월 중 개최 예정이며 <br/> 
+          FEConf는 2019년 9월~10월 중 개최 예정이며 <br/> 
            4-500 여명 규모의 참가자와 <br/> 
            2트랙으로 12세션을 진행할 예정입니다.
         </p>
@@ -112,8 +112,7 @@ export default class InfoSection extends Section {
 
   private renderContent(info) {
     this.content.classList.remove('active');
-    this.timeout = setTimeout(() =>
-      this.content.classList.add('active'), 100);
+    this.timeout = window.setTimeout(() => this.content.classList.add('active'), 100);
     const title = this.square.querySelector('h1');
     const location = this.square.querySelector('.modal-location');
     const website = this.square.querySelector('.modal-website');
