@@ -2,18 +2,21 @@ import Section from "./Section"
 
 const benefits = [
   {
+    id: 'diamond',
     desc: `
       개별 홍보 시간 10분, Booth, 현수막 로고 <br/>
       X Banner logo, 홈페이지 로고 노출, 초대권 10장
     `
   },
   {
+    id: 'platinum',
     desc: `
       Booth, 현수막 로고 , X Banner logo<br/> 
       홈페이지 로고 노출, 초대권 5장
     `
   },
   {
+    id: 'gold',
     desc: `
       현수막 로고 , X Banner logo<br/>
       홈페이지 로고 노출, 초대권 3장
@@ -58,6 +61,7 @@ export default class BenefitSection extends Section {
 
   private updateBenefit() {
     const children = this.getClassChildren();
+    document.body.classList.add(benefits[this.currentIdx].id);
     for (let i = 0; i < children.length; i++) {
       children[i].classList.remove('active');
     }
@@ -71,11 +75,17 @@ export default class BenefitSection extends Section {
 
   private onClickBenefit(e, idx) {
     e.preventDefault();
+    this.removeAllBodyClass();
     this.currentIdx = idx;
     this.updateBenefit();
   }
 
   private getClassChildren() {
     return this.wrap.querySelector('.class-wrap').children;
+  }
+
+  private removeAllBodyClass() {
+    benefits.forEach(b =>
+      document.body.classList.remove(b.id));
   }
 }

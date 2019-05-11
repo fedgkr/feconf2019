@@ -27,6 +27,7 @@ new fullpage('#fullpage', {
   onLeave(origin, target) {
     sections[origin.index].afterLeave();
     ui.afterSectionLeave(target.index);
+    onBGChange(target.index);
   },
   afterLoad(_, dest) {
     sections[dest.index].afterLoad();
@@ -47,4 +48,11 @@ function onResize() {
     document.head.appendChild(style);
   }
   style.innerHTML = `.square {max-width: ${Math.min(window.innerHeight, 1024)}px;}`;
+}
+
+function onBGChange(idx) {
+  const bodyClass = document.body.classList;
+  const classList = sections.map((_, idx) => `section${idx + 1}`);
+  classList.forEach(c => bodyClass.remove(c));
+  bodyClass.add(`section${idx + 1}`);
 }

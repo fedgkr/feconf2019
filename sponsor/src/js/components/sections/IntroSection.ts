@@ -20,13 +20,16 @@ export default class IntroSection extends Section {
   }
 
   onLoad() {
-    this.timeout = setTimeout(() =>
-      this.wrap.classList.add('phase-2'), 600);
+    this.timeout = setTimeout(() => {
+      this.wrap.classList.add('phase-2');
+    }, 600);
+    document.body.classList.add('phase-2');
   }
 
   onLeave() {
     clearTimeout(this.timeout);
     this.wrap.classList.remove('phase-2');
+    document.body.classList.remove('phase-2');
   }
 }
 

@@ -3,6 +3,7 @@ import { UI } from "../UI"
 
 const infoList = [
   {
+    id: 'feconf2017',
     title: 'FEConf 2017',
     location: '마루 180(150여명 규모)',
     website: 'https://2017.feconf.kr/',
@@ -10,6 +11,7 @@ const infoList = [
     other: 'FEConf 2018',
   },
   {
+    id: 'feconf2018',
     title: 'FEConf 2018',
     location: '롯데타워 SKY31 컨벤션(400여명 규모)',
     website: 'https://2018.feconf.kr/',
@@ -108,7 +110,9 @@ export default class InfoSection extends Section {
   }
 
   private openModal(title) {
+    this.removeAllBodyClass();
     const info = infoList.find(i => i.title === title);
+    document.body.classList.add(info.id);
     this.page.classList.add('hide');
     this.square.classList.add('open');
     this.ui.hide();
@@ -116,6 +120,7 @@ export default class InfoSection extends Section {
   }
 
   private closeModal() {
+    this.removeAllBodyClass();
     this.page.classList.remove('hide');
     this.square.classList.remove('open');
     this.ui.show();
@@ -138,5 +143,10 @@ export default class InfoSection extends Section {
     website.setAttribute('href', info.website);
     videos.setAttribute('href', info.videos);
     other.setAttribute('data-target', info.other);
+  }
+
+  private removeAllBodyClass() {
+    infoList.forEach(i =>
+      document.body.classList.remove(i.id));
   }
 }
