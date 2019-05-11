@@ -10,17 +10,17 @@
 @import 'sections/benefit';
 
 * {
-  font-family: "Spoqa Han Sans";
+  font-family: "Spoqa Han Sans", sans-serif;
 }
 
 body {
   background-color: #19104a;
-  transition: background-color 1.1s $easeOutCubic;
+  transition: background-color 2.2s $easeOutCubic;
   &.section1 {
     background-color: #19104a;
     &.phase-2 {
       background-color: #5449c6;
-      transition: background-color 1.1s $easeOutCubic 1s;
+      transition: background-color 2.2s $easeOutCubic 1s;
     }
   }
   &.section2 {
