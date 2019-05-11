@@ -27,6 +27,7 @@
       top: 50%;
       left: 60px;
       transform: translateY(-50%);
+      pointer-events: all;
       img {
         width: 36px;
         height: 36px;
@@ -55,6 +56,24 @@
         }
       }
     }
+    .down-arrow {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 72px;
+      display: block;
+      margin: 0 auto;
+      width: 34px;
+      text-align: center;
+      pointer-events: all;
+      animation: pointingBottom 3s infinite;
+      svg {
+        fill: black;
+      }
+      &.hide {
+        display: none;
+      }
+    }
   }
   &.hide {
     opacity: 0;
@@ -79,6 +98,13 @@
         top: 36px;
         right: 24px;
         &.active {
+          opacity: .5;
+        }
+      }
+      .down-arrow {
+        bottom: 24px;
+        svg {
+          fill: white;
           opacity: .5;
         }
       }

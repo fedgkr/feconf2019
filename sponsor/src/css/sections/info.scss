@@ -1,7 +1,6 @@
 #info-section {
   color: white;
   text-align: center;
-  background: #162a74;
   .page {
     position: relative;
     opacity: 1;
@@ -39,10 +38,12 @@
         position: absolute;
         left: 130px;
         top: 130px;
-        display: inline-block;
+        display: block;
         width: 35px;
         height: 35px;
-        background-color: black;
+        svg {
+          fill: black;
+        }
       }
       .content {
         display: flex;
@@ -106,9 +107,14 @@
     .square {
       .modal {
         .close-btn {
-          left: auto;
-          right: 24px;
+          left: 24px;
           top: 0;
+          width: 24px;
+          height: 24px;
+          svg {
+            fill: white;
+            opacity: .5;
+          }
         }
       }
     }

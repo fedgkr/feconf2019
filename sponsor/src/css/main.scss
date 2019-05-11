@@ -1,7 +1,7 @@
 @import 'variables';
+@import 'effectors';
 @import 'ui';
 @import 'section';
-@import 'effectors';
 
 @import 'sections/intro';
 @import 'sections/info';
@@ -11,6 +11,10 @@
 
 * {
   font-family: "Spoqa Han Sans";
+}
+
+body {
+  background-color: #0f2b79;
 }
 
 .extended {

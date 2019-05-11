@@ -1,6 +1,4 @@
 #intro-section {
-  background-color: rgb(27, 12, 77);
-  transition: background-color .9s $easeInCubic;
   .intro-words {
     position: relative;
     max-width: 600px;
@@ -25,7 +23,6 @@
     }
   }
   &.phase-2 {
-    background-color: rgb(44, 0, 154);
     .intro-words {
       h1 {
         transform: translateY(0);

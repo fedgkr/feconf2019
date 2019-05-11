@@ -26,8 +26,7 @@ new fullpage('#fullpage', {
   anchors: ['intro', 'info', 'due', 'pricing', 'benefit'],
   onLeave(origin, target) {
     sections[origin.index].afterLeave();
-    ui.updateNav(target.index);
-    ui.activateSupportBtn(target.index);
+    ui.afterSectionLeave(target.index);
   },
   afterLoad(_, dest) {
     sections[dest.index].afterLoad();
