@@ -22,7 +22,7 @@ const infoList = [
 
 export default class InfoSection extends Section {
   page: HTMLDivElement;
-  square: HTMLDivElement;
+  uiWrap: HTMLDivElement;
   content: HTMLDivElement;
   timeout: number;
 
@@ -48,38 +48,36 @@ export default class InfoSection extends Section {
           </div>
         </div>
       </div>
-      <div class="square extended">
-        <div class="modal extended">
-          <div class="content extended">
-            <a href="#" class="close-btn">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                   viewBox="0 0 460.775 460.775" xml:space="preserve">
-                <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
-                \tc-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
-                \tc-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
-                \tc-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
-                \tl171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
-                \tc6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/>
-              </svg>
-            </a>
-            <h1 class="ft-title"></h1>
-            <div>
-              <p class="ft-desc">
-                <span>장소:</span>&nbsp;
-                <span class="modal-location"></span>
-              </p>
-              <p class="ft-desc">
-                <span>홈페이지:</span>&nbsp;
-                <a class="modal-website" target="_blank"></a>
-              </p>
-              <p class="ft-desc">
-                <span>발표영상:</span>&nbsp;
-                <a class="modal-videos" target="_blank"></a>
-              </p>
-              <p class="ft-desc">
-                <a class="modal-other" href="#"></a>
-              </p>
-            </div>
+      <div class="ui-wrap extended">
+        <div class="content extended">
+          <a href="#" class="close-btn">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 460.775 460.775" xml:space="preserve">
+              <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+              \tc-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+              \tc-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+              \tc-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+              \tl171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+              \tc6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/>
+            </svg>
+          </a>
+          <h1 class="ft-title"></h1>
+          <div>
+            <p class="ft-desc">
+              <span>장소:</span>&nbsp;
+              <span class="modal-location"></span>
+            </p>
+            <p class="ft-desc">
+              <span>홈페이지:</span>&nbsp;
+              <a class="modal-website" target="_blank"></a>
+            </p>
+            <p class="ft-desc">
+              <span>발표영상:</span>&nbsp;
+              <a class="modal-videos" target="_blank"></a>
+            </p>
+            <p class="ft-desc">
+              <a class="modal-other" href="#"></a>
+            </p>
           </div>
         </div>
       </div>
@@ -99,7 +97,7 @@ export default class InfoSection extends Section {
       this.closeModal();
     });
     this.page = this.wrap.querySelector('.page');
-    this.square = this.wrap.querySelector('.square');
+    this.uiWrap = this.wrap.querySelector('.ui-wrap');
     this.content = this.wrap.querySelector('.content');
   }
 
@@ -114,7 +112,7 @@ export default class InfoSection extends Section {
     const info = infoList.find(i => i.title === title);
     document.body.classList.add(info.id);
     this.page.classList.add('hide');
-    this.square.classList.add('open');
+    this.uiWrap.classList.add('open');
     this.ui.hide();
     this.renderContent(info);
   }
@@ -122,18 +120,18 @@ export default class InfoSection extends Section {
   private closeModal() {
     this.removeAllBodyClass();
     this.page.classList.remove('hide');
-    this.square.classList.remove('open');
+    this.uiWrap.classList.remove('open');
     this.ui.show();
   }
 
   private renderContent(info) {
     this.content.classList.remove('active');
     this.timeout = window.setTimeout(() => this.content.classList.add('active'), 100);
-    const title = this.square.querySelector('h1');
-    const location = this.square.querySelector('.modal-location');
-    const website = this.square.querySelector('.modal-website');
-    const videos = this.square.querySelector('.modal-videos');
-    const other = this.square.querySelector('.modal-other');
+    const title = this.uiWrap.querySelector('h1');
+    const location = this.uiWrap.querySelector('.modal-location');
+    const website = this.uiWrap.querySelector('.modal-website');
+    const videos = this.uiWrap.querySelector('.modal-videos');
+    const other = this.uiWrap.querySelector('.modal-other');
 
     title.innerText = info.title;
     location.innerHTML = info.location;

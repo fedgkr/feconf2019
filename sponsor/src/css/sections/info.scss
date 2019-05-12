@@ -25,59 +25,54 @@
       transition: opacity .4s $easeOutCubic;
     }
   }
-  .square {
+  .ui-wrap {
     margin: auto;
     pointer-events: none;
     opacity: 0;
     transition: opacity .4s $easeOutCubic;
-    .modal {
-      top: 50%;
-      padding-bottom: 100%;
-      transform: translateY(-50%);
-      .close-btn {
-        position: absolute;
-        left: 130px;
-        top: 130px;
-        display: block;
-        width: 35px;
-        height: 35px;
-        svg {
-          fill: black;
-        }
+    .close-btn {
+      position: absolute;
+      left: 130px;
+      top: 130px;
+      display: block;
+      width: 35px;
+      height: 35px;
+      svg {
+        fill: black;
       }
-      .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h1, p {
-          margin: 0;
-          opacity: 0;
-        }
-        p {
-          margin-bottom: 16px;
-        }
-        a {
-          color: white;
-        }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1, p {
+        margin: 0;
+        opacity: 0;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+      a {
+        color: white;
+      }
+      h1 {
+        margin-bottom: 24px;
+      }
+      &.active {
         h1 {
-          margin-bottom: 24px;
+          animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
         }
-        &.active {
-          h1 {
-            animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
-          }
-          p:nth-child(1) {
-            animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
-          }
-          p:nth-child(2) {
-            animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
-          }
-          p:nth-child(3) {
-            animation: fadeInUp20 .9s $easeOutCubic .4s forwards;
-          }
-          p:nth-child(4) {
-            animation: fadeInUp20 .9s $easeOutCubic .5s forwards;
-          }
+        p:nth-child(1) {
+          animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
+        }
+        p:nth-child(2) {
+          animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
+        }
+        p:nth-child(3) {
+          animation: fadeInUp20 .9s $easeOutCubic .4s forwards;
+        }
+        p:nth-child(4) {
+          animation: fadeInUp20 .9s $easeOutCubic .5s forwards;
         }
       }
     }
@@ -104,17 +99,15 @@
     }
   }
   @media (max-width: $small-device) {
-    .square {
-      .modal {
-        .close-btn {
-          left: 24px;
-          top: 0;
-          width: 24px;
-          height: 24px;
-          svg {
-            fill: white;
-            opacity: .5;
-          }
+    .ui-wrap {
+      .close-btn {
+        left: 24px;
+        top: 24px;
+        width: 24px;
+        height: 24px;
+        svg {
+          fill: white;
+          opacity: .5;
         }
       }
     }

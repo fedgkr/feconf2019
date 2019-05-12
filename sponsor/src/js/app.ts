@@ -42,19 +42,6 @@ setTimeout(() => document.body.classList.add('loaded'), 0);
 document.querySelectorAll('a.support-btn').forEach(item =>
   item.setAttribute('href', SUPPORT_URL));
 
-window.addEventListener('resize', onResize);
-onResize();
-
-function onResize() {
-  let style = document.getElementById('square-style');
-  if (!style) {
-    style = document.createElement('style');
-    style.id = 'square-style';
-    document.head.appendChild(style);
-  }
-  style.innerHTML = `.square {max-width: ${Math.min(window.innerHeight, 1024)}px;}`;
-}
-
 function onBGChange(idx) {
   const bodyClass = document.body.classList;
   const classList = sections.map((_, idx) => `section${idx + 1}`);
