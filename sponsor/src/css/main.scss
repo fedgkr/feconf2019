@@ -9,13 +9,14 @@
 @import 'sections/pricing';
 @import 'sections/benefit';
 
-* {
-  font-family: "Spoqa Han Sans", sans-serif;
-}
-
 body {
+  opacity: 0;
+  font-family: "Spoqa Han Sans", sans-serif;
   background-color: #19104a;
   transition: background-color 2.2s $easeOutCubic;
+  &.loaded {
+    opacity: 1;
+  }
   &.section1 {
     background-color: #19104a;
     &.phase-2 {

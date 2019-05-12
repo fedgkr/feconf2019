@@ -29,11 +29,16 @@ new fullpage('#fullpage', {
     onBGChange(target.index);
   },
   afterLoad(origin, dest) {
-    sections[origin.index].afterLeave();
-    sections[dest.index].afterLoad();
+    if (origin) {
+      sections[origin.index].afterLeave();
+    }
+    if (dest) {
+      sections[dest.index].afterLoad();
+    }
   },
 });
 
+setTimeout(() => document.body.classList.add('loaded'), 0);
 document.querySelectorAll('a.support-btn').forEach(item =>
   item.setAttribute('href', SUPPORT_URL));
 
