@@ -7,7 +7,7 @@ const infoList = [
     title: 'FEConf 2017',
     location: '마루 180(150여명 규모)',
     website: 'https://2017.feconf.kr/',
-    videos: 'https://youtu.be/lmVqI04Aj0o',
+    videos: 'https://youtu.be/psIees_xuEY',
     other: 'FEConf 2018',
   },
   {
@@ -15,7 +15,7 @@ const infoList = [
     title: 'FEConf 2018',
     location: '롯데타워 SKY31 컨벤션(400여명 규모)',
     website: 'https://2018.feconf.kr/',
-    videos: 'https://youtu.be/psIees_xuEY',
+    videos: 'https://youtu.be/lmVqI04Aj0o',
     other: 'FEConf 2017'
   },
 ];
