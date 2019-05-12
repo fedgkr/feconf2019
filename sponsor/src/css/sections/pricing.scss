@@ -17,21 +17,21 @@
   h1, h2, p {
     opacity: 0;
   }
-  &.active {
+  &.loaded {
     h1 {
-      animation: fadeInUp20 .9s $easeOutCubic .6s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic forwards;
     }
     h2:nth-child(1) {
-      animation: fadeInUp20 .9s $easeOutCubic .7s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
     }
     h2:nth-child(2) {
-      animation: fadeInUp20 .9s $easeOutCubic .8s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
     }
     h2:nth-child(3) {
-      animation: fadeInUp20 .9s $easeOutCubic .9s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
     }
     p {
-      animation: fadeInUp20 .9s $easeOutCubic 1s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .4s forwards;
     }
   }
 }

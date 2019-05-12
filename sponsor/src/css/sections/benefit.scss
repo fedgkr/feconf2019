@@ -51,18 +51,18 @@
       background-color: rgba(0, 0, 0, 0.4);
     }
   }
-  &.active {
+  &.loaded {
     h1 {
-      animation: fadeInUp20 .9s $easeOutCubic .6s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic forwards;
     }
     .class-wrap {
-      animation: fadeInUp20 .9s $easeOutCubic .7s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
     }
     .desc-wrap {
-      animation: fadeInUp20 .9s $easeOutCubic .8s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
     }
     .support-btn {
-      animation: fadeInUp20 .9s $easeOutCubic .9s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .3ms forwards;
     }
   }
   @media (max-width: $small-device) {

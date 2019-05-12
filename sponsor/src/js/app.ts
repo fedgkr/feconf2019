@@ -24,12 +24,12 @@ document.querySelectorAll('.section').forEach((_, i) => {
 new fullpage('#fullpage', {
   licenseKey: 'uobwH@p8',
   anchors: ['intro', 'info', 'due', 'pricing', 'benefit'],
-  onLeave(origin, target) {
-    sections[origin.index].afterLeave();
+  onLeave(_, target) {
     ui.afterSectionLeave(target.index);
     onBGChange(target.index);
   },
-  afterLoad(_, dest) {
+  afterLoad(origin, dest) {
+    sections[origin.index].afterLeave();
     sections[dest.index].afterLoad();
   },
 });

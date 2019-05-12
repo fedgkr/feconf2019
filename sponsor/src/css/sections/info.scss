@@ -87,19 +87,19 @@
       transition: opacity .4s $easeOutCubic .3s;
     }
   }
-  &.active {
+  &.loaded {
     .page {
       h1 {
-        animation: fadeInUp20 .9s $easeOutCubic .6s forwards;
+        animation: fadeInUp20 .9s $easeOutCubic forwards;
       }
       p {
-        animation: fadeInUp20 .9s $easeOutCubic .7s forwards;
+        animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
       }
       .link:nth-child(1) {
-        animation: fadeInUp20 .9s $easeOutCubic .8s forwards;
+        animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
       }
       .link:nth-child(2) {
-        animation: fadeInUp20 .9s $easeOutCubic .9s forwards;
+        animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
       }
     }
   }

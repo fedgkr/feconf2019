@@ -11,12 +11,12 @@
   h1:nth-child(2) {
     font-weight: 400;
   }
-  &.active {
+  &.loaded {
     h1:nth-child(1) {
-      animation: fadeInUp20 .9s $easeOutCubic .6s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic forwards;
     }
     h1:nth-child(2) {
-      animation: fadeInUp20 .9s $easeOutCubic .8s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
     }
   }
 }
