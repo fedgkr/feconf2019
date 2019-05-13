@@ -36,7 +36,9 @@
     "dev": "next src",
     "build": "next build src && next export -o out src",
     "build:sponsor": "cd sponsor && yarn deploy:sponsor && cd ../",
-    "export": "yarn build && yarn build:sponsor && touch out/.nojekyll",
+    "build:cname": "echo '2019.feconf.kr' > ./out/CNAME",
+    "build:all": "yarn build && yarn build:sponsor && yarn build:cname",
+    "export": "yarn build:all && touch out/.nojekyll",
     "push": "push-dir --dir=out --branch=gh-pages --cleanup --verbose",
     "deploy": "yarn export && yarn push"
   }

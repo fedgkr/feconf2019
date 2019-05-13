@@ -1,5 +1,9 @@
 import Section from "./Section"
 import { UI } from "../UI"
+import * as feconf2017sponsors from '../../../static/images/sponsors/2017/*.png';
+import * as feconf2018sponsors from '../../../static/images/sponsors/2018/*.png';
+delete feconf2017sponsors.default;
+delete feconf2018sponsors.default;
 
 const infoList = [
   {
@@ -8,6 +12,7 @@ const infoList = [
     location: '마루 180(150 여 명 규모)',
     website: 'https://2017.feconf.kr/',
     videos: 'https://youtu.be/psIees_xuEY',
+    sponsors: feconf2017sponsors,
     other: 'FEConf 2018',
   },
   {
@@ -16,7 +21,8 @@ const infoList = [
     location: '롯데타워 SKY31 컨벤션(500 여 명 규모)',
     website: 'https://2018.feconf.kr/',
     videos: 'https://youtu.be/lmVqI04Aj0o',
-    other: 'FEConf 2017'
+    sponsors: feconf2018sponsors,
+    other: 'FEConf 2017',
   },
 ];
 
@@ -62,7 +68,7 @@ export default class InfoSection extends Section {
             </svg>
           </a>
           <h1 class="ft-title"></h1>
-          <div>
+          <div class="desc">
             <p class="ft-desc">
               <span>장소:</span>&nbsp;
               <span class="modal-location"></span>
@@ -75,6 +81,12 @@ export default class InfoSection extends Section {
               <span>발표영상:</span>&nbsp;
               <a class="modal-videos" target="_blank"></a>
             </p>
+            <div>
+              <p class="ft-desc">
+                <span>후원사:</span>
+              </p>
+              <div class="modal-sponsor"></div>
+            </div>
             <p class="ft-desc">
               <a class="modal-other" href="#"></a>
             </p>
@@ -132,15 +144,37 @@ export default class InfoSection extends Section {
     const website = this.uiWrap.querySelector('.modal-website');
     const videos = this.uiWrap.querySelector('.modal-videos');
     const other = this.uiWrap.querySelector('.modal-other');
+    const sponsor = this.uiWrap.querySelector('.modal-sponsor');
+    const sponsorsEl = this.renderSponsors(info.sponsors);
 
     title.innerText = info.title;
     location.innerHTML = info.location;
     website.innerHTML = info.website;
     videos.innerHTML = info.videos;
     other.innerHTML = info.other;
+    sponsor.innerHTML = '';
+    sponsor.appendChild(sponsorsEl);
     website.setAttribute('href', info.website);
     videos.setAttribute('href', info.videos);
     other.setAttribute('data-target', info.other);
+  }
+
+  private renderSponsors(sponsors) {
+    const sponsorsEl = document.createElement('div');
+    sponsorsEl.classList.add('sponsors-wrap');
+    Object.keys(sponsors).forEach((key, idx) => {
+      const img = document.createElement('img');
+      img.src = sponsors[key];
+      img.alt = key;
+      if (idx % 4 === 0) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+        sponsorsEl.appendChild(row);
+      }
+      const latest = sponsorsEl.children[sponsorsEl.children.length - 1];
+      latest.appendChild(img);
+    });
+    return sponsorsEl;
   }
 
   private removeAllBodyClass() {

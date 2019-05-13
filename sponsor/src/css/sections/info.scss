@@ -59,21 +59,59 @@
       h1 {
         margin-bottom: 24px;
       }
+      div:nth-child(4) {
+        .row, span {
+          opacity: 0;
+        }
+        span {
+          display: inline-block;
+          margin-bottom: 24px;
+        }
+      }
+      .modal-sponsor {
+        .sponsors-wrap {
+          margin-bottom: 15px;
+          .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 36px auto;
+            max-width: 580px;
+            img {
+              width: 102px;
+              height: 68px;
+            }
+          }
+        }
+      }
       &.active {
-        h1 {
+        & > h1 {
           animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
         }
-        p:nth-child(1) {
+        .desc > p:nth-child(1) {
           animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
         }
-        p:nth-child(2) {
+        .desc > p:nth-child(2) {
           animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
         }
-        p:nth-child(3) {
+        .desc > p:nth-child(3) {
           animation: fadeInUp20 .9s $easeOutCubic .4s forwards;
         }
-        p:nth-child(4) {
-          animation: fadeInUp20 .9s $easeOutCubic .5s forwards;
+        .desc > div:nth-child(4) {
+          p {
+            opacity: 1;
+          }
+          span {
+            animation: fadeInUp20 .9s $easeOutCubic .5s forwards;
+          }
+          .row:nth-child(1) {
+            animation: fadeInUp20 .9s $easeOutCubic .6s forwards;
+          }
+          .row:nth-child(2) {
+            animation: fadeInUp20 .9s $easeOutCubic .7s forwards;
+          }
+        }
+        .desc > p:nth-child(5) {
+          animation: fadeInUp20 .9s $easeOutCubic .8s forwards;
         }
       }
     }
@@ -106,6 +144,22 @@
         top: 24px;
         width: 24px;
         height: 24px;
+      }
+      .content {
+        .modal-sponsor {
+          .sponsors-wrap {
+            .row {
+              max-width: 380px;
+              img {
+                width: 76px;
+                height: 51px;
+              }
+              @media (max-width: $mobile-device) {
+                max-width: 350px;
+              }
+            }
+          }
+        }
       }
     }
   }

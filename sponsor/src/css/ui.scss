@@ -73,6 +73,9 @@
   &.hide {
     opacity: 0;
     transition: opacity .4s $easeOutCubic;
+    .logo, .support-btn, .down-arrow, .nav {
+      pointer-events: none;
+    }
   }
   @media (max-width: $small-device) {
     .logo {
