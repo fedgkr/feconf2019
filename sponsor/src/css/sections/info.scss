@@ -38,7 +38,8 @@
       width: 35px;
       height: 35px;
       svg {
-        fill: black;
+        fill: white;
+        opacity: .5;
       }
     }
     .content {
@@ -105,10 +106,6 @@
         top: 24px;
         width: 24px;
         height: 24px;
-        svg {
-          fill: white;
-          opacity: .5;
-        }
       }
     }
   }

@@ -22,7 +22,7 @@ export default class IntroSection extends Section {
   onLoad() {
     this.timeout = setTimeout(() => {
       this.wrap.classList.add('phase-2');
-    }, 600);
+    }, 100);
     document.body.classList.add('phase-2');
   }
 

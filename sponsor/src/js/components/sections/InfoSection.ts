@@ -5,7 +5,7 @@ const infoList = [
   {
     id: 'feconf2017',
     title: 'FEConf 2017',
-    location: '마루 180(150여명 규모)',
+    location: '마루 180(150 여 명 규모)',
     website: 'https://2017.feconf.kr/',
     videos: 'https://youtu.be/psIees_xuEY',
     other: 'FEConf 2018',
@@ -13,7 +13,7 @@ const infoList = [
   {
     id: 'feconf2018',
     title: 'FEConf 2018',
-    location: '롯데타워 SKY31 컨벤션(400여명 규모)',
+    location: '롯데타워 SKY31 컨벤션(500 여 명 규모)',
     website: 'https://2018.feconf.kr/',
     videos: 'https://youtu.be/lmVqI04Aj0o',
     other: 'FEConf 2017'
@@ -36,8 +36,8 @@ export default class InfoSection extends Section {
         <h1 class="ft-title">When & Where?</h1>
         <p class="ft-desc">
           <span>FEConf는 2019년 9월~10월 중 개최 예정이며</span><br/> 
-          <span>4-500 여명 규모의 참가자와</span> <br/>
-          <span>2트랙으로 12세션을 진행할 예정입니다.</span> 
+          <span>500 여 명 규모의 참가자와</span> <br/>
+          <span>2 트랙으로 12 세션을 진행할 예정입니다.</span> 
         </p>
         <div class="link-wrap">
           <div class="link ft-desc">

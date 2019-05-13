@@ -63,7 +63,8 @@
     pointer-events: all;
     animation: pointingBottom 3s infinite;
     svg {
-      fill: black;
+      fill: white;
+      opacity: .5;
     }
     &.hide {
       display: none;
@@ -91,10 +92,6 @@
     }
     .down-arrow {
       bottom: 24px;
-      svg {
-        fill: white;
-        opacity: .5;
-      }
     }
   }
 }
