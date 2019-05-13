@@ -5,6 +5,18 @@ import * as feconf2018sponsors from '../../../static/images/sponsors/2018/*.png'
 delete feconf2017sponsors.default;
 delete feconf2018sponsors.default;
 
+const sponsorsUrl = {
+  banksalad: 'https://banksalad.com/',
+  kakao: 'https://www.kakaocorp.com/',
+  naver: 'https://www.navercorp.com/',
+  ooa: 'https://www.woowahan.com/',
+  toss: 'https://toss.im/',
+  protopie: 'https://www.protopie.io/',
+  ncsoft: 'http://kr.ncsoft.com/korean/',
+  ntech: 'https://www.nts-corp.com/index.jsp',
+  lezhin: 'https://www.lezhin.com/',
+};
+
 const infoList = [
   {
     id: 'feconf2017',
@@ -163,16 +175,20 @@ export default class InfoSection extends Section {
     const sponsorsEl = document.createElement('div');
     sponsorsEl.classList.add('sponsors-wrap');
     Object.keys(sponsors).forEach((key, idx) => {
+      const a = document.createElement('a');
       const img = document.createElement('img');
       img.src = sponsors[key];
       img.alt = key;
+      a.href = sponsorsUrl[key];
+      a.target = '_blank';
+      a.appendChild(img);
       if (idx % 4 === 0) {
         const row = document.createElement('div');
         row.classList.add('row');
         sponsorsEl.appendChild(row);
       }
       const latest = sponsorsEl.children[sponsorsEl.children.length - 1];
-      latest.appendChild(img);
+      latest.appendChild(a);
     });
     return sponsorsEl;
   }
