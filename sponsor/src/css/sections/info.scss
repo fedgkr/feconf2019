@@ -37,6 +37,7 @@
       display: block;
       width: 35px;
       height: 35px;
+      z-index: 2;
       svg {
         fill: white;
         opacity: .5;
@@ -150,6 +151,7 @@
           .sponsors-wrap {
             .row {
               max-width: 380px;
+              margin: 0 auto 24px auto;
               img {
                 width: 76px;
                 height: 51px;
