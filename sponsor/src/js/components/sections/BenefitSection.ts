@@ -5,13 +5,13 @@ const benefits = [
     id: 'diamond',
     desc: `
       <strong>개별 홍보 시간</strong> 10분, 초대권 <strong>10</strong>장, Booth<br/>
-      현수막 로고 , X Banner logo, 홈페이지 로고 노출
+      현수막 로고, X Banner logo, 홈페이지 로고 노출
     `
   },
   {
     id: 'platinum',
     desc: `
-      초대권 <strong>5</strong>장, <strong>Booth</strong>, 현수막 로고 <br/> 
+      <strong>Booth</strong>, 초대권 <strong>5</strong>장, 현수막 로고<br/> 
       X Banner logo, 홈페이지 로고 노출
     `
   },
