@@ -30,7 +30,7 @@ const infoList = [
   {
     id: 'feconf2018',
     title: 'FEConf 2018',
-    location: '롯데타워 SKY31 컨벤션(500 여 명 규모)',
+    location: '롯데타워 SKY31 컨벤션(400 여 명 규모)',
     website: 'https://2018.feconf.kr/',
     videos: 'https://youtu.be/lmVqI04Aj0o',
     sponsors: feconf2018sponsors,
@@ -54,7 +54,7 @@ export default class InfoSection extends Section {
         <h1 class="ft-title">When & Where?</h1>
         <p class="ft-desc">
           <span>FEConf는 2019년 9월~10월 중 개최 예정이며</span><br/> 
-          <span>500 여 명 규모의 참가자와</span><br/>
+          <span>400 여 명 규모의 참가자와</span><br/>
           <span>2 트랙으로 12 세션을 진행할 예정입니다.</span>
         </p>
         <div class="link-wrap">
