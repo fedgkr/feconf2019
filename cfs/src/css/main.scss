@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'effectors';
+@import 'ui';
+@import 'section';
+
+@import 'sections/intro';
+@import 'sections/info';
+@import 'sections/sponsor';
+
+body {
+  opacity: 0;
+  font-family: "Spoqa Han Sans", sans-serif;
+  background-color: #19104a;
+  transition: background-color 2.2s $easeOutCubic;
+  &.loaded {
+    opacity: 1;
+  }
+  &.section1 {
+    background-color: #19104a;
+    &.phase-2 {
+      background-color: #5449c6;
+      transition: background-color 2.2s $easeOutCubic 1s;
+    }
+  }
+  &.section2 {
+    background-color: #0f2b79;
+  }
+  &.section3 {
+    background-color: #004264;
+  }
+}
+
+.extended {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ui-wrap {
+  width: 100%;
+  height: 100%;
+  max-width: 1024px;
+  max-height: 1024px;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "FEConf2019-Cfs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "rm -rf dist && parcel build src/index.html --public-url ./",
+    "move": "cp -R dist ../out/ && rm -rf ../out/cfs && mv ../out/dist ../out/cfs",
+    "deploy:cfs": "yarn build && yarn move"
+  },
+  "dependencies": {
+    "fullpage.js": "^3.0.5",
+    "static": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@types/jquery": "^3.3.29",
+    "autoprefixer": "^9.5.1",
+    "babel-polyfill": "^6.26.0",
+    "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-ogimage": "^1.1.0"
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
+    }
+  }
+}

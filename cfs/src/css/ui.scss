@@ -1,0 +1,96 @@
+#ui {
+  margin: auto;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity .4s $easeOutCubic .3s;
+  .logo {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    pointer-events: all;
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .apply-btn {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    font-size: 16px;
+    opacity: .8;
+    color: white;
+    text-decoration: none;
+    pointer-events: all;
+    transition: opacity .3s ease-out;
+  }
+  .nav {
+    position: absolute;
+    flex-direction: column;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    .item {
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #d8d8d8;
+      opacity: .2;
+      pointer-events: all;
+      transition: opacity .4s .1s;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  .down-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 72px;
+    display: block;
+    margin: 0 auto;
+    width: 34px;
+    text-align: center;
+    pointer-events: all;
+    animation: pointingBottom 3s infinite;
+    svg {
+      fill: white;
+      opacity: .5;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+  &.hide {
+    opacity: 0;
+    transition: opacity .4s $easeOutCubic;
+    .logo, .support-btn, .down-arrow, .nav {
+      pointer-events: none;
+    }
+  }
+  @media (max-width: $small-device) {
+    .logo {
+      top: 32px;
+      left: 26px;
+      transform: translateY(0);
+    }
+    .nav {
+      display: none;
+    }
+    .apply-btn {
+      top: 36px;
+      right: 24px;
+      &.active {
+        opacity: .5;
+      }
+    }
+    .down-arrow {
+      bottom: 24px;
+    }
+  }
+}
