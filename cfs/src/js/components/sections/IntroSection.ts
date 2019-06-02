@@ -22,6 +22,11 @@ export default class IntroSection extends Section {
         궁금하신 점이 있으신 분은 언제든지 feconf@googlegroups.com로 문의해 주세요.
         열정있는 프론트엔드 개발자 분들의 많은 신청 부탁드립니다!  
       </p>
+      <p>
+        <a class="apply-btn" href="#" target="_blank">
+          스피커 신청하기
+        </a>
+      </p>
     `;
   }
 

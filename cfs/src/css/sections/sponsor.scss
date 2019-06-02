@@ -1,37 +1,35 @@
 #sponsor-section {
   text-align: center;
   color: white;
+  font-size: 0;
   h1 {
-    margin: 0 0 36px;
+    margin: 0 0 80px;
   }
-  h2 {
-    font-weight: 400;
-    margin: 0;
-    &:nth-child(2) {
-      margin: 16px 0;
+  .sponsor-list {
+    margin: 0 0 80px;
+    a {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 57px;
+      }
+      img {
+        width: 102px;
+        height: 68px;
+      }
     }
   }
-  p {
-    margin-top: 24px;
-  }
-  h1, h2, p {
+  h1, p, .sponsor-list {
     opacity: 0;
   }
   &.loaded {
     h1 {
       animation: fadeInUp20 .9s $easeOutCubic forwards;
     }
-    h2:nth-child(1) {
+    .sponsor-list {
       animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
     }
-    h2:nth-child(2) {
-      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
-    }
-    h2:nth-child(3) {
-      animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
-    }
     p {
-      animation: fadeInUp20 .9s $easeOutCubic .4s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
     }
   }
 }

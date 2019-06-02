@@ -4,6 +4,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.next" />
+      <excludeFolder url="file://$MODULE_DIR$/cfs/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/cfs/dist" />
       <excludeFolder url="file://$MODULE_DIR$/out" />
       <excludeFolder url="file://$MODULE_DIR$/sponsor/.cache" />
       <excludeFolder url="file://$MODULE_DIR$/sponsor/dist" />
