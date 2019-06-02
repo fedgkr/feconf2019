@@ -3,10 +3,12 @@ import IntroSection from "./components/sections/IntroSection"
 import InfoSection from "./components/sections/InfoSection"
 import SponsorSection from "./components/sections/SponsorSection"
 import { UI } from "./components/UI"
+import DescSection from "./components/sections/DescSection"
 
 const ui = new UI();
 const sections = [
   new IntroSection('intro-section'),
+  new DescSection('desc-section'),
   new InfoSection('info-section'),
   new SponsorSection('sponsor-section'),
 ];
@@ -19,7 +21,7 @@ document.querySelectorAll('.section').forEach((_, i) => {
 
 new fullpage('#fullpage', {
   licenseKey: 'uobwH@p8',
-  anchors: ['intro', 'info', 'sponsors'],
+  anchors: ['intro', 'description', 'info', 'sponsors'],
   onLeave(_, target) {
     ui.afterSectionLeave(target.index);
     onBGChange(target.index);

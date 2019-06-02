@@ -1,0 +1,36 @@
+#desc-section {
+  position: relative;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  p {
+    padding: 0 24px;
+    opacity: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    &:nth-child(1) {
+      margin-bottom: 16px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 70px;
+    }
+  }
+  &.loaded {
+    p:nth-child(1) {
+      animation: fadeInUp20 .9s $easeOutCubic forwards;
+    }
+    p:nth-child(2) {
+      animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
+    }
+    p:nth-child(3) {
+      animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
+    }
+  }
+  @media (max-width: $small-device) {
+    p {
+      &:nth-child(2) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

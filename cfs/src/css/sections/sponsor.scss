@@ -5,6 +5,12 @@
   h1 {
     margin: 0 0 80px;
   }
+  p {
+    padding: 0 24px;
+    opacity: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
   .sponsor-list {
     margin: 0 0 80px;
     a {
@@ -29,7 +35,15 @@
       animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
     }
     p {
-      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
+    }
+  }
+  @media (max-width: $small-device) {
+    h1 {
+      margin: 0 0 30px;
+    }
+    .sponsor-list {
+      margin: 0 0 30px;
     }
   }
 }
