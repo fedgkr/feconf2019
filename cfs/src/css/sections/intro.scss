@@ -3,41 +3,87 @@
   margin: 0 auto;
   color: white;
   text-align: center;
-  h1 {
-    margin: 0 0 40px;
-    width: 100%;
-    opacity: 0;
-  }
   p {
     padding: 0 24px;
     opacity: 0;
     max-width: 600px;
     margin: 0 auto;
-    &:nth-child(2) {
-      margin-bottom: 40px;
+  }
+  .first-page {
+    display: block;
+    h1 {
+      margin: 0 0 40px;
+      width: 100%;
+      opacity: 0;
     }
-    &:nth-child(3) {
-      margin-bottom: 16px;
+    p:nth-child(2) {
+      margin: 0 auto 40px;
     }
-    &:nth-child(4) {
-      margin-bottom: 70px;
+    .next-btn {
+      display: inline-block;
+      padding: 19px 90px;
+      border: solid 1px rgba(255, 255, 255, .4);
+      background-color: rgba(0, 0, 0, .1);
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        background-color: rgba(0, 0, 0, .4);
+      }
+    }
+  }
+  .next-page {
+    display: none;
+    p {
+      &:nth-child(1) {
+        margin-bottom: 16px;
+      }
+      &:nth-child(2) {
+        margin-bottom: 70px;
+      }
     }
   }
   &.loaded {
     h1 {
-      animation: fadeInUp20 .9s $easeOutCubic .4s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
     }
     p:nth-child(2) {
-      animation: fadeInUp20 .9s $easeOutCubic .5s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
     }
     p:nth-child(3) {
-      animation: fadeInUp20 .9s $easeOutCubic .6s forwards;
+      animation: fadeInUp20 .9s $easeOutCubic .5s forwards;
     }
-    p:nth-child(4) {
-      animation: fadeInUp20 .9s $easeOutCubic .7s forwards;
+  }
+  &.phase-2 {
+    .first-page {
+      display: none;
     }
-    p:nth-child(5) {
-      animation: fadeInUp20 .9s $easeOutCubic .8s forwards;
+    .next-page {
+      display: block;
+      p:nth-child(1) {
+        animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
+      }
+      p:nth-child(2) {
+        animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
+      }
+      p:nth-child(3) {
+        animation: fadeInUp20 .9s $easeOutCubic .5s forwards;
+      }
+    }
+  }
+  @media (max-width: $small-device) {
+    .first-page {
+      p:nth-child(2) {
+        margin: 0 0 30px;
+      }
+    }
+    .next-page {
+      p {
+        &:nth-child(2) {
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }
