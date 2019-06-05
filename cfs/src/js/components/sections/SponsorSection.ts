@@ -11,6 +11,9 @@ export default class SponsorSection extends Section {
   render() {
     return `
       <h1 class="ft-title">FEConf 2019 스폰서</h1>
+      <p class="ft-desc">
+        (스폰서는 현재 모집 중입니다)
+      </p>
       <div class="sponsor-list">
         ${this.renderSponsorList()}
       </div>

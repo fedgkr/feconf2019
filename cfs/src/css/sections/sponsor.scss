@@ -3,11 +3,10 @@
   color: white;
   font-size: 0;
   h1 {
-    margin: 0 0 80px;
+    margin: 0 0 10px;
   }
   p {
     padding: 0 24px;
-    opacity: 0;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -27,20 +26,26 @@
   h1, p, .sponsor-list {
     opacity: 0;
   }
+  p:nth-child(2) {
+    margin: 0 auto 80px;
+  }
   &.loaded {
     h1 {
       animation: fadeInUp20 .9s $easeOutCubic forwards;
     }
-    .sponsor-list {
+    p:nth-child(2) {
       animation: fadeInUp20 .9s $easeOutCubic .1s forwards;
     }
-    p {
-      animation: fadeInUp20 .9s $easeOutCubic .3s forwards;
+    .sponsor-list {
+      animation: fadeInUp20 .9s $easeOutCubic .2s forwards;
+    }
+    p:nth-child(4) {
+      animation: fadeInUp20 .9s $easeOutCubic .4s forwards;
     }
   }
   @media (max-width: $small-device) {
-    h1 {
-      margin: 0 0 30px;
+    p:nth-child(2) {
+      margin: 0 auto 30px;
     }
     .sponsor-list {
       margin: 0 0 30px;
