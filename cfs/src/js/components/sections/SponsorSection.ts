@@ -5,6 +5,7 @@ delete sponsors.default;
 const sponsorsUrl = {
   naver: 'https://www.navercorp.com/',
   ncsoft: 'http://kr.ncsoft.com/korean/',
+  ooa: 'https://www.woowahan.com/',
 };
 
 export default class SponsorSection extends Section {
