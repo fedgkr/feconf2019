@@ -6,6 +6,7 @@ const sponsorsUrl = {
   naver: 'https://www.navercorp.com/',
   ncsoft: 'http://kr.ncsoft.com/korean/',
   ooa: 'https://www.woowahan.com/',
+  peoplefund: 'https://www.peoplefund.co.kr/',
 };
 
 export default class SponsorSection extends Section {
@@ -23,17 +24,26 @@ export default class SponsorSection extends Section {
           스피커 신청하기
         </a>
       </p>
-    `;
+    `.trim();
   }
 
   private renderSponsorList() {
-    const html = Object.keys(sponsors).map(key => {
-      return `
+    const wrap = document.createElement('div');
+    Object.keys(sponsors).forEach((key, idx) => {
+      const item = document.createElement('div');
+      item.innerHTML = `
         <a href="${sponsorsUrl[key]}" target="_blank">
           <img src="${sponsors[key]}" alt="${key}">
         </a>
-      `;
+      `.trim();
+      if (idx % 2 === 0) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+        wrap.appendChild(row);
+      }
+      const latest = wrap.children[wrap.children.length - 1];
+      latest.appendChild(item.lastChild);
     });
-    return html.join('');
+    return wrap.outerHTML;
   }
 }
