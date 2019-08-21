@@ -9,3 +9,10 @@ html, body {
 h1, h2, h3, p {
   margin: 0;
 }
+
+:global {
+  .wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
