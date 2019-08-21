@@ -4,6 +4,7 @@ import React from 'react';
 import 'normalize.css';
 import 'styles/style.scss';
 import 'core-js/es/object/assign';
+import Header from "../views/components/Header/Header";
 
 if (typeof window === 'object') {
   require('intersection-observer');
@@ -20,7 +21,8 @@ class FEConf2019 extends App {
           <title>FEConf 2019</title>
           <meta name="description" content="" />
         </Head>
-        <Component {...pageProps} />
+        <Header/>
+        <Component {...pageProps}/>
       </Container>
     );
   }
