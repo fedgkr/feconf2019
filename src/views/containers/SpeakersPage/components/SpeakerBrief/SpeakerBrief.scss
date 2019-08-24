@@ -1,0 +1,25 @@
+.SpeakerBrief {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #312d3e;
+  .ProfileImage {
+    position: relative;
+    font-size: 0;
+    height: 180px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background: #d8d8d8;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .Name {
+    font-weight: 700;
+  }
+}
