@@ -1,0 +1,20 @@
+html, body {
+  font-family: $font-family;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+:global {
+  .wrap {
+    padding-top: 131px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
