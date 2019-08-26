@@ -8,9 +8,8 @@ module.exports = sass({
     importLoaders: 1,
     localIdentName: isBuild ? '[hash:base64:5]' : '[local]-[hash:base64:5]',
   },
-}, {
   distDir: '../.next',
-  assetPrefix: './',
+  assetPrefix: '/',
   webpack(config) {
     config.resolve.modules.push(path.resolve('./src'));
     return config;
@@ -18,6 +17,8 @@ module.exports = sass({
   exportPathMap: function () {
     return {
       '/': { page: '/' },
+      '/speakers/index': { page: '/speakers' },
+      '/speakers/jooyoung/index': { page: '/speakers/detail' },
     }
   }
 });
