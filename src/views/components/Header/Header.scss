@@ -1,3 +1,5 @@
+@import '~styles/variable';
+
 .Header {
   position: absolute;
   top: 0;
@@ -24,18 +26,18 @@
       font-size: 14px;
       a {
         text-decoration: none;
-        color: #060113;
+        color: $fc-black;
         &.active {
-          color: #ff5d00;
+          color: $fc-main;
         }
       }
     }
     button {
       font-size: 14px;
       padding: 14px 24px 12px 24px;
-      border: 1px solid #ff5d00;
+      border: 1px solid $fc-main;
       border-radius: 22px;
-      color: #ff5d00;
+      color: $fc-main;
       font-weight: 700;
       cursor: pointer;
     }

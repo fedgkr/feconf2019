@@ -11,13 +11,11 @@ const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = () => {
   const bgAnimation = useSpring({
     transform: 'translateX(0)',
     from: { transform: 'translateX(-101%)' },
-    // transform: 'translateY(0)',
-    // from: { transform: 'translateY(101%)' },
-    delay: 200,
+    delay: 300,
   });
-  const info1Animation = useSpring({ ...fadeInUpAnimation, delay: 400 });
-  const info2Animation = useSpring({ ...fadeInUpAnimation, delay: 540 });
-  const info3Animation = useSpring({ ...fadeInUpAnimation, delay: 680 });
+  const info1Animation = useSpring({ ...fadeInUpAnimation, delay: 500 });
+  const info2Animation = useSpring({ ...fadeInUpAnimation, delay: 640 });
+  const info3Animation = useSpring({ ...fadeInUpAnimation, delay: 780 });
   return (
     <div className={css.SpeakerDetailPage}>
       <TitleHero title="2019" subTitle="Speakers" />

@@ -1,11 +1,13 @@
+@import '~styles/variable';
+
 .TitleHero {
   font-weight: 700;
   .Title {
     font-size: 21px;
-    color: #ff5d00;
+    color: $fc-main;
   }
   .SubTitle {
     font-size: 48px;
-    color: #060113;
+    color: $fc-black;
   }
 }

@@ -1,0 +1,61 @@
+@import '~styles/variable';
+
+.Hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  .TextWrap {
+    .Title {
+      padding: 142px 0 80px 0;
+      color: $fc-black;
+      h3 {
+        font-size: 36px;
+        line-height: 37px;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-top: 16px;
+        span {
+          display: inline-block;
+        }
+      }
+    }
+    .Info {
+      color: $fc-main;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .ApplyButton {
+      position: relative;
+      display: inline-block;
+      margin-top: 48px;
+      padding: 16px 0 17px 0;
+      width: 220px;
+      text-align: center;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      background: $fc-main;
+      & > div {
+        border: 1px solid $fc-main;
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+        transition: opacity .4s ease-out, transform .4s ease-out;
+      }
+      &:hover {
+        & > div {
+          opacity: 1;
+          transform: translate3d(6px, 6px, 0);
+        }
+      }
+    }
+  }
+  .ImageWrap {
+    width: 530px;
+    height: 609px;
+    background: #d8d8d8;
+  }
+}
