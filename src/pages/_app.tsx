@@ -20,6 +20,7 @@ class FEConf2019 extends App {
         <Head>
           <title>FEConf 2019</title>
           <meta name="description" content="" />
+          <meta http-equiv="refresh" content="0; url=https://2019.feconf.kr/cfs"/>
         </Head>
         <Header/>
         <Component {...pageProps}/>
