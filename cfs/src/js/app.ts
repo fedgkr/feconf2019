@@ -10,7 +10,6 @@ const sections = [
   new IntroSection('intro-section'),
   new DescSection('desc-section'),
   new InfoSection('info-section'),
-  new SponsorSection('sponsor-section'),
 ];
 
 document.querySelectorAll('.section').forEach((_, i) => {

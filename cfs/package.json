@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
     "@types/jquery": "^3.3.29",
+    "@zeit/next-typescript": "^1.1.1",
     "autoprefixer": "^9.5.1",
     "babel-polyfill": "^6.26.0",
     "node-sass": "^4.12.0",
