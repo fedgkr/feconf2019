@@ -1,4 +1,4 @@
-export const fadeInUp = {
+export const fadeInUpAnimation = {
   opacity: 1,
   transform: 'translateY(0)',
   from: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { animated, useSpring } from 'react-spring';
 import css from './SpeakerDetailPage.scss';
 import TitleHero from "../../components/TitleHero/TitleHero";
-import {fadeInUp} from "../../../shared/animations";
+import {fadeInUpAnimation} from "../../../shared/animations";
 
 interface SpeakerDetailPageProps {
 }
@@ -10,14 +10,14 @@ interface SpeakerDetailPageProps {
 const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = () => {
   const bgAnimation = useSpring({
     transform: 'translateX(0)',
-    from: {
-      transform: 'translateX(-101%)',
-    },
-    delay: 480,
+    from: { transform: 'translateX(-101%)' },
+    // transform: 'translateY(0)',
+    // from: { transform: 'translateY(101%)' },
+    delay: 200,
   });
-  const info1Animation = useSpring({ ...fadeInUp, delay: 200 });
-  const info2Animation = useSpring({ ...fadeInUp, delay: 340 });
-  const info3Animation = useSpring({ ...fadeInUp, delay: 480 });
+  const info1Animation = useSpring({ ...fadeInUpAnimation, delay: 400 });
+  const info2Animation = useSpring({ ...fadeInUpAnimation, delay: 540 });
+  const info3Animation = useSpring({ ...fadeInUpAnimation, delay: 680 });
   return (
     <div className={css.SpeakerDetailPage}>
       <TitleHero title="2019" subTitle="Speakers" />
