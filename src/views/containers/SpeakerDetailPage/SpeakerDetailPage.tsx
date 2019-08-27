@@ -1,13 +1,18 @@
 import React from 'react';
+import { animated, useSpring } from 'react-spring';
 import css from './SpeakerDetailPage.scss';
-import {useRouter} from "next/router";
 import TitleHero from "../../components/TitleHero/TitleHero";
 
 interface SpeakerDetailPageProps {
 }
 
 const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = () => {
-  useRouter();
+  const props = useSpring({
+    transform: 'translateX(0)',
+    from: {
+      transform: 'translateX(-100%)',
+    },
+  });
   return (
     <div className={css.SpeakerDetailPage}>
       <TitleHero title="2019" subTitle="Speakers" />
@@ -20,6 +25,7 @@ const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = () => {
             <h3 className={css.Name}>윤휴먼</h3>
             <span className={css.Party}>Sendbird | FE Engineer</span>
           </div>
+          <animated.div style={props} className={css.ProfileBg}/>
         </div>
         <div className={css.InfoWrap}>
           <div className={css.Cover}/>

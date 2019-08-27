@@ -7,7 +7,10 @@ interface SpeakerBriefProps {
 
 const SpeakerBrief: React.FC<SpeakerBriefProps> = () => {
   return (
-    <Link href="/speakers/jooyoung">
+    <Link
+      href={{ pathname: '/speakers/detail', query: { speakerName: 'jooyoung' } }}
+      // as={`/speakers/jooyoung`}
+    >
       <a>
         <div className={css.SpeakerBrief}>
           <div className={css.ProfileImage}>
