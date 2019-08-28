@@ -1,0 +1,26 @@
+@import '~styles/variable';
+
+.HoverButton {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  padding: 17px 0 16px 0;
+  border: 1px solid $fc-main;
+  color: $fc-main;
+  font-size: 16px;
+  text-align: center;
+  background: white;
+  & > div {
+    background: $fc-main;
+    opacity: 0;
+    z-index: -1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity .4s ease-out, transform .4s ease-out;
+  }
+  &:hover {
+    & > div {
+      opacity: 1;
+      transform: translate3d(6px, 6px, 0);
+    }
+  }
+}

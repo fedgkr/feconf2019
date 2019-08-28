@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = () => {
     transform: 'translate3d(0,0px,0)',
     opacity: 1,
     from: {
-      transform: 'translate3d(0,-20px,0)',
+      transform: 'translate3d(0,-14px,0)',
       opacity: 0
     },
     config: config.stiff,
