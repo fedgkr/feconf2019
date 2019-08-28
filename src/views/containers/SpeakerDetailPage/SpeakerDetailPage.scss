@@ -3,6 +3,9 @@
 .SpeakerDetailPage {
   position: relative;
   margin-top: 60px;
+  .TitleHeroWrap {
+    padding: 0 60px;
+  }
   .Container {
     display: flex;
     margin-top: 47px;

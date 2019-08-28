@@ -26,7 +26,7 @@ const TitleHero: React.FC<TitleHeroProps> = ({
       opacity: 0,
       transform: 'translateX(-40px)',
     },
-    delay: 200,
+    delay: 150,
   });
   return (
     <div className={css.TitleHero}>

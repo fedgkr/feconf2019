@@ -18,7 +18,9 @@ const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = () => {
   const info3Animation = useSpring({ ...fadeInUpAnimation, delay: 780 });
   return (
     <div className={css.SpeakerDetailPage}>
-      <TitleHero title="2019" subTitle="Speakers" />
+      <div className={css.TitleHeroWrap}>
+        <TitleHero title="2019" subTitle="Speakers" />
+      </div>
       <div className={css.Container}>
         <div className={css.ProfileWrap}>
           <div>
