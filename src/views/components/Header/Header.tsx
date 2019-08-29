@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import css from './Header.scss';
+import HoverButton from "../HoverButton/HoverButton";
 
 interface HeaderProps {
 }
@@ -17,7 +18,17 @@ const Header: React.FC<HeaderProps> = () => {
         <li><Link href="/schedule"><a>Schedule</a></Link></li>
         <li><Link href="/sponsors"><a>Sponsors</a></Link></li>
         <li><Link href="/organizers"><a>Organizers</a></Link></li>
-        <a href="/apply"><button>신청하기</button></a>
+        <HoverButton
+          style={{
+            fontSize: 14,
+            fontWeight: 700,
+            padding: '14px 0 12px 0'
+          }}
+          href="/apply"
+          title="신청하기"
+          width={103}
+          filled={false}
+        />
       </ul>
     </div>
   );

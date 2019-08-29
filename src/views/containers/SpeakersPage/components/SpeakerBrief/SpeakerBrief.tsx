@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import css from './SpeakerBrief.scss';
+import cc from "classcat";
 
 interface SpeakerBriefProps {
 }
@@ -12,7 +13,7 @@ const SpeakerBrief: React.FC<SpeakerBriefProps> = () => {
       // as={`/speakers/jooyoung`}
     >
       <a>
-        <div className={css.SpeakerBrief}>
+        <div className={cc([css.SpeakerBrief, 'kr-text'])}>
           <div className={css.ProfileImage}>
             <img src="" alt=""/>
           </div>

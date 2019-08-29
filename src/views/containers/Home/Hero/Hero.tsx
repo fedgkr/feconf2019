@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import cc from 'classcat';
 import css from "./Hero.scss";
 import {animated, config, useTrail} from "react-spring";
+import HoverButton from "../../../components/HoverButton/HoverButton";
 
 interface HeroProps {
 }
@@ -33,14 +35,13 @@ const Hero: React.FC<HeroProps> = () => {
             ))}
           </h2>
         </div>
-        <p className={css.Info}>
+        <p className={cc([css.Info, 'kr-text'])}>
           2019년 10월 26일 토요일 10AM - 5PM <br/>
-          잠실 롯데타워 SKY31
+          <a target="_blank" href="http://naver.me/GF26VviE">
+            잠실 롯데타워 SKY31
+          </a>
         </p>
-        <a className={css.ApplyButton} href="#">
-          참가 신청하기
-          <div className="extended"/>
-        </a>
+        <HoverButton title="참가 신청하기"/>
       </div>
       <div className={css.ImageWrap}>
 

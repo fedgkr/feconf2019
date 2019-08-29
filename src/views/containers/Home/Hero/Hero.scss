@@ -27,29 +27,11 @@
       color: $fc-main;
       font-size: 14px;
       font-weight: 700;
-    }
-    .ApplyButton {
-      position: relative;
-      display: inline-block;
-      margin-top: 48px;
-      padding: 16px 0 17px 0;
-      width: 220px;
-      text-align: center;
-      color: white;
-      font-size: 16px;
-      font-weight: 700;
-      background: $fc-main;
-      & > div {
-        border: 1px solid $fc-main;
-        opacity: 0;
-        transform: translate3d(0, 0, 0);
-        transition: opacity .4s ease-out, transform .4s ease-out;
-      }
-      &:hover {
-        & > div {
-          opacity: 1;
-          transform: translate3d(6px, 6px, 0);
-        }
+      margin-bottom: 32px;
+      & > a {
+        display: inline-block;
+        color: $fc-main;
+        margin-top: 4px;
       }
     }
   }

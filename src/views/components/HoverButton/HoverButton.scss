@@ -3,7 +3,6 @@
 .HoverButton {
   position: relative;
   display: inline-block;
-  width: 300px;
   padding: 17px 0 16px 0;
   border: 1px solid $fc-main;
   color: $fc-main;
@@ -21,6 +20,15 @@
     & > div {
       opacity: 1;
       transform: translate3d(6px, 6px, 0);
+    }
+  }
+  &.filled {
+    border: none;
+    color: white;
+    background: $fc-main;
+    & > div {
+      background: white;
+      border: 1px solid $fc-main;
     }
   }
 }

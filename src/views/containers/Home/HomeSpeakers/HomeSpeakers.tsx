@@ -18,7 +18,10 @@ const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
         <SpeakerBrief/>
       </div>
       <div className={css.ButtonWrap}>
-        <HoverButton/>
+        <HoverButton
+          title="스피커 모두 보기"
+          filled={false}
+        />
       </div>
     </div>
   );
