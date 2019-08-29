@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './HomeSpeakers.scss';
-import TitleHero from "../../../components/TitleHero/TitleHero";
-import SpeakerBrief from "../../SpeakersPage/components/SpeakerBrief/SpeakerBrief";
-import HoverButton from "../../../components/HoverButton/HoverButton";
+import TitleHero from "../../../../components/TitleHero/TitleHero";
+import SpeakerBrief from "../../../SpeakersPage/components/SpeakerBrief/SpeakerBrief";
+import HoverButton from "../../../../components/HoverButton/HoverButton";
 
 interface HomeSpeakersProps {
 }

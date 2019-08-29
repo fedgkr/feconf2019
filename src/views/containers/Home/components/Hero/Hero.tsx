@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import cc from 'classcat';
 import css from "./Hero.scss";
 import {animated, config, useTrail} from "react-spring";
-import HoverButton from "../../../components/HoverButton/HoverButton";
+import HoverButton from "../../../../components/HoverButton/HoverButton";
 
 interface HeroProps {
 }

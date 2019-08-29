@@ -21,7 +21,6 @@ const Header: React.FC<HeaderProps> = () => {
         <HoverButton
           style={{
             fontSize: 14,
-            fontWeight: 700,
             padding: '14px 0 12px 0'
           }}
           href="/apply"
