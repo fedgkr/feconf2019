@@ -1,4 +1,5 @@
 import React from 'react';
+import cc from 'classcat';
 import css from './HomeSpeakers.scss';
 import TitleHero from "../../../../components/TitleHero/TitleHero";
 import SpeakerBrief from "../../../SpeakersPage/components/SpeakerBrief/SpeakerBrief";
@@ -9,7 +10,7 @@ interface HomeSpeakersProps {
 
 const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
   return (
-    <div className={css.HomeSpeakers}>
+    <div className={cc(['container', css.HomeSpeakers])}>
       <TitleHero title="2019" subTitle="16 Speakers"/>
       <div className={css.SpeakerList}>
         <SpeakerBrief/>

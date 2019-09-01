@@ -5,6 +5,8 @@ import HomeSpeakers from "./components/HomeSpeakers/HomeSpeakers";
 import HomeTracks from "./components/HomeTracks/HomeTracks";
 import HomeSponsors from "./components/HomeSponsors/HomeSponsors";
 import HomeInfo from "./components/HomeInfo/HomeInfo";
+import HomeBanner from "./components/HomeBanner/HomeBanner";
+import Footer from "../../components/Footer/Footer";
 
 interface Props {}
 
@@ -16,6 +18,8 @@ const Home: React.FC<Props> = () => {
       <HomeTracks/>
       <HomeSponsors/>
       <HomeInfo/>
+      <HomeBanner/>
+      <Footer/>
     </div>
   );
 }

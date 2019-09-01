@@ -2,13 +2,14 @@ import React from 'react';
 import css from './HomeInfo.scss';
 import TitleHero from "../../../../components/TitleHero/TitleHero";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
+import cc from "classcat";
 
 interface HomeInfoProps {
 }
 
 const HomeInfo: React.FC<HomeInfoProps> = () => {
   return (
-    <div className={css.HomeInfo}>
+    <div className={cc(['container', css.HomeInfo])}>
       <TitleHero
         title="FE Conference"
         subTitle="Event Information"

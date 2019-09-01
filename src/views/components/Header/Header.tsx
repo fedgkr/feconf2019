@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = () => {
         <HoverButton
           style={{
             fontSize: 14,
-            padding: '14px 0 12px 0'
+            padding: '14px 0 13px 0'
           }}
           href="/apply"
           title="신청하기"

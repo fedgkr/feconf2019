@@ -1,0 +1,26 @@
+@import '~styles/variable';
+
+.Footer {
+  margin-top: 86px;
+  border-top: 2px solid #efecec;
+  .Content {
+    display: flex;
+    justify-content: space-between;
+    padding: 33px 60px 50px 60px;
+    box-sizing: border-box;
+    color: $fc-black;
+    font-size: 12px;
+    .SNS {
+      .Title {
+        margin-bottom: 8px;
+      }
+    }
+    .Links {
+      a {
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: 700;
+      }
+    }
+  }
+}

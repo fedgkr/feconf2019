@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = () => {
     config: config.stiff,
   });
   return (
-    <div className={css.Hero}>
+    <div className={cc([css.Hero, 'container'])}>
       <div className={css.TextWrap}>
         <div className={css.Title}>
           <h3>FE Conference 2019</h3>
