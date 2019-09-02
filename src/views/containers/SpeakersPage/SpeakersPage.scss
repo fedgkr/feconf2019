@@ -1,7 +1,9 @@
 .SpeakersPage {
   position: relative;
-  padding: 60px;
+  margin-top: 60px;
   .SpeakerList {
+    display: flex;
+    justify-content: space-between;
     margin-top: 60px;
   }
 }

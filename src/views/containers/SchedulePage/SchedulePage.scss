@@ -1,0 +1,18 @@
+.SchedulePage {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .Date {
+    color: #312d3e;
+    margin-top: 16px;
+  }
+  .TrackWrap {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+  }
+  .ButtonWrap {
+    margin-top: 60px;
+    text-align: center;
+  }
+}

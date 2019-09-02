@@ -1,4 +1,5 @@
 import React from 'react';
+import cc from 'classcat';
 import { animated, useSpring } from 'react-spring';
 import css from './SpeakerDetailPage.scss';
 import TitleHero from "../../components/TitleHero/TitleHero";
@@ -18,8 +19,10 @@ const SpeakerDetailPage: React.FC<SpeakerDetailPageProps> = () => {
   const info3Animation = useSpring({ ...fadeInUpAnimation, delay: 780 });
   return (
     <div className={css.SpeakerDetailPage}>
-      <div className={css.TitleHeroWrap}>
-        <TitleHero title="2019" subTitle="Speakers" />
+      <div className="container">
+        <div className={css.TitleHeroWrap}>
+          <TitleHero title="2019" subTitle="Speakers" />
+        </div>
       </div>
       <div className={css.Container}>
         <div className={css.ProfileWrap}>

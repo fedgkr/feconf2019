@@ -6,6 +6,11 @@
     margin-top: 16px;
   }
   .TrackWrap {
-
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+  }
+  .ButtonWrap {
+    text-align: center;
   }
 }

@@ -13,10 +13,14 @@
     margin-bottom: 24px;
     border-radius: 50%;
     background: #d8d8d8;
+    overflow: hidden;
     img {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
+      border: 0;
     }
   }
   .Name {

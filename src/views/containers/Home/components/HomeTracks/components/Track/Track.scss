@@ -1,3 +1,11 @@
 .Track {
-
+  position: relative;
+  width: 50%;
+  .Title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #230462;
+    text-align: center;
+    margin-bottom: 16px;
+  }
 }
