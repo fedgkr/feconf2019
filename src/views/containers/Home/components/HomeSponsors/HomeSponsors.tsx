@@ -5,6 +5,7 @@ import SpeakerBrief from "../../../SpeakersPage/components/SpeakerBrief/SpeakerB
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import cc from "classcat";
 import {speakers} from "../../../../../shared/data";
+import RowContainer from "../../../../components/RowContainer/RowContainer";
 
 interface HomeSponsorsProps {
 }
@@ -14,10 +15,7 @@ const HomeSponsors: React.FC<HomeSponsorsProps> = () => {
     <div className={cc(['container', css.HomeSponsors])}>
       <TitleHero title="2019" subTitle="Our Proud Sponsors"/>
       <div className={css.SponsorList}>
-        <SpeakerBrief speaker={speakers[0]}/>
-        <SpeakerBrief speaker={speakers[1]}/>
-        <SpeakerBrief speaker={speakers[2]}/>
-        <SpeakerBrief speaker={speakers[3]}/>
+        <RowContainer count={4} fold={true} items={speakers}/>
       </div>
       <div className={css.ButtonWrap}>
         <HoverButton

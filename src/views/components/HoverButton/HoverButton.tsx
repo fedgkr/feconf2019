@@ -8,6 +8,7 @@ interface HoverButtonProps {
   filled?: boolean;
   width?: number;
   href?: string;
+  onClick?: () => void;
 }
 
 const HoverButton: React.FC<HoverButtonProps> = ({
@@ -16,12 +17,14 @@ const HoverButton: React.FC<HoverButtonProps> = ({
   width = 300,
   href = '#',
   style = {},
+  onClick = () => null,
 }) => {
   return (
     <a
       href={href}
       className={cc([css.HoverButton, 'kr-text', filled ? css.filled : ''])}
       style={{ ...style, width }}
+      onClick={onClick}
     >
       {title}
       <div className="extended"/>

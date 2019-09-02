@@ -1,0 +1,13 @@
+.RowContainer {
+  position: relative;
+  .Row {
+    display: flex;
+    justify-content: space-between;
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+    & > div {
+      flex-shrink: 2;
+    }
+  }
+}

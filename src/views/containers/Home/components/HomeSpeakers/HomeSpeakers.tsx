@@ -23,6 +23,9 @@ const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
         <HoverButton
           title="스피커 모두 보기"
           filled={false}
+          onClick={() => {
+
+          }}
         />
       </div>
     </div>
