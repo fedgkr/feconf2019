@@ -23,7 +23,16 @@ const RowContainer: React.FC<RowContainerProps> = ({
   }, []);
   return (
     <div className={css.RowContainer}>
-      {rowList.map((row, idx) => (
+      {fold ? (
+        <div key={0} className={css.Row}>
+          {rowList[0].map((item) => (
+            <SpeakerBrief
+              key={item.nameEn}
+              speaker={item}
+            />
+          ))}
+        </div>
+      ) : rowList.map((row, idx) => (
         <div key={idx} className={css.Row}>
           {row.map((item, idx) => (
             <SpeakerBrief

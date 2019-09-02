@@ -24,7 +24,10 @@ const HoverButton: React.FC<HoverButtonProps> = ({
       href={href}
       className={cc([css.HoverButton, 'kr-text', filled ? css.filled : ''])}
       style={{ ...style, width }}
-      onClick={onClick}
+      onClick={e => {
+        e.preventDefault();
+        onClick();
+      }}
     >
       {title}
       <div className="extended"/>
