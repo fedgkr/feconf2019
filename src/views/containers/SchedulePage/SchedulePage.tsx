@@ -20,8 +20,8 @@ const SchedulePage: React.FC<SchedulePageProps> = () => {
         2019년 10월 26일 토요일, 10AM - 5PM
       </p>
       <div className={css.TrackWrap}>
-        <Track title="Track 1" isMain={true} speakers={trackASpeakers}/>
-        <Track title="Track 2" isMain={false} speakers={trackBSpeakers}/>
+        <Track title="Track 1" isMain={true} isFold={false} speakers={trackASpeakers}/>
+        <Track title="Track 2" isMain={false} isFold={false} speakers={trackBSpeakers}/>
       </div>
     </div>
   );

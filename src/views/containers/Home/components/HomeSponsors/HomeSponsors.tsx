@@ -17,13 +17,15 @@ const HomeSponsors: React.FC<HomeSponsorsProps> = () => {
       <div className={css.SponsorList}>
         <RowContainer count={4} fold={isFold} items={speakers}/>
       </div>
-      <div className={css.ButtonWrap}>
-        <HoverButton
-          title="스폰서 모두 보기"
-          filled={false}
-          onClick={() => fold(!isFold)}
-        />
-      </div>
+      {isFold ?
+        <div className={css.ButtonWrap}>
+          <HoverButton
+            title="스폰서 모두 보기"
+            filled={false}
+            onClick={() => fold(!isFold)}
+          />
+        </div> : null
+      }
     </div>
   );
 }

@@ -17,13 +17,15 @@ const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
       <div className={css.SpeakerList}>
         <RowContainer count={4} fold={isFold} items={speakers}/>
       </div>
-      <div className={css.ButtonWrap}>
-        <HoverButton
-          title="스피커 모두 보기"
-          filled={false}
-          onClick={() => fold(!isFold)}
-        />
-      </div>
+      {isFold ?
+        <div className={css.ButtonWrap}>
+          <HoverButton
+            title="스피커 모두 보기"
+            filled={false}
+            onClick={() => fold(!isFold)}
+          />
+        </div> : null
+      }
     </div>
   );
 }
