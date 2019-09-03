@@ -1,7 +1,15 @@
+@import '~styles/mixin';
+
 .SponsorsPage {
   position: relative;
   margin: 60px auto;
   .SponsorList {
     margin-top: 60px;
+  }
+  @include mobile {
+    margin: 24px auto;
+    .SponsorList {
+      margin-top: 24px;
+    }
   }
 }

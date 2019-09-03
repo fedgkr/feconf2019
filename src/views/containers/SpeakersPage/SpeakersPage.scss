@@ -1,7 +1,15 @@
+@import '~styles/mixin';
+
 .SpeakersPage {
   position: relative;
   margin: 60px auto;
   .SpeakerList {
     margin-top: 60px;
+  }
+  @include mobile {
+    margin: 24px auto;
+    .SpeakerList {
+      margin-top: 24px;
+    }
   }
 }
