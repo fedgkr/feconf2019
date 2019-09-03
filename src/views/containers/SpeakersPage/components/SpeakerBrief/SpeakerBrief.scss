@@ -34,4 +34,23 @@
       height: 140px;
     }
   }
+  @include mobile {
+    width: 100%;
+    flex-direction: row;
+    &:not(.empty) {
+      margin-bottom: 20px;
+    }
+    .ProfileImage {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 0;
+    }
+    .Info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20px;
+      text-align: left;
+    }
+  }
 }

@@ -5,12 +5,14 @@ import TitleHero from "../../../../components/TitleHero/TitleHero";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import {speakers} from "../../../../../shared/data";
 import RowContainer from "../../../../components/RowContainer/RowContainer";
+import useResponsive from "../../../../../shared/hooks/useResponsive";
 
 interface HomeSpeakersProps {
 }
 
 const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
   const [isFold, fold] = useState(true);
+  const {isMobile} = useResponsive();
   return (
     <div className={cc(['container', css.HomeSpeakers])}>
       <TitleHero title="2019" subTitle="16 Speakers"/>
@@ -21,6 +23,7 @@ const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
         <div className={css.ButtonWrap}>
           <HoverButton
             title="스피커 모두 보기"
+            width={isMobile ? "100%" : 300}
             filled={false}
             onClick={() => fold(!isFold)}
           />

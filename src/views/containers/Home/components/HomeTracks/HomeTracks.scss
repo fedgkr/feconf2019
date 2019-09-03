@@ -1,9 +1,14 @@
+@import '~styles/mixin';
+
 .HomeTracks {
   position: relative;
   margin-top: 120px;
   .Date {
     color: #312d3e;
     margin-top: 16px;
+  }
+  .TrackTitle {
+    display: none;
   }
   .TrackWrap {
     display: flex;
@@ -13,5 +18,28 @@
   .ButtonWrap {
     margin-top: 60px;
     text-align: center;
+  }
+  @include mobile {
+    margin-top: 48px;
+    .Date {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+    .TrackTitle {
+      display: flex;
+      margin-top: 24px;
+      a {
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 20px;
+        color: #aeaabb;
+        &.selected {
+          color: #230462;
+        }
+      }
+    }
+    .TrackWrap {
+      margin-top: 28px;
+    }
   }
 }

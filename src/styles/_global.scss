@@ -37,6 +37,9 @@ a {
     }
   }
   @include mobile {
+    .wrap {
+      padding-top: 60px;
+    }
     .container {
       padding: 0 24px;
     }

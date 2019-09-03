@@ -1,3 +1,5 @@
+@import '~styles/mixin';
+
 .Track {
   position: relative;
   width: 50%;
@@ -7,5 +9,14 @@
     color: #230462;
     text-align: center;
     margin-bottom: 16px;
+  }
+  @include mobile {
+    width: 100%;
+    .Title {
+      display: none;
+    }
+    &:not(.selected) {
+      display: none;
+    }
   }
 }

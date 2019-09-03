@@ -20,18 +20,20 @@ const SpeakerBrief: React.FC<SpeakerBriefProps> = ({ speaker }) => {
             <div className={css.ProfileImage}>
               <img src={`static/images/speakers/${speaker.image}`} alt={speaker.name}/>
             </div>
-            <p className={css.Name}>{speaker.name}</p>
-            {speaker.company ?
-              <p>
-                {speaker.company.name}
-              </p> : null
-            }
+            <div className={css.Info}>
+              <p className={css.Name}>{speaker.name}</p>
+              {speaker.company ?
+                <p>
+                  {speaker.company.name}
+                </p> : null
+              }
+            </div>
           </div>
         </a>
       </Link>
       :
       <Link href="#">
-        <a><div className={css.SpeakerBrief}></div></a>
+        <a><div className={cc([css.SpeakerBrief, css.empty])}></div></a>
       </Link>
   );
 }

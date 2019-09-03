@@ -37,6 +37,15 @@ const TrackItem: React.FC<TrackItemProps> = ({ speaker, isMain }) => {
           { speaker ? timetable[speaker.track.order] : '10:00 - 10:50' }
         </div> : null
       }
+      <div className={css.Mobile}>
+        <div className={css.MobileTime}>
+          <span>{ speaker ? timetable[speaker.track.order] : '10:00 - 10:50' }</span>
+          <span className={css.Name}>{speaker.name}</span>
+        </div>
+        <div className={css.TrackName}>
+          {speaker.track.title}
+        </div>
+      </div>
     </div>
   );
 }

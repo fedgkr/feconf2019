@@ -4,6 +4,7 @@ import css from "./Hero.scss";
 import {animated, useTrail} from "react-spring";
 import { MainImage } from "../../../../../static/images/main";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
+import useResponsive from "../../../../../shared/hooks/useResponsive";
 
 interface HeroProps {
 }
@@ -13,6 +14,7 @@ const words = [
 ];
 
 const Hero: React.FC<HeroProps> = () => {
+  const {isMobile} = useResponsive();
   const [currentIdx, setIdx] = useState(0);
   const text = words[currentIdx].split('').map((value, idx) => ({ key: idx, value }));
   const trail = useTrail(text.length, {
@@ -32,18 +34,19 @@ const Hero: React.FC<HeroProps> = () => {
             <h3>FE Conference 2019</h3>
             <h3>is for</h3>
             <h2>
-              {trail.map((props, i) => (
-                <animated.span key={i} style={props}>{text[i].value}</animated.span>
-              ))}
+              <animated.span>{words[0]}</animated.span>
             </h2>
           </div>
           <p className={cc([css.Info, 'kr-text'])}>
             2019년 10월 26일 토요일 10AM - 5PM <br/>
-            <a target="_blank" href="http://naver.me/GF26VviE">
+            <a target="_blank" href="https://naver.me/GF26VviE">
               잠실 롯데타워 SKY31
             </a>
           </p>
-          <HoverButton title="참가 신청하기"/>
+          <HoverButton
+            title="참가 신청하기"
+            width={isMobile ? "100%" : 300}
+          />
         </div>
       </div>
     </div>

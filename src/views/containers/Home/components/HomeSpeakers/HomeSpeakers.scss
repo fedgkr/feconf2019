@@ -1,4 +1,5 @@
 @import '~styles/variable';
+@import '~styles/mixin';
 
 .HomeSpeakers {
   position: relative;
@@ -9,5 +10,14 @@
   .ButtonWrap {
     margin-top: 60px;
     text-align: center;
+  }
+  @include mobile {
+    margin-top: 48px;
+    .SpeakerList {
+      margin-top: 20px;
+    }
+    .ButtonWrap {
+      margin-top: 12px;
+    }
   }
 }

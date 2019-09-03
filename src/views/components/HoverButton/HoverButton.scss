@@ -1,4 +1,5 @@
 @import '~styles/variable';
+@import '~styles/mixin';
 
 .HoverButton {
   position: relative;
@@ -30,6 +31,12 @@
     & > div {
       background: white;
       border: 1px solid $fc-main;
+    }
+  }
+  @include mobile {
+    & > div {
+      opacity: 1;
+      transform: translate3d(6px, 6px, 0);
     }
   }
 }

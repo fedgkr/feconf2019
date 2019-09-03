@@ -6,7 +6,7 @@ interface HoverButtonProps {
   title: string;
   style?: CSSProperties;
   filled?: boolean;
-  width?: number;
+  width?: number | string;
   href?: string;
   onClick?: () => void;
 }

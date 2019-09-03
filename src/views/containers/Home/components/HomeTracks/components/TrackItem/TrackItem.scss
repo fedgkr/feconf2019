@@ -1,4 +1,5 @@
 @import '~styles/variable';
+@import '~styles/mixin';
 
 .TrackItem {
   position: relative;
@@ -11,6 +12,7 @@
   &.isMain {
     border-right: 1px solid $fc-main;
     .Info {
+      position: relative;
       .Name {
         padding-right: 0;
         padding-left: 38px;
@@ -61,6 +63,51 @@
       font-weight: 700;
       color: $fc-black;
       word-break: keep-all;
+    }
+  }
+  .Mobile {
+    display: none;
+    font-size: 14px;
+    .Name {
+      display: inline-block;
+      margin-left: 12px;
+      color: #312d3e;
+    }
+    .TrackName {
+      margin-top: 4px;
+      word-break: keep-all;
+      text-align: left;
+      color: $fc-black;
+      font-weight: 700;
+    }
+  }
+  @include mobile {
+    height: auto;
+    &.isMain {
+      border-right: none;
+    }
+    &:not(.isMain) {
+      display: flex;
+      justify-content: flex-start;
+    }
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+    .Info {
+      display: none;
+    }
+    .Time {
+      display: none;
+    }
+    .Mobile {
+      display: flex;
+      flex-direction: column;
+      .MobileTime {
+        position: relative;
+        color: $fc-main;
+        font-size: 14px;
+        font-weight: 700;
+      }
     }
   }
 }
