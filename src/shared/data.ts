@@ -1,5 +1,4 @@
 import {Company, Speaker, SponsorGrade, Track, TrackType} from "./interfaces";
-import {shuffle} from "./utils";
 
 export const timetable = [
   '11:00 - 11:40',

@@ -1,3 +1,4 @@
+@import '~styles/mixin';
 @import '~styles/variable';
 
 .Header {
@@ -33,13 +34,29 @@
         }
       }
     }
-    button {
-      font-size: 14px;
-      padding: 14px 24px 12px 24px;
-      border: 1px solid $fc-main;
-      color: $fc-main;
-      font-weight: 700;
-      cursor: pointer;
+  }
+  .Hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16px;
+    & > div {
+      width: 20px;
+      height: 4px;
+      background: $fc-main;
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
+    }
+  }
+  @include tablet {
+    padding: 0 30px;
+  }
+  @include mobile {
+    padding: 0 24px;
+    height: 60px;
+    img {
+      width: 40px;
     }
   }
 }

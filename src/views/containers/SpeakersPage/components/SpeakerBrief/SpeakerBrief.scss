@@ -1,3 +1,5 @@
+@import '~styles/mixin';
+
 .SpeakerBrief {
   display: flex;
   flex-direction: column;
@@ -25,5 +27,11 @@
   }
   .Name {
     font-weight: 700;
+  }
+  @include tablet {
+    width: 140px;
+    .ProfileImage {
+      height: 140px;
+    }
   }
 }
