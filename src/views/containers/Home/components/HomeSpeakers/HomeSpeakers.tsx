@@ -23,8 +23,8 @@ const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
         <div className={css.ButtonWrap}>
           <HoverButton
             title="스피커 모두 보기"
-            width={isMobile ? "100%" : 300}
             filled={false}
+            width={isMobile ? "100%" : 300}
             onClick={() => fold(!isFold)}
           />
         </div> : null

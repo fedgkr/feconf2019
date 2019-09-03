@@ -1,3 +1,5 @@
+@import '~styles/mixin';
+
 .HomeBanner {
   margin-top: 120px;
   .Banner {
@@ -7,5 +9,8 @@
   .ButtonWrap {
     margin-top: 60px;
     text-align: center;
+  }
+  @include mobile {
+    display: none;
   }
 }

@@ -6,6 +6,7 @@ import Track from "./components/Track/Track";
 import {getSpeakers} from "../../../../../shared/data";
 import {TrackType} from "../../../../../shared/interfaces";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
+import useResponsive from "../../../../../shared/hooks/useResponsive";
 
 interface HomeTracksProps {
 }
@@ -16,6 +17,7 @@ const trackBSpeakers = getSpeakers(TrackType.B);
 const HomeTracks: React.FC<HomeTracksProps> = () => {
   const [isFold, fold] = useState(true);
   const [selectedTrack, setSelectedTrack] = useState(1);
+  const {isMobile} = useResponsive();
   return (
     <div className={cc(['container', css.HomeTracks])}>
       <TitleHero title="2 Tracks" subTitle="16 Talks"/>
@@ -65,6 +67,7 @@ const HomeTracks: React.FC<HomeTracksProps> = () => {
           <HoverButton
             title="스케쥴 더 보기"
             filled={false}
+            width={isMobile ? "100%" : 300}
             onClick={() => fold(!isFold)}
           />
         </div> : null

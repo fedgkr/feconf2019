@@ -29,4 +29,22 @@
       padding: 33px 30px 50px 30px;
     }
   }
+  @include mobile {
+    margin-top: 60px;
+    .Content {
+      flex-direction: column;
+      padding: 24px;
+      margin-bottom: 84px;
+      .Info {
+        .Links {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px;
+          & >  a:first-child {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
 }

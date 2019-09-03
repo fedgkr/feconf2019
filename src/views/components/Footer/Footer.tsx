@@ -18,9 +18,11 @@ const Footer: React.FC<FooterProps> = () => {
             <a target="_blank" href="mailto:feconf@googlegroups.com">Mail</a>
           </div>
         </div>
-        <div className={css.Links}>
-          <Link href="/organizers"><a>FEConf 2019 Organizers</a></Link>
-          <Link href="/coc"><a>Our Code of Conduct</a></Link>
+        <div className={css.Info}>
+          <div className={css.Links}>
+            <Link href="/organizers"><a>FEConf 2019 Organizers</a></Link>
+            <Link href="/coc"><a>Our Code of Conduct</a></Link>
+          </div>
         </div>
       </div>
     </div>

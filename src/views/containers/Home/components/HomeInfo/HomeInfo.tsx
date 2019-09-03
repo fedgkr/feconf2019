@@ -3,11 +3,13 @@ import css from './HomeInfo.scss';
 import TitleHero from "../../../../components/TitleHero/TitleHero";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import cc from "classcat";
+import useResponsive from "../../../../../shared/hooks/useResponsive";
 
 interface HomeInfoProps {
 }
 
 const HomeInfo: React.FC<HomeInfoProps> = () => {
+  const {isMobile} = useResponsive();
   return (
     <div className={cc(['container', css.HomeInfo])}>
       <TitleHero
@@ -31,6 +33,7 @@ const HomeInfo: React.FC<HomeInfoProps> = () => {
         <HoverButton
           title="더 보기"
           filled={false}
+          width={isMobile ? "100%" : 300}
         />
       </div>
     </div>
