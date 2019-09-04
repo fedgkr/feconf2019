@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = () => {
       {isMobile ?
         <a href="#" onClick={e => {
           e.preventDefault();
-          openModal();
+          openModal({ mobileMenu: true });
         }}>
           <div className={css.Hamburger}>
             <div/>

@@ -22,9 +22,6 @@ const Home: React.FC<Props> = () => {
       <HomeInfo/>
       <HomeBanner/>
       <Footer/>
-      <ModalPortal>
-        <MobileMenuModal/>
-      </ModalPortal>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+@import '~styles/mixin';
+
 .SchedulePage {
   position: relative;
   padding-top: 60px;
@@ -5,6 +7,9 @@
   .Date {
     color: #312d3e;
     margin-top: 16px;
+  }
+  .TrackTitle {
+    display: none;
   }
   .TrackWrap {
     display: flex;
@@ -14,5 +19,32 @@
   .ButtonWrap {
     margin-top: 60px;
     text-align: center;
+  }
+  @include mobile {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    .Date {
+      margin-top: 12px;
+      font-size: 12px;
+    }
+    .TrackTitle {
+      display: flex;
+      margin-top: 24px;
+      a {
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 20px;
+        color: #aeaabb;
+        &.selected {
+          color: #230462;
+        }
+      }
+    }
+    .TrackWrap {
+      margin-top: 28px;
+    }
+    .ButtonWrap {
+      margin-top: 32px;
+    }
   }
 }

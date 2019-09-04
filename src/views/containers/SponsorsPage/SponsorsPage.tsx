@@ -4,6 +4,8 @@ import css from './SponsorsPage.scss';
 import {speakers} from "../../../shared/data";
 import TitleHero from "../../components/TitleHero/TitleHero";
 import RowContainer from "../../components/RowContainer/RowContainer";
+import MobileMenuModal from "../../components/modal/MobileMenuModal/MobileMenuModal";
+import ModalPortal from "../../components/modal/ModalPortal/ModalPortal";
 
 interface SponsorsPageProps {
 }

@@ -8,6 +8,15 @@
   font-size: 14px;
   line-height: 20px;
   color: #312d3e;
+  &.loaded {
+    .ProfileImage {
+      opacity: 1;
+    }
+    .Info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   .ProfileImage {
     position: relative;
     font-size: 0;
@@ -15,6 +24,8 @@
     margin-bottom: 24px;
     background: #d8d8d8;
     border-radius: 50%;
+    opacity: 0;
+    transition: opacity .5s cubic-bezier(0.23, 1, 0.32, 1);
     img {
       position: absolute;
       top: 0;
@@ -25,8 +36,13 @@
       border-radius: 50%;
     }
   }
-  .Name {
-    font-weight: 700;
+  .Info {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform .7s cubic-bezier(0.23, 1, 0.32, 1), opacity .7s cubic-bezier(0.23, 1, 0.32, 1);
+    .Name {
+      font-weight: 700;
+    }
   }
   @include tablet {
     width: 140px;

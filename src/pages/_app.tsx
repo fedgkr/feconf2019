@@ -1,9 +1,12 @@
 import App from 'next/app';
+import Router from 'next/router';
 import Head from 'next/head';
 import React from 'react';
 import 'core-js/es/object/assign';
 import '../styles/style.scss';
 import Header from "../views/components/Header/Header";
+import {useModalApi} from "../shared/store";
+import ModalPortal from "../views/components/modal/ModalPortal/ModalPortal";
 
 if (typeof window === 'object') {
   require('intersection-observer');
@@ -11,6 +14,12 @@ if (typeof window === 'object') {
 
 class FEConf2019 extends App {
   public props: any;
+
+  componentDidMount() {
+    Router.events.on('routeChangeStart', () => {
+      useModalApi.setState({ modalOpened: false });
+    });
+  }
 
   public render() {
     const { Component, pageProps } = this.props;
@@ -52,6 +61,7 @@ class FEConf2019 extends App {
         <div className="wrap">
           <Header/>
           <Component {...pageProps}/>
+          <ModalPortal/>
         </div>
         <div id="modal"/>
       </>

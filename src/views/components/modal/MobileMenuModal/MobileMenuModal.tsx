@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import cc from 'classcat';
 import css from './MobileMenuModal.scss';
-import Header from "../../Header/Header";
 import {useModal} from "../../../../shared/store";
 
 interface MobileMenuModalProps {
