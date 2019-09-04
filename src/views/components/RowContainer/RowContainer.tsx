@@ -25,24 +25,31 @@ const RowContainer: React.FC<RowContainerProps> = ({
     <div className={css.RowContainer}>
       {fold ? (
         <div key={0} className={css.Row}>
-          {rowList[0].map((item) => (
+          {rowList[0].map((item, idx) => (
             <SpeakerBrief
               key={item.nameEn}
               speaker={item}
+              order={idx}
             />
           ))}
         </div>
-      ) : rowList.map((row, idx) => (
-        <div key={idx} className={css.Row}>
+      ) : rowList.map((row, listIdx) => (
+        <div key={listIdx} className={css.Row}>
           {row.map((item, idx) => (
             <SpeakerBrief
               key={idx}
               speaker={item}
+              order={(listIdx * 4) + idx}
             />
           ))}
           {row.length < count ?
-            [...Array(count - row.length)].map((_, idx) => <SpeakerBrief speaker={null} key={idx}/>)
-            : null
+            [...Array(count - row.length)].map((_, idx) => (
+              <SpeakerBrief
+                speaker={null}
+                key={idx}
+                order={(listIdx * 4) + idx}
+              />
+            )) : null
           }
         </div>
       ))}
