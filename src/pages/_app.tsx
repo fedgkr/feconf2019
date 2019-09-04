@@ -53,6 +53,7 @@ class FEConf2019 extends App {
           <Header/>
           <Component {...pageProps}/>
         </div>
+        <div id="modal"/>
       </>
     );
   }

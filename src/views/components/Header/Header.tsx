@@ -3,11 +3,13 @@ import Link from 'next/link';
 import css from './Header.scss';
 import HoverButton from "../HoverButton/HoverButton";
 import useResponsive from "../../../shared/hooks/useResponsive";
+import {useModal} from "../../../shared/store";
 
 interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = () => {
+  const { openModal } = useModal();
   const {isMobile} = useResponsive();
   return (
     <div className={css.Header}>
@@ -15,7 +17,10 @@ const Header: React.FC<HeaderProps> = () => {
         <a><img src="/static/images/logo@2x.png" alt="FEConf"/></a>
       </Link>
       {isMobile ?
-        <a href="#">
+        <a href="#" onClick={e => {
+          e.preventDefault();
+          openModal();
+        }}>
           <div className={css.Hamburger}>
             <div/>
             <div/>

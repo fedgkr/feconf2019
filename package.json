@@ -11,7 +11,8 @@
     "next": "^9.0.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-spring": "^8.0.19"
+    "react-spring": "^8.0.19",
+    "zustand": "^1.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
