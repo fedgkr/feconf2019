@@ -7,3 +7,8 @@ $p-font-sz: 24px;
 // Font Color
 $fc-main: #ff5d00;
 $fc-black: #060113;
+
+// Bezier
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);

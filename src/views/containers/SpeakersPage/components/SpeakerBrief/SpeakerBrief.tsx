@@ -3,6 +3,7 @@ import Link from 'next/link';
 import css from './SpeakerBrief.scss';
 import cc from "classcat";
 import {Speaker} from "../../../../../shared/interfaces";
+import {useModal} from "../../../../../shared/store";
 
 interface SpeakerBriefProps {
   speaker: Speaker;
@@ -10,6 +11,7 @@ interface SpeakerBriefProps {
 }
 
 const SpeakerBrief: React.FC<SpeakerBriefProps> = ({ speaker, order }) => {
+  const { openSpeakerDetailModal } = useModal();
   const [loaded, setLoaded] = useState(false);
   const ref = useRef<HTMLImageElement>(null);
   const cssDelay = { transitionDelay: `${order * .05}s` };
@@ -20,11 +22,13 @@ const SpeakerBrief: React.FC<SpeakerBriefProps> = ({ speaker, order }) => {
   }, []);
   return (
     speaker ?
-      <Link
-        href={{ pathname: '/speakers/detail', query: { speakerName: speaker.nameEn } }}
-        // as={`/speakers/jooyoung`}
-      >
-        <a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            openSpeakerDetailModal({ speakerDetail: true }, speaker);
+          }}
+        >
           <div className={cc([css.SpeakerBrief, 'kr-text', loaded ? css.loaded : ''])}>
             <div className={cc([css.ProfileImage])} style={cssDelay}>
               <img
@@ -44,11 +48,8 @@ const SpeakerBrief: React.FC<SpeakerBriefProps> = ({ speaker, order }) => {
             </div>
           </div>
         </a>
-      </Link>
       :
-      <Link href="#">
-        <a><div className={cc([css.SpeakerBrief, css.empty])}></div></a>
-      </Link>
+      <a><div className={cc([css.SpeakerBrief, css.empty])}></div></a>
   );
 }
 

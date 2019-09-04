@@ -37,7 +37,7 @@ const RowContainer: React.FC<RowContainerProps> = ({
         <div key={listIdx} className={css.Row}>
           {row.map((item, idx) => (
             <SpeakerBrief
-              key={idx}
+              key={item.nameEn}
               speaker={item}
               order={(listIdx * 4) + idx}
             />

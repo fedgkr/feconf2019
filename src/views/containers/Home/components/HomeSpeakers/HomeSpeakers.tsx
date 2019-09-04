@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import cc from 'classcat';
 import css from './HomeSpeakers.scss';
 import TitleHero from "../../../../components/TitleHero/TitleHero";
@@ -6,13 +6,19 @@ import HoverButton from "../../../../components/HoverButton/HoverButton";
 import {speakers} from "../../../../../shared/data";
 import RowContainer from "../../../../components/RowContainer/RowContainer";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
+import {useModal} from "../../../../../shared/store";
 
 interface HomeSpeakersProps {
 }
 
 const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
+  const {openSpeakerDetailModal} = useModal();
   const [isFold, fold] = useState(true);
   const {isMobile} = useResponsive();
+  useEffect(() => {
+    openSpeakerDetailModal({ speakerDetail: true }, speakers[0]);
+  }, []);
+
   return (
     <div className={cc(['container', css.HomeSpeakers])}>
       <TitleHero title="2019" subTitle="16 Speakers"/>

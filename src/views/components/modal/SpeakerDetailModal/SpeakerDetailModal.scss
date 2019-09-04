@@ -1,0 +1,185 @@
+@import '~styles/variable';
+
+.SpeakerDetailModal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .BottomWrap {
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 480px;
+    background: white;
+    overflow: hidden;
+    .LeftBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: 530px;
+      background: $fc-main;
+      transform: skew(-25deg) translate(-125px, -100%);
+      animation: SlideDown .6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    .LeftWrap {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      padding: 80px 223px 0 60px;
+      width: 45%;
+      height: 100%;
+      box-sizing: border-box;
+      .ProfileWrap {
+        width: 180px;
+        color: white;
+        text-align: center;
+        .ProfileImage {
+          position: relative;
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          background: #d8d8d8;
+          opacity: 0;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 50%;
+          }
+        }
+        .ProfileName {
+          font-size: 24px;
+          margin: 40px 0 0;
+          opacity: 0;
+        }
+        .ProfileInfo {
+          display: inline-block;
+          font-size: 16px;
+          margin-top: 14px;
+          opacity: 0;
+          color: white;
+        }
+      }
+    }
+    .RightWrap {
+      position: relative;
+      width: 55%;
+      .NavWrap {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 40px;
+        height: 120px;
+        box-sizing: border-box;
+        a {
+          opacity: 0;
+          font-size: 14px;
+          color: #060113;
+        }
+      }
+      .ProfileWrap {
+        padding: 120px 60px 0 0;
+        text-align: right;
+        .ProfileDesc {
+          font-size: 14px;
+          line-height: 19px;
+          color: #312d3e;
+          word-break: keep-all;
+          opacity: 0;
+        }
+        .TrackTime {
+          margin-top: 52px;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 18px;
+          color: #230462;
+          opacity: 0;
+        }
+        .TrackTitle {
+          margin-top: 16px;
+          font-size: 32px;
+          font-weight: 700;
+          color: $fc-black;
+          word-break: keep-all;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &.rendered {
+    .BottomWrap {
+      .LeftWrap {
+        .ProfileWrap {
+          .ProfileImage {
+            animation: SlideUpFadeIn20 .8s .3s $easeOutCirc forwards;
+          }
+          .ProfileName {
+            animation: SlideUpFadeIn20 .6s .4s $easeOutCirc forwards;
+          }
+          .ProfileInfo {
+            animation: SlideUpFadeIn20 .6s .5s $easeOutCirc forwards;
+          }
+        }
+      }
+      .RightWrap {
+        .NavWrap {
+          a {
+            animation: SlideUpFadeIn20 .5s .6s $easeOutCirc forwards;
+          }
+        }
+        .ProfileWrap {
+          .ProfileDesc {
+            animation: SlideRightFadeIn20 .5s .7s $easeOutCirc forwards;
+          }
+          .TrackTime {
+            animation: SlideRightFadeIn20 .5s .8s $easeOutCirc forwards;
+          }
+          .TrackTitle {
+            animation: SlideRightFadeIn20 .5s .9s $easeOutCirc forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes SlideUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes SlideDown {
+  0% { transform: skew(-25deg) translate(-125px, -100%); }
+  100% { transform: skew(-25deg) translate(-125px, 0); }
+}
+
+@keyframes SlideUpFadeIn20 {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes SlideRightFadeIn20 {
+  0% {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
