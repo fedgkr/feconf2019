@@ -1,4 +1,5 @@
 @import '~styles/variable';
+@import '~styles/mixin';
 
 .SpeakerDetailModal {
   position: relative;
@@ -145,6 +146,38 @@
           }
           .TrackTitle {
             animation: SlideRightFadeIn20 .5s .9s $easeOutCirc forwards;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    .BottomWrap {
+      .LeftWrap {
+        padding: 80px 223px 0 20px;
+        .ProfileWrap {
+          width: 90px;
+          .ProfileImage {
+            width: 90px;
+            height: 90px;
+          }
+          .ProfileName {
+            font-size: 18px;
+          }
+          .ProfileInfo {
+            font-size: 13px;
+          }
+        }
+      }
+      .RightWrap {
+        .NavWrap {
+          padding: 0 20px;
+        }
+        .ProfileWrap {
+          padding: 120px 20px 0 0;
+          text-align: right;
+          .TrackTitle {
+            font-size: 24px;
           }
         }
       }
