@@ -23,26 +23,31 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
   }, [speaker]);
   return (
     <div className={cc([css.SpeakerDetailModal, rendered ? css.rendered : ''])}>
-      <div className={cc([css.BottomWrap, 'kr-text'])}>
+      <div
+        className={cc([css.BottomWrap, 'kr-text'])}
+        onClick={e => e.stopPropagation()}
+      >
         <div className={css.LeftBg}/>
         <div className={css.LeftWrap}>
           <div className={cc([css.ProfileWrap])}>
             <div className={css.ProfileImage}>
               <img src={`static/images/speakers/${speaker.image}`} alt={speaker.nameEn}/>
             </div>
-            <h1 className={css.ProfileName}>
-              {speaker.name}
-            </h1>
-            {speaker.company ?
-              <a
-                target="_blank"
-                href={speaker.company.link}
-                className={css.ProfileInfo}
-                onClick={e => e.stopPropagation()}
-              >
-              {speaker.company.name}
-            </a> : null
-            }
+            <div className={css.ProfileTextWrap}>
+              <h1 className={css.ProfileName}>
+                {speaker.name}
+              </h1>
+              {speaker.company ?
+                <a
+                  target="_blank"
+                  href={speaker.company.link}
+                  className={css.ProfileInfo}
+                  onClick={e => e.stopPropagation()}
+                >
+                  {speaker.company.name}
+                </a> : null
+              }
+            </div>
           </div>
         </div>
         <div className={css.RightWrap}>

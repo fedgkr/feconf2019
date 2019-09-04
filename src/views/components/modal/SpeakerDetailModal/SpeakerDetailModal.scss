@@ -53,23 +53,26 @@
             border-radius: 50%;
           }
         }
-        .ProfileName {
-          font-size: 24px;
-          margin: 40px 0 0;
-          opacity: 0;
-        }
-        .ProfileInfo {
-          display: inline-block;
-          font-size: 16px;
-          margin-top: 14px;
-          opacity: 0;
-          color: white;
+        .ProfileTextWrap {
+          .ProfileName {
+            font-size: 24px;
+            margin: 40px 0 0;
+            opacity: 0;
+          }
+          .ProfileInfo {
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 14px;
+            opacity: 0;
+            color: white;
+          }
         }
       }
     }
     .RightWrap {
       position: relative;
       width: 55%;
+      max-width: 570px;
       .NavWrap {
         position: absolute;
         display: flex;
@@ -123,11 +126,13 @@
           .ProfileImage {
             animation: SlideUpFadeIn20 .8s .3s $easeOutCirc forwards;
           }
-          .ProfileName {
-            animation: SlideUpFadeIn20 .6s .4s $easeOutCirc forwards;
-          }
-          .ProfileInfo {
-            animation: SlideUpFadeIn20 .6s .5s $easeOutCirc forwards;
+          .ProfileTextWrap {
+            .ProfileName {
+              animation: SlideUpFadeIn20 .6s .4s $easeOutCirc forwards;
+            }
+            .ProfileInfo {
+              animation: SlideUpFadeIn20 .6s .5s $easeOutCirc forwards;
+            }
           }
         }
       }
@@ -178,6 +183,72 @@
           text-align: right;
           .TrackTitle {
             font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+  @include  mobile {
+    .BottomWrap {
+      display: block;
+      padding: 32px 24px;
+      height: auto;
+      box-sizing: border-box;
+      .LeftBg {
+        display: none;
+      }
+      .LeftWrap {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0;
+        height: auto;
+        .ProfileWrap {
+          display: flex;
+          text-align: left;
+          width: auto;
+          .ProfileImage {
+            width: 72px;
+            height: 72px;
+          }
+          .ProfileTextWrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 20px;
+            color: #312d3e;
+            .ProfileName {
+              font-size: 14px;
+              margin: 0;
+            }
+            .ProfileInfo {
+              font-size: 14px;
+              margin-top: 6px;
+              color: #312d3e;
+            }
+          }
+        }
+      }
+      .RightWrap {
+        width: auto;
+        margin-top: 24px;
+        margin-bottom: 46px;
+        .NavWrap {
+          display: none;
+        }
+        .ProfileWrap {
+          padding: 0;
+          text-align: left;
+          .ProfileDesc {
+            line-height: 20px;
+          }
+          .TrackTime {
+            margin-top: 32px;
+            font-size: 13px;
+          }
+          .TrackTitle {
+            margin-top: 12px;
+            font-size: 20px;
           }
         }
       }
