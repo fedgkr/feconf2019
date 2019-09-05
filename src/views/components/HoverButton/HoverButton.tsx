@@ -30,7 +30,7 @@ const HoverButton: React.FC<HoverButtonProps> = ({
       }}
     >
       <span>{title}</span>
-      <span className="extended">{title}</span>
+      <span>{title}</span>
     </a>
   );
 }

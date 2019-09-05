@@ -12,6 +12,7 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "skipLibCheck": true,
+    "downlevelIteration": true,
     "baseUrl": "./src",
     "typeRoots": [
       "./node_modules/@types",
