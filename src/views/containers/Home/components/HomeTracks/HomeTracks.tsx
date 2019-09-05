@@ -3,7 +3,7 @@ import css from './HomeTracks.scss';
 import TitleHero from "../../../../components/TitleHero/TitleHero";
 import cc from "classcat";
 import Track from "./components/Track/Track";
-import {getSpeakers} from "../../../../../shared/data";
+import {getSpeakers, timeRange} from "../../../../../shared/data";
 import {TrackType} from "../../../../../shared/interfaces";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
@@ -22,7 +22,7 @@ const HomeTracks: React.FC<HomeTracksProps> = () => {
     <div className={cc(['container', css.HomeTracks])}>
       <TitleHero title="2 Tracks" subTitle="14 Talks"/>
       <p className={css.Date}>
-        2019년 10월 26일 토요일, 10AM - 5PM
+        { timeRange }
       </p>
       <div className={css.TrackTitle}>
         <a

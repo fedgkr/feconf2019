@@ -3,7 +3,7 @@ import cc from 'classcat';
 import css from './SchedulePage.scss';
 import TitleHero from "../../components/TitleHero/TitleHero";
 import Track from "../Home/components/HomeTracks/components/Track/Track";
-import {getSpeakers} from "../../../shared/data";
+import {getSpeakers, timeRange} from "../../../shared/data";
 import {TrackType} from "../../../shared/interfaces";
 
 interface SchedulePageProps {
@@ -18,7 +18,7 @@ const SchedulePage: React.FC<SchedulePageProps> = () => {
     <div className={cc(['container', css.SchedulePage])}>
       <TitleHero title="2 Tracks" subTitle="14 Talks"/>
       <p className={css.Date}>
-        2019년 10월 26일 토요일, 10AM - 5PM
+        { timeRange }
       </p>
       <div className={css.TrackTitle}>
         <a

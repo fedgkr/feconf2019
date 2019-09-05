@@ -1,5 +1,7 @@
 import {Company, Speaker, SponsorGrade, Track, TrackType} from "./interfaces";
 
+export const timeRange = '2019년 10월 26일 토요일, 10AM - 6:20PM';
+
 export const titleWords = [
   'Sustainability',
   'Diversity',
