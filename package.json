@@ -38,6 +38,7 @@
     "build:all": "yarn build:main && yarn build:sponsor && yarn build:cfs && yarn build:cname",
     "export": "yarn build:all && touch out/.nojekyll",
     "push": "push-dir --dir=out --branch=gh-pages --cleanup --verbose",
+    "deploy:dev": "yarn build && now out --name feconf2019",
     "deploy": "yarn export && yarn push"
   }
 }
