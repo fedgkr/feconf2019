@@ -8,18 +8,32 @@
   border: 1px solid $fc-main;
   color: $fc-main;
   font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  background: white;
-  & > div {
+  span:first-child {
+    opacity: 0;
+  }
+  span:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-align: center;
+    z-index: 2;
+    background: white;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
     background: $fc-main;
     opacity: 0;
-    z-index: -1;
     transform: translate3d(0, 0, 0);
     transition: opacity .4s ease-out, transform .4s ease-out;
   }
   &:hover {
-    & > div {
+    &:before {
       opacity: 1;
       transform: translate3d(6px, 6px, 0);
     }
@@ -27,14 +41,16 @@
   &.filled {
     border: none;
     color: white;
-    background: $fc-main;
-    & > div {
+    &:before {
       background: white;
       border: 1px solid $fc-main;
     }
+    span:nth-child(2) {
+      background: $fc-main;
+    }
   }
   @include mobile {
-    & > div {
+    &:before {
       opacity: 1;
       transform: translate3d(6px, 6px, 0);
     }

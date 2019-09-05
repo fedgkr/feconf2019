@@ -1,33 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import cc from 'classcat';
 import css from "./Hero.scss";
-import {animated, useTrail} from "react-spring";
+import {animated} from "react-spring";
 import { MainImage } from "../../../../../static/images/main";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
+import {titleWords} from "../../../../../shared/data";
 
 interface HeroProps {
 }
 
-const words = [
-  'Sustainability',
-  'Diversity',
-  'Transparency',
-  'Practical',
-];
-
 const Hero: React.FC<HeroProps> = () => {
   const {isMobile} = useResponsive();
-  const [currentIdx, setIdx] = useState(0);
-  const text = words[currentIdx].split('').map((value, idx) => ({ key: idx, value }));
-  const trail = useTrail(text.length, {
-    transform: 'translate3d(0,0px,0)',
-    opacity: 1,
-    from: {
-      transform: 'translate3d(0,-14px,0)',
-      opacity: 0
-    },
-  });
   return (
     <div className={cc([css.Hero])}>
       <div className={css.Wrap}>
@@ -37,10 +21,10 @@ const Hero: React.FC<HeroProps> = () => {
             <h3>FE Conference 2019</h3>
             <h3>is for</h3>
             <h2>
-              <animated.span>{words[0]}</animated.span>
-              <animated.span>{words[1]}</animated.span>
-              <animated.span>{words[2]}</animated.span>
-              <animated.span>{words[3]}</animated.span>
+              <animated.span>{titleWords[0]}</animated.span>
+              <animated.span>{titleWords[1]}</animated.span>
+              <animated.span>{titleWords[2]}</animated.span>
+              <animated.span>{titleWords[3]}</animated.span>
             </h2>
           </div>
           <p className={cc([css.Info, 'kr-text'])}>

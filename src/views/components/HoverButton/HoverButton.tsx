@@ -29,8 +29,8 @@ const HoverButton: React.FC<HoverButtonProps> = ({
         onClick();
       }}
     >
-      {title}
-      <div className="extended"/>
+      <span>{title}</span>
+      <span className="extended">{title}</span>
     </a>
   );
 }

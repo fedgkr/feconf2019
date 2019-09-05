@@ -48,7 +48,7 @@
           content: '';
           position: absolute;
           top: 0;
-          left: 15px;
+          left: 22px;
           width: 45%;
           height: 100%;
           z-index: -1;
@@ -103,6 +103,9 @@
         h2 {
           font-size: 32px;
           height: 38px;
+        }
+        span:before {
+          left: 15px;
         }
       }
       .Info {

@@ -1,5 +1,12 @@
 import {Company, Speaker, SponsorGrade, Track, TrackType} from "./interfaces";
 
+export const titleWords = [
+  'Sustainability',
+  'Diversity',
+  'Transparency',
+  'Growth',
+];
+
 export const timetable = [
   '11:00 - 11:40',
   '11:50 - 12:30',
