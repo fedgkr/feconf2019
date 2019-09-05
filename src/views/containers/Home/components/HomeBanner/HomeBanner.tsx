@@ -11,7 +11,7 @@ const HomeBanner: React.FC<HomeBannerProps> = () => {
     <div className={css.HomeBanner}>
       <div className={css.Banner}>
         {titleWords.map((word) => (
-          <span key={word} className={css.Word}>{word}</span>
+          <div key={word} className={css.Word}><span>{word}</span></div>
         ))}
         <div>
           {[...Array(7).keys()].map((idx) => (

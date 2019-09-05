@@ -14,26 +14,17 @@ const RowContainer: React.FC<RowContainerProps> = ({
   fold = true,
   items = [],
 }) => {
-  const rowList = items.reduce((acc, item, idx) => {
+  let rowList = items.reduce((acc, item, idx) => {
     if (idx % count === 0) {
       acc.push([]);
     }
     acc[acc.length - 1].push(item);
     return acc;
   }, []);
+  rowList = fold ? rowList.splice(0, 1) : rowList;
   return (
     <div className={css.RowContainer}>
-      {fold ? (
-        <div key={0} className={css.Row}>
-          {rowList[0].map((item, idx) => (
-            <SpeakerBrief
-              key={item.nameEn}
-              speaker={item}
-              order={idx}
-            />
-          ))}
-        </div>
-      ) : rowList.map((row, listIdx) => (
+      {rowList.map((row, listIdx) => (
         <div key={listIdx} className={css.Row}>
           {row.map((item, idx) => (
             <SpeakerBrief
