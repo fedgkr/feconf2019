@@ -1,0 +1,27 @@
+@import '~styles/variable';
+@import '~styles/mixin';
+
+.FloatingMobileBtn {
+  position: fixed;
+  left: 24px;
+  right: 24px;
+  bottom: 16px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 700;
+  height: 52px;
+  transform: translateY(calc(100% + 18px));
+  transition: opacity .5s cubic-bezier(.215,.61,.355,1), transform .5s cubic-bezier(.215,.61,.355, 1);
+  background: $fc-main;
+  color: white;
+  z-index: 99;
+  &.visible {
+    transform: translateY(0);
+  }
+  @include mobile {
+    display: flex;
+  }
+}

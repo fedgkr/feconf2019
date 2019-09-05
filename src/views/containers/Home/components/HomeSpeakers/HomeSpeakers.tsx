@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {MutableRefObject, useState} from 'react';
 import cc from 'classcat';
 import css from './HomeSpeakers.scss';
 import TitleHero from "../../../../components/TitleHero/TitleHero";
@@ -8,14 +8,14 @@ import RowContainer from "../../../../components/RowContainer/RowContainer";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
 
 interface HomeSpeakersProps {
+  wrapRef: MutableRefObject<HTMLDivElement>;
 }
 
-const HomeSpeakers: React.FC<HomeSpeakersProps> = () => {
+const HomeSpeakers: React.FC<HomeSpeakersProps> = ({ wrapRef }) => {
   const [isFold, fold] = useState(true);
   const {isMobile} = useResponsive();
-
   return (
-    <div className={cc(['container', css.HomeSpeakers])}>
+    <div ref={wrapRef} className={cc(['container', css.HomeSpeakers])}>
       <TitleHero title="2019" subTitle="16 Speakers"/>
       <div className={css.SpeakerList}>
         <RowContainer count={4} fold={isFold} items={speakers}/>

@@ -21,6 +21,7 @@ const Footer: React.FC<FooterProps> = () => {
         <div className={css.Info}>
           <div className={css.Links}>
             <Link href="/organizers"><a>FEConf 2019 Organizers</a></Link>
+            <span> / </span>
             <Link href="/coc"><a>Our Code of Conduct</a></Link>
           </div>
         </div>

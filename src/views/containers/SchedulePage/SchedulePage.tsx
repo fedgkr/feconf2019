@@ -16,7 +16,7 @@ const SchedulePage: React.FC<SchedulePageProps> = () => {
   const [selectedTrack, setSelectedTrack] = useState(1);
   return (
     <div className={cc(['container', css.SchedulePage])}>
-      <TitleHero title="2 Tracks" subTitle="16 Talks"/>
+      <TitleHero title="2 Tracks" subTitle="14 Talks"/>
       <p className={css.Date}>
         2019년 10월 26일 토요일, 10AM - 5PM
       </p>
