@@ -124,7 +124,7 @@ export const tracks: Track[] = [
   {
     type: TrackType.B,
     order: 3,
-    title: '프론트엔드에서의 마이크로 서비스 아키텍처 (postMessage API로 iframe 재발명하기)',
+    title: '프론트엔드에서의 마이크로 서비스 아키텍처',
     description: 'Front-end에서의 Micro-service Architecture는 Side-Effect의 물리적인 차단을 통해 높은 수준의 제품 안정성을 보장 할 수 있도록 합니다. 또한 코드를 작은 단위로 분리해내므로 새로운 Feature를 추가하는데 드는 개발 사이클 시간을 획기적으로 단축 할 수 있습니다. 해당 발표에서는 해당 Architecture 전략에 대한 자세한 설명과 이를 iframe과 postMessage API을 사용한 SDK로 개발, 구현한 방법에 대해 소개합니다.',
   },
   {
@@ -252,7 +252,7 @@ export const speakers: Speaker[] = [
   {
     name: '원지혁',
     nameEn: 'tony',
-    description: 'GraphQL과 React를 좋아하는 잡식 개발자입니다. Vue.js로 프론트엔드 개발을 시작해, 현재는 TypeScript와 React.js를 주로 사용합니다. 실시간 교육 서비스인 Erion을 창업해 현재 CTO로 개발중이며, AWSKRUG GraphQL 소모임의 오거나이저로 활동하고 있습니다.',
+    description: 'GraphQL과 React를 좋아하는 잡식 개발자입니다. Vue.js로 프론트엔드 개발을 시작해, 현재는 TypeScript와 React.js를 주로 사용합니다. 실시간 교육 서비스인 Erion을 창업해 현재 CTO로 개발중이며, GraphQL Korea와 AWSKRUG GraphQL 소모임에서 Organizer로 활동하고 있습니다.',
     image: 'tony.jpg',
     company: getCompany('Erion Company'),
     track: getTrack(TrackType.A, 4),
