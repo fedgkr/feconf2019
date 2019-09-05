@@ -188,7 +188,7 @@
       }
     }
   }
-  @include  mobile {
+  @include mobile {
     .BottomWrap {
       display: block;
       padding: 32px 24px;
@@ -196,6 +196,9 @@
       box-sizing: border-box;
       .LeftBg {
         display: none;
+        background: #e7e7e7;
+        transform: skew(-25deg);
+        animation: SlideDownMobile .6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       }
       .LeftWrap {
         position: relative;
@@ -262,6 +265,11 @@
 }
 
 @keyframes SlideDown {
+  0% { transform: skew(-25deg) translate(-125px, -100%); }
+  100% { transform: skew(-25deg) translate(-125px, 0); }
+}
+
+@keyframes SlideDownMobile {
   0% { transform: skew(-25deg) translate(-125px, -100%); }
   100% { transform: skew(-25deg) translate(-125px, 0); }
 }

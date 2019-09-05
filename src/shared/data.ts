@@ -65,6 +65,10 @@ export const companies: Company[] = [
     name: '주식회사 체커',
     link: 'https://www.chequer.io',
   },
+  {
+    name: 'KossLab',
+    link: 'https://kosslab.kr',
+  }
 ];
 
 export const tracks: Track[] = [

@@ -11,6 +11,9 @@ interface HeroProps {
 
 const words = [
   'Sustainability',
+  'Diversity',
+  'Transparency',
+  'Practical',
 ];
 
 const Hero: React.FC<HeroProps> = () => {
@@ -35,6 +38,9 @@ const Hero: React.FC<HeroProps> = () => {
             <h3>is for</h3>
             <h2>
               <animated.span>{words[0]}</animated.span>
+              <animated.span>{words[1]}</animated.span>
+              <animated.span>{words[2]}</animated.span>
+              <animated.span>{words[3]}</animated.span>
             </h2>
           </div>
           <p className={cc([css.Info, 'kr-text'])}>
