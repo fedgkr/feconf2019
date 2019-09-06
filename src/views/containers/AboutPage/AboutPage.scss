@@ -1,3 +1,11 @@
+@import '~styles/mixin';
+
 .AboutPage {
   position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include mobile {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }

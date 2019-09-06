@@ -14,4 +14,13 @@ module.exports = sass({
     config.resolve.modules.push(path.resolve('./src'));
     return config;
   },
+  exportPathMap: function () {
+    return {
+      '/': { page: '/' },
+      '/about/index': { page: '/about' },
+      '/speakers/index': { page: '/speakers' },
+      '/schedule/index': { page: '/schedule' },
+      '/sponsors/index': { page: '/sponsors' },
+    }
+  }
 });
