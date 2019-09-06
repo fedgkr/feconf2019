@@ -26,7 +26,7 @@ const HomeBanner: React.FC<HomeBannerProps> = () => {
       </div>
       <div className={css.ButtonWrap}>
         <HoverButton
-          title="2019 FEConf 참가 신청하기"
+          title="FEConf2019 참가 신청하기"
         />
       </div>
     </div>

@@ -27,26 +27,31 @@ const HomeTracks: React.FC<HomeTracksProps> = () => {
           { timeRange }
         </p>
         <div className={css.TrackTitle}>
-          <a
-            className={selectedTrack === 1 ? css.selected : ''}
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setSelectedTrack(1);
-            }}
-          >
-            Track1
-          </a>
-          <a
-            className={selectedTrack === 2 ? css.selected : ''}
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setSelectedTrack(2);
-            }}
-          >
-            Track2
-          </a>
+          <div>
+            <a
+              className={selectedTrack === 1 ? css.selected : ''}
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedTrack(1);
+              }}
+            >
+              <span>Track1</span>
+            </a>
+            <a
+              className={selectedTrack === 2 ? css.selected : ''}
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedTrack(2);
+              }}
+            >
+              Track2
+            </a>
+          </div>
+          <div>
+            <span>({selectedTrack === 1 ? '오디토리움' : '컨퍼런스룸'})</span>
+          </div>
         </div>
         <div className={css.TrackWrap}>
           <Track
