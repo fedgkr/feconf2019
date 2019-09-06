@@ -14,11 +14,4 @@ module.exports = sass({
     config.resolve.modules.push(path.resolve('./src'));
     return config;
   },
-  exportPathMap: function () {
-    return {
-      '/': { page: '/' },
-      '/speakers/index': { page: '/speakers' },
-      '/speakers/jooyoung/index': { page: '/speakers/detail' },
-    }
-  }
 });

@@ -4,8 +4,7 @@ import css from './SponsorsPage.scss';
 import {speakers} from "../../../shared/data";
 import TitleHero from "../../components/TitleHero/TitleHero";
 import RowContainer from "../../components/RowContainer/RowContainer";
-import MobileMenuModal from "../../components/modal/MobileMenuModal/MobileMenuModal";
-import ModalPortal from "../../components/modal/ModalPortal/ModalPortal";
+import Footer from "../../components/Footer/Footer";
 
 interface SponsorsPageProps {
 }
@@ -17,6 +16,7 @@ const SponsorsPage: React.FC<SponsorsPageProps> = () => {
       <div className={css.SponsorList}>
         <RowContainer count={4} fold={false} items={speakers}/>
       </div>
+      <Footer/>
     </div>
   );
 }

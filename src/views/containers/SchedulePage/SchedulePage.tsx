@@ -5,6 +5,7 @@ import TitleHero from "../../components/TitleHero/TitleHero";
 import Track from "../Home/components/HomeTracks/components/Track/Track";
 import {getSpeakers, timeRange} from "../../../shared/data";
 import {TrackType} from "../../../shared/interfaces";
+import Footer from "../../components/Footer/Footer";
 
 interface SchedulePageProps {
 }
@@ -46,6 +47,7 @@ const SchedulePage: React.FC<SchedulePageProps> = () => {
         <Track title="Track 1" isMain={true} isFold={false} speakers={trackASpeakers} selected={selectedTrack === 1}/>
         <Track title="Track 2" isMain={false} isFold={false} speakers={trackBSpeakers} selected={selectedTrack === 2}/>
       </div>
+      <Footer/>
     </div>
   );
 }
