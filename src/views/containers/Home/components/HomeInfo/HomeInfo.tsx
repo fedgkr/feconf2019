@@ -23,14 +23,16 @@ const HomeInfo: React.FC<HomeInfoProps> = () => {
         />
         <Intro/>
         <CoC fold={isFold} />
-        <div className={css.ButtonWrap}>
-          <HoverButton
-            title="더 보기"
-            filled={false}
-            width={isMobile ? "100%" : 300}
-            onClick={() => fold(!isFold)}
-          />
-        </div>
+        {isFold ?
+          <div className={css.ButtonWrap}>
+            <HoverButton
+              title="더 보기"
+              filled={false}
+              width={isMobile ? "100%" : 300}
+              onClick={() => fold(!isFold)}
+            />
+          </div> : null
+        }
       </div>
     </Viewable>
   );
