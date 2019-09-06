@@ -18,7 +18,7 @@ const HomeSpeakers: React.FC<HomeSpeakersProps> = ({ wrapRef }) => {
   return (
     <Viewable>
       <div ref={wrapRef} className={cc(['container', css.HomeSpeakers])}>
-        <TitleHero title="2019" subTitle="16 Speakers"/>
+        <TitleHero title="2019" subTitle={`${speakers.length} Speakers`}/>
         <div className={css.SpeakerList}>
           <RowContainer count={4} fold={isFold} items={speakers}/>
         </div>
