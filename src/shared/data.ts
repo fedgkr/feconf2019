@@ -178,98 +178,15 @@ export const speakers: Speaker[] = [
     sns: {},
   },
   {
-    name: '한장현',
-    nameEn: 'janghyun',
-    description: 'Angular를 더 잘 쓰고 싶어하는 개발자입니다. Angular 공식 한국어 가이드 angular.kr을 운영하고 있습니다.',
-    image: 'janghyun.jpg',
-    company: getCompany('카카오뱅크'),
-    track: getTrack(TrackType.B, 0),
-    sns: {
-      github: 'https://github.com/han41858',
-    },
-  },
-  {
-    name: '최연규',
-    nameEn: 'yungyu',
-    description: '네이버 FE플랫폼에서 egjs라는 UI컴퍼넌트 오픈소스를 개발하고 있습니다. daybrush라는 이름으로 오픈소스 활동하고 있으며 최근에는 Scene.js와 Moveable 개발해 많은 인기를 끌고 있습니다.',
-    image: 'yungyu.jpg',
-    company: getCompany('네이버'),
-    track: getTrack(TrackType.A, 1),
-    sns: {
-      github: 'https://github.com/daybrush',
-    },
-  },
-  {
-    name: '유상엽',
-    nameEn: 'sangyeob',
-    description: 'React와 자율출퇴근을 사랑하는 프론트엔드 개발자입니다.',
-    image: 'sangyeob.jpg',
-    company: getCompany('Lunit Inc'),
-    track: getTrack(TrackType.B, 1),
-    sns: {
-      link: 'https://medium.com/@Dev_Bono',
-    },
-  },
-  {
-    name: '장기효',
-    nameEn: 'gihyo',
-    description: '재밌는 지식과 기술을 정리해 공유하는 걸 좋아하는 현직 프런트엔드 개발자. 틈틈이 오프라인 강의와 온라인 강의를 진행하고 있으며 Do it! Vue.js 입문 책을 집필했다. 맛있는 맥주와 마블 시리즈를 좋아한다.',
-    image: 'gihyo.jpg',
-    company: getCompany('KossLab'),
-    track: getTrack(TrackType.A, 2),
-    sns: {
-      github: 'https://github.com/joshua1988/',
-    },
-  },
-  {
     name: '이소영',
     nameEn: 'soyoung',
     description: '안녕하세요, 0.9년차 프론트엔드 개발자 입니다. 계란찜과 양고기를 좋아하며 만두를 닮았습니다.',
     image: 'soyoung.jpg',
     company: getCompany('뱅크샐러드'),
-    track: getTrack(TrackType.B, 2),
+    track: getTrack(TrackType.B, 0),
     sns: {
       github: 'https://github.com/SoYoung210',
     },
-  },
-  {
-    name: '오창영',
-    nameEn: 'changyoung',
-    description: '영상통화 서비스 Wave를 React Native로 개발하고 있습니다.',
-    image: 'changyoung.jpg',
-    company: getCompany('Wave Corporation'),
-    track: getTrack(TrackType.A, 3),
-    sns: {},
-  },
-  {
-    name: '조화수',
-    nameEn: 'hwasoo',
-    description: '프로덕트를 좋아합니다. 완성도 높은 프로덕트를 개발하기 위해 백앤드, 프론트앤드, UX 무관 뭐든지 열심히 배우고 있습니다. 최근에는 Flutter로 사이드 프로젝트 개발하는 재미에 푹 빠져있습니다.',
-    image: 'hwasoo.jpg',
-    track: getTrack(TrackType.B, 3),
-    sns: {
-      twitter: 'https://twitter.com/developerhenry',
-    },
-  },
-  {
-    name: '원지혁',
-    nameEn: 'tony',
-    description: 'GraphQL과 React를 좋아하는 잡식 개발자입니다. Vue.js로 프론트엔드 개발을 시작해, 현재는 TypeScript와 React.js를 주로 사용합니다. 실시간 교육 서비스인 Erion을 창업해 현재 CTO로 개발중이며, GraphQL Korea와 AWSKRUG GraphQL 소모임에서 Organizer로 활동하고 있습니다.',
-    image: 'tony.jpg',
-    company: getCompany('Erion Company'),
-    track: getTrack(TrackType.A, 4),
-    sns: {
-      github: 'https://github.com/tonyfromundefined',
-    },
-  },
-  {
-    name: '천민호',
-    nameEn: 'minho',
-    description: '다른 사람이 봐도 감탄할 수 있는 아키텍처를 설계할 수 있는 사람이 되기 위해 계속해서 고민하는 FE 개발자 입니다.',
-    image: 'minho.jpg',
-    company: getCompany('PUBG'),
-    track: getTrack(TrackType.B, 4),
-    sns: {},
   },
   {
     name: '유인동',
@@ -277,7 +194,7 @@ export const speakers: Speaker[] = [
     description: '마플 CTO',
     image: 'indong.jpg',
     company: getCompany('마플'),
-    track: getTrack(TrackType.A, 5),
+    track: getTrack(TrackType.A, 1),
     sns: {
       github: 'https://github.com/indongyoo',
     },
@@ -288,20 +205,70 @@ export const speakers: Speaker[] = [
     description: '안녕하세요 🙌 맥주와 코딩을 사랑하는 개발자 나석주입니다. 웹 기술을 이용해 퀄리티 높은 UI를 만드는데 관심이 있습니다. React를 주로 다루지만, Angular 프레임워크를 좋아합니다.',
     image: 'seokju.jpg',
     company: getCompany('비바리퍼블리카'),
-    track: getTrack(TrackType.B, 5),
+    track: getTrack(TrackType.B, 1),
     sns: {
       github: 'https://github.com/seokju-na',
     },
   },
   {
-    name: '곽희범',
-    nameEn: 'heebeom',
-    description: '리눅스용 클라이언트 개발과 Node.js 서버 개발을 하다 JavaScript가 좋아서 프런트엔드 개발을 시작하게 되었습니다. 현재는 LINE Financial Plus에서 주로 글로벌 파이낸셜 서비스를 만들고 있습니다.',
-    image: 'heebeom.jpg',
-    company: getCompany('LINE Financial Plus'),
-    track: getTrack(TrackType.A, 6),
+    name: '오창영',
+    nameEn: 'changyoung',
+    description: '영상통화 서비스 Wave를 React Native로 개발하고 있습니다.',
+    image: 'changyoung.jpg',
+    company: getCompany('Wave Corporation'),
+    track: getTrack(TrackType.A, 2),
+    sns: {},
+  },
+  {
+    name: '조화수',
+    nameEn: 'hwasoo',
+    description: '프로덕트를 좋아합니다. 완성도 높은 프로덕트를 개발하기 위해 백앤드, 프론트앤드, UX 무관 뭐든지 열심히 배우고 있습니다. 최근에는 Flutter로 사이드 프로젝트 개발하는 재미에 푹 빠져있습니다.',
+    image: 'hwasoo.jpg',
+    track: getTrack(TrackType.B, 2),
     sns: {
-      link: 'https://norux.me',
+      twitter: 'https://twitter.com/developerhenry',
+    },
+  },
+  {
+    name: '유상엽',
+    nameEn: 'sangyeob',
+    description: 'React와 자율출퇴근을 사랑하는 프론트엔드 개발자입니다.',
+    image: 'sangyeob.jpg',
+    company: getCompany('Lunit Inc'),
+    track: getTrack(TrackType.A, 3),
+    sns: {
+      link: 'https://medium.com/@Dev_Bono',
+    },
+  },
+  {
+    name: '원지혁',
+    nameEn: 'tony',
+    description: 'GraphQL과 React를 좋아하는 잡식 개발자입니다. Vue.js로 프론트엔드 개발을 시작해, 현재는 TypeScript와 React.js를 주로 사용합니다. 실시간 교육 서비스인 Erion을 창업해 현재 CTO로 개발중이며, GraphQL Korea와 AWSKRUG GraphQL 소모임에서 Organizer로 활동하고 있습니다.',
+    image: 'tony.jpg',
+    company: getCompany('Erion Company'),
+    track: getTrack(TrackType.B, 3),
+    sns: {
+      github: 'https://github.com/tonyfromundefined',
+    },
+  },
+  {
+    name: '천민호',
+    nameEn: 'minho',
+    description: '다른 사람이 봐도 감탄할 수 있는 아키텍처를 설계할 수 있는 사람이 되기 위해 계속해서 고민하는 FE 개발자 입니다.',
+    image: 'minho.jpg',
+    company: getCompany('PUBG'),
+    track: getTrack(TrackType.A, 4),
+    sns: {},
+  },
+  {
+    name: '최연규',
+    nameEn: 'yungyu',
+    description: '네이버 FE플랫폼에서 egjs라는 UI컴퍼넌트 오픈소스를 개발하고 있습니다. daybrush라는 이름으로 오픈소스 활동하고 있으며 최근에는 Scene.js와 Moveable 개발해 많은 인기를 끌고 있습니다.',
+    image: 'yungyu.jpg',
+    company: getCompany('네이버'),
+    track: getTrack(TrackType.B, 4),
+    sns: {
+      github: 'https://github.com/daybrush',
     },
   },
   {
@@ -310,11 +277,48 @@ export const speakers: Speaker[] = [
     description: '15년 경력의 JavaScript Full Stack 개발자, 모르는 것 빼고 다 아는 잡학다식 개발자. Facebook Developer Circle Seoul 리더, React Korea 운영, 자바스크립트 개발자 포럼 운영',
     image: 'dongwoo.jpg',
     company: getCompany('주식회사 체커'),
-    track: getTrack(TrackType.B, 6),
+    track: getTrack(TrackType.A, 5),
     sns: {
       facebook: 'https://www.facebook.com/woo.gim',
     },
   },
+  {
+    name: '곽희범',
+    nameEn: 'heebeom',
+    description: '리눅스용 클라이언트 개발과 Node.js 서버 개발을 하다 JavaScript가 좋아서 프런트엔드 개발을 시작하게 되었습니다. 현재는 LINE Financial Plus에서 주로 글로벌 파이낸셜 서비스를 만들고 있습니다.',
+    image: 'heebeom.jpg',
+    company: getCompany('LINE Financial Plus'),
+    track: getTrack(TrackType.B, 5),
+    sns: {
+      link: 'https://norux.me',
+    },
+  },
+  {
+    name: '한장현',
+    nameEn: 'janghyun',
+    description: 'Angular를 더 잘 쓰고 싶어하는 개발자입니다. Angular 공식 한국어 가이드 angular.kr을 운영하고 있습니다.',
+    image: 'janghyun.jpg',
+    company: getCompany('카카오뱅크'),
+    track: getTrack(TrackType.A, 6),
+    sns: {
+      github: 'https://github.com/han41858',
+    },
+  },
+  {
+    name: '장기효',
+    nameEn: 'gihyo',
+    description: '재밌는 지식과 기술을 정리해 공유하는 걸 좋아하는 현직 프런트엔드 개발자. 틈틈이 오프라인 강의와 온라인 강의를 진행하고 있으며 Do it! Vue.js 입문 책을 집필했다. 맛있는 맥주와 마블 시리즈를 좋아한다.',
+    image: 'gihyo.jpg',
+    company: getCompany('KossLab'),
+    track: getTrack(TrackType.B, 6),
+    sns: {
+      github: 'https://github.com/joshua1988/',
+    },
+  },
+
+
+
+
 ];
 
 export function getCompany(name: string) {
