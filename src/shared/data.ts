@@ -214,7 +214,7 @@ export const speakers: Speaker[] = [
     name: '장기효',
     nameEn: 'gihyo',
     description: '재밌는 지식과 기술을 정리해 공유하는 걸 좋아하는 현직 프런트엔드 개발자. 틈틈이 오프라인 강의와 온라인 강의를 진행하고 있으며 Do it! Vue.js 입문 책을 집필했다. 맛있는 맥주와 마블 시리즈를 좋아한다.',
-    image: 'gihyo.png',
+    image: 'gihyo.jpg',
     company: getCompany('KossLab'),
     track: getTrack(TrackType.A, 2),
     sns: {
@@ -225,7 +225,7 @@ export const speakers: Speaker[] = [
     name: '이소영',
     nameEn: 'soyoung',
     description: '안녕하세요, 0.9년차 프론트엔드 개발자 입니다. 계란찜과 양고기를 좋아하며 만두를 닮았습니다.',
-    image: 'soyoung.jpeg',
+    image: 'soyoung.jpg',
     company: getCompany('뱅크샐러드'),
     track: getTrack(TrackType.B, 2),
     sns: {
@@ -236,7 +236,7 @@ export const speakers: Speaker[] = [
     name: '오창영',
     nameEn: 'changyoung',
     description: '영상통화 서비스 Wave를 React Native로 개발하고 있습니다.',
-    image: 'changyoung.jpeg',
+    image: 'changyoung.jpg',
     company: getCompany('Wave Corporation'),
     track: getTrack(TrackType.A, 3),
     sns: {},
@@ -266,7 +266,7 @@ export const speakers: Speaker[] = [
     name: '천민호',
     nameEn: 'minho',
     description: '다른 사람이 봐도 감탄할 수 있는 아키텍처를 설계할 수 있는 사람이 되기 위해 계속해서 고민하는 FE 개발자 입니다.',
-    image: 'minho.jpeg',
+    image: 'minho.jpg',
     company: getCompany('PUBG'),
     track: getTrack(TrackType.B, 4),
     sns: {},
@@ -286,7 +286,7 @@ export const speakers: Speaker[] = [
     name: '나석주',
     nameEn: 'seokju',
     description: '안녕하세요 🙌 맥주와 코딩을 사랑하는 개발자 나석주입니다. 웹 기술을 이용해 퀄리티 높은 UI를 만드는데 관심이 있습니다. React를 주로 다루지만, Angular 프레임워크를 좋아합니다.',
-    image: 'seokju.jpeg',
+    image: 'seokju.jpg',
     company: getCompany('비바리퍼블리카'),
     track: getTrack(TrackType.B, 5),
     sns: {
@@ -297,7 +297,7 @@ export const speakers: Speaker[] = [
     name: '곽희범',
     nameEn: 'heebeom',
     description: '리눅스용 클라이언트 개발과 Node.js 서버 개발을 하다 JavaScript가 좋아서 프런트엔드 개발을 시작하게 되었습니다. 현재는 LINE Financial Plus에서 주로 글로벌 파이낸셜 서비스를 만들고 있습니다.',
-    image: 'heebeom.png',
+    image: 'heebeom.jpg',
     company: getCompany('LINE Financial Plus'),
     track: getTrack(TrackType.A, 6),
     sns: {
