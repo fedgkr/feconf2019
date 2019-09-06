@@ -6,6 +6,7 @@ import cc from "classcat";
 import {speakers} from "../../../../../shared/data";
 import RowContainer from "../../../../components/RowContainer/RowContainer";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
+import Viewable from "../../../../components/Viewable/Viewable";
 
 interface HomeSponsorsProps {
 }
@@ -14,22 +15,24 @@ const HomeSponsors: React.FC<HomeSponsorsProps> = () => {
   const [isFold, fold] = useState(true);
   const {isMobile} = useResponsive();
   return (
-    <div className={cc(['container', css.HomeSponsors])}>
-      <TitleHero title="2019" subTitle="Our Proud Sponsors"/>
-      <div className={css.SponsorList}>
-        <RowContainer count={4} fold={isFold} items={speakers}/>
+    <Viewable>
+      <div className={cc(['container', css.HomeSponsors])}>
+        <TitleHero title="2019" subTitle="Our Proud Sponsors"/>
+        <div className={css.SponsorList}>
+          <RowContainer count={4} fold={isFold} items={speakers}/>
+        </div>
+        {isFold ?
+          <div className={css.ButtonWrap}>
+            <HoverButton
+              title="스폰서 모두 보기"
+              filled={false}
+              width={isMobile ? "100%" : 300}
+              onClick={() => fold(!isFold)}
+            />
+          </div> : null
+        }
       </div>
-      {isFold ?
-        <div className={css.ButtonWrap}>
-          <HoverButton
-            title="스폰서 모두 보기"
-            filled={false}
-            width={isMobile ? "100%" : 300}
-            onClick={() => fold(!isFold)}
-          />
-        </div> : null
-      }
-    </div>
+    </Viewable>
   );
 }
 
