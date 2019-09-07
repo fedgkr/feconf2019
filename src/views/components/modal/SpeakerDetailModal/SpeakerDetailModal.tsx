@@ -82,6 +82,10 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
               className={css.ProfileDesc}
               dangerouslySetInnerHTML={{__html: speaker.track.description}}
             />
+            <p
+              className={css.ProfileTarget}
+              dangerouslySetInnerHTML={{__html: '대상 : ' + speaker.track.target}}
+            />
             <p className={css.TrackTime}>
               2019년 10월 26일 | { timetable[speaker.track.order] } <br/>
               Track {speaker.track.type === 'A' ? 1 : 2}

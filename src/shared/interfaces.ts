@@ -36,6 +36,7 @@ export interface Track {
   order: number;
   title: string;
   description: string;
+  target?: string;
 }
 
 export enum TrackType {

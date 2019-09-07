@@ -94,7 +94,7 @@
         left: 0;
         width: 100%;
         padding: 0 40px;
-        height: 120px;
+        height: 100px;
         box-sizing: border-box;
         a {
           opacity: 0;
@@ -103,7 +103,7 @@
         }
       }
       .ProfileWrap {
-        padding: 120px 60px 0 0;
+        padding: 100px 40px 0 0;
         text-align: right;
         .ProfileDesc {
           font-size: 14px;
@@ -112,8 +112,14 @@
           word-break: keep-all;
           opacity: 0;
         }
+        .ProfileTarget {
+          font-size: 12px;
+          margin-top: 12px;
+          word-break: keep-all;
+          opacity: 0;
+        }
         .TrackTime {
-          margin-top: 52px;
+          margin-top: 24px;
           font-size: 14px;
           font-weight: 700;
           line-height: 18px;
@@ -161,11 +167,14 @@
           .ProfileDesc {
             animation: SlideRightFadeIn20 .5s .7s $easeOutCirc forwards;
           }
-          .TrackTime {
+          .ProfileTarget {
             animation: SlideRightFadeIn20 .5s .8s $easeOutCirc forwards;
           }
-          .TrackTitle {
+          .TrackTime {
             animation: SlideRightFadeIn20 .5s .9s $easeOutCirc forwards;
+          }
+          .TrackTitle {
+            animation: SlideRightFadeIn20 .5s 1s $easeOutCirc forwards;
           }
         }
       }
