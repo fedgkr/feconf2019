@@ -48,6 +48,28 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
                 </a> : null
               }
             </div>
+            <div className={css.ProfileSnsWrap}>
+              {speaker.sns.twitter ?
+                <a href={speaker.sns.twitter} target="_blank">
+                  <img src={'/static/images/icons/twitter.svg'} alt="Twitter Link"/>
+                </a> : null
+              }
+              {speaker.sns.github ?
+                <a href={speaker.sns.github} target="_blank">
+                  <img src={'/static/images/icons/github.svg'} alt="GitHub Link"/>
+                </a> : null
+              }
+              {speaker.sns.facebook ?
+                <a href={speaker.sns.facebook} target="_blank">
+                  <img src={'/static/images/icons/facebook.svg'} alt="Facebook Link"/>
+                </a> : null
+              }
+              {speaker.sns.link ?
+                <a href={speaker.sns.link} target="_blank">
+                  <img src={'/static/images/icons/link.svg'} alt="Link"/>
+                </a> : null
+              }
+            </div>
           </div>
         </div>
         <div className={css.RightWrap}>

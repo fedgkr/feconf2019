@@ -32,7 +32,7 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = () => {
         <li><Link href="/speakers"><a>Speakers</a></Link></li>
         <li><Link href="/schedule"><a>Schedule</a></Link></li>
         <li><Link href="/sponsors"><a>Sponsors</a></Link></li>
-        <li><Link href="/info"><a>Event Information</a></Link></li>
+        <li><Link href="/about"><a>Event Information</a></Link></li>
       </ul>
     </div>
   );
