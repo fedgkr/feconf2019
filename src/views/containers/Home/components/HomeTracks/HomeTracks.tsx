@@ -8,16 +8,14 @@ import {TrackType} from "../../../../../shared/interfaces";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
 import Viewable from "../../../../components/Viewable/Viewable";
+import PreTrack from "../../../../components/PreTrack/PreTrack";
+import Tracks from "../../../../components/Tracks/Tracks";
 
 interface HomeTracksProps {
 }
 
-const trackASpeakers = getSpeakers(TrackType.A);
-const trackBSpeakers = getSpeakers(TrackType.B);
-
 const HomeTracks: React.FC<HomeTracksProps> = () => {
   const [isFold, fold] = useState(true);
-  const [selectedTrack, setSelectedTrack] = useState(1);
   const {isMobile} = useResponsive();
   return (
     <Viewable>
@@ -26,49 +24,8 @@ const HomeTracks: React.FC<HomeTracksProps> = () => {
         <p className={css.Date}>
           { timeRange }
         </p>
-        <div className={css.TrackTitle}>
-          <div>
-            <a
-              className={selectedTrack === 1 ? css.selected : ''}
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setSelectedTrack(1);
-              }}
-            >
-              <span>Track1</span>
-            </a>
-            <a
-              className={selectedTrack === 2 ? css.selected : ''}
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setSelectedTrack(2);
-              }}
-            >
-              Track2
-            </a>
-          </div>
-          <div>
-            <span>({selectedTrack === 1 ? '오디토리움' : '컨퍼런스룸'})</span>
-          </div>
-        </div>
-        <div className={css.TrackWrap}>
-          <Track
-            title="Track 1"
-            isMain={true}
-            isFold={isFold}
-            selected={selectedTrack === 1}
-            speakers={trackASpeakers}
-          />
-          <Track
-            title="Track 2"
-            isMain={false}
-            isFold={isFold}
-            selected={selectedTrack === 2}
-            speakers={trackBSpeakers}
-          />
-        </div>
+        <PreTrack/>
+        <Tracks isFold={isFold} />
         {isFold ?
           <div className={css.ButtonWrap}>
             <HoverButton
