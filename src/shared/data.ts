@@ -27,6 +27,7 @@ export const companies: Company[] = [
   {
     name: '우아한형제들',
     link: 'https://www.woowahan.com',
+    image: 'woowahan.png',
     sponsor: {
       grade: SponsorGrade.Diamond,
     },
@@ -38,6 +39,7 @@ export const companies: Company[] = [
   {
     name: '네이버',
     link: 'https://www.navercorp.com',
+    image: 'naver.png',
     sponsor: {
       grade: SponsorGrade.Platinum,
     },
@@ -65,6 +67,10 @@ export const companies: Company[] = [
   {
     name: '비바리퍼블리카',
     link: 'https://toss.im',
+    image: 'toss.png',
+    sponsor: {
+      grade: SponsorGrade.Diamond,
+    },
   },
   {
     name: 'LINE Financial Plus',
@@ -77,7 +83,63 @@ export const companies: Company[] = [
   {
     name: 'KossLab',
     link: 'https://kosslab.kr',
-  }
+  },
+  {
+    name: 'ncsoft',
+    link: 'http://ncsoft.com',
+    image: 'ncsoft.png',
+    sponsor: {
+      grade: SponsorGrade.Gold,
+    },
+  },
+  {
+    name: 'jetbrains',
+    link: 'https://jetbrains.com',
+    image: 'jetbrains.png',
+    sponsor: {
+      grade: SponsorGrade.Platinum,
+    },
+  },
+  {
+    name: 'peoplefund',
+    link: 'https://www.peoplefund.co.kr',
+    image: 'peoplefund.svg',
+    sponsor: {
+      grade: SponsorGrade.Platinum,
+    },
+  },
+  {
+    name: 'rainist',
+    link: 'https://rainist.com',
+    image: 'rainist.png',
+    sponsor: {
+      grade: SponsorGrade.Platinum,
+    },
+  },
+  {
+    name: 'soomgo',
+    link: 'https://soomgo.com',
+    image: 'soomgo.svg',
+    sponsor: {
+      grade: SponsorGrade.Platinum,
+    },
+  },
+  {
+    name: 'marpple',
+    link: 'https://marpple.com',
+    image: 'marpple.png',
+    sponsor: {
+      grade: SponsorGrade.Platinum,
+    },
+  },
+  {
+    name: 'yanolja',
+    link: 'https://yanolja.com',
+    image: 'yanolja.png',
+    sponsor: {
+      grade: SponsorGrade.Platinum,
+    },
+  },
 ];
 
 export const tracks: Track[] = [
@@ -315,10 +377,6 @@ export const speakers: Speaker[] = [
       github: 'https://github.com/joshua1988/',
     },
   },
-
-
-
-
 ];
 
 export function getCompany(name: string) {
@@ -333,3 +391,6 @@ export function getSpeakers(type: TrackType) {
   return speakers.filter(s => s.track.type === type).sort((a, b) => a.track.order - b.track.order);
 }
 
+export function getSponsors() {
+  return companies.filter(c => !!c.sponsor);
+}

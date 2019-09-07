@@ -16,6 +16,7 @@ export interface Speaker {
 export interface Company {
   name: string;
   link: string;
+  image?: string;
   sponsor?: Sponsor;
 }
 

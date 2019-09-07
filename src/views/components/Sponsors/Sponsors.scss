@@ -1,0 +1,88 @@
+@import '~styles/mixin';
+
+.Sponsors {
+  position: relative;
+  .Row {
+    &:not(:first-child) {
+      margin-top: 52px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #22032b;
+      text-align: center;
+    }
+    .SponsorList {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 40px;
+      font-size: 0;
+      &.DIAMOND {
+        a img {
+          width: 200px;
+        }
+      }
+      &.PLATINUM {
+        a img {
+          width: 150px;
+        }
+      }
+      &.GOLD {
+        a img {
+          width: 120px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .Row {
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+      h2 {
+        font-size: 17px;
+      }
+      .SponsorList {
+        margin-top: 24px;
+        &.DIAMOND {
+          a img {
+            width: 120px;
+          }
+        }
+        &.PLATINUM {
+          a img {
+            width: 90px;
+          }
+        }
+        &.GOLD {
+          a img {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+  @include small {
+    .Row {
+      .SponsorList {
+        &.DIAMOND {
+          a img {
+            width: 120px;
+          }
+        }
+        &.PLATINUM {
+          a img {
+            width: 70px;
+          }
+        }
+        &.GOLD {
+          a img {
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+}
