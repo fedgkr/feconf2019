@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
         </a> :
         <ul className={css.Menu}>
-          <li><Link href="/about"><a>About FE 2019</a></Link></li>
+          <li><Link href="/about"><a>About</a></Link></li>
           <li><Link href="/speakers"><a>Speakers</a></Link></li>
           <li><Link href="/schedule"><a>Schedule</a></Link></li>
           <li><Link href="/sponsors"><a>Sponsors</a></Link></li>

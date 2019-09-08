@@ -5,7 +5,7 @@ import {animated} from "react-spring";
 import { MainImage } from "../../../../../static/images/main";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
-import {applyLink, titleWords} from "../../../../../shared/data";
+import {applyLink, timeRange, titleWords} from "../../../../../shared/data";
 
 interface HeroProps {
 }
@@ -28,9 +28,9 @@ const Hero: React.FC<HeroProps> = () => {
             </h2>
           </div>
           <p className={cc([css.Info, 'kr-text'])}>
-            2019년 10월 26일 토요일 10AM - 5PM <br/>
+            {timeRange} <br/>
             <a target="_blank" href="https://naver.me/GF26VviE">
-              잠실 롯데타워 SKY31
+              롯데월드타워 SKY 31
             </a>
           </p>
           <HoverButton
