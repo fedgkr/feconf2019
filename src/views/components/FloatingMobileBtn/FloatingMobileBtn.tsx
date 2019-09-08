@@ -10,6 +10,7 @@ interface FloatingMobileBtnProps {
 const FloatingMobileBtn: React.FC<FloatingMobileBtnProps> = ({ visible }) => {
   return (
     <a
+      target="_blank"
       href={applyLink}
       className={cc([css.FloatingMobileBtn, 'kr-text', visible ? css.visible : ''])}
     >

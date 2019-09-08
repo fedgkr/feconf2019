@@ -38,6 +38,7 @@ const Header: React.FC<HeaderProps> = () => {
               fontSize: 14,
               padding: '14px 0 13px 0'
             }}
+            target="_blank"
             href={applyLink}
             title="신청하기"
             width={103}

@@ -97,7 +97,7 @@ export const companies: Company[] = [
   {
     name: 'jetbrains',
     link: 'https://jetbrains.com',
-    image: 'jetbrains.png',
+    image: 'jetbrains.svg',
     sponsor: {
       grade: SponsorGrade.Platinum,
     },
@@ -113,7 +113,7 @@ export const companies: Company[] = [
   {
     name: 'rainist',
     link: 'https://rainist.com',
-    image: 'rainist.png',
+    image: 'rainist2.png',
     sponsor: {
       grade: SponsorGrade.Platinum,
     },

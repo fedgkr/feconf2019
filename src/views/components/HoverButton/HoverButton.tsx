@@ -7,12 +7,14 @@ interface HoverButtonProps {
   style?: CSSProperties;
   filled?: boolean;
   width?: number | string;
+  target?: string;
   href?: string;
   onClick?: () => void;
 }
 
 const HoverButton: React.FC<HoverButtonProps> = ({
   title = '',
+  target = '_self',
   filled = true,
   width = 300,
   href = '#',
@@ -21,6 +23,7 @@ const HoverButton: React.FC<HoverButtonProps> = ({
 }) => {
   return (
     <a
+      target={target}
       href={href}
       className={cc([css.HoverButton, 'kr-text', filled ? css.filled : ''])}
       style={{ ...style, width }}

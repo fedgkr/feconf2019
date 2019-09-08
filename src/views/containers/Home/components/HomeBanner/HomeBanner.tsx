@@ -27,6 +27,7 @@ const HomeBanner: React.FC<HomeBannerProps> = () => {
       <div className={css.ButtonWrap}>
         <HoverButton
           title="FEConf2019 참가 신청하기"
+          target="_blank"
           href={applyLink}
         />
       </div>

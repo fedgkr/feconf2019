@@ -34,6 +34,7 @@ const Hero: React.FC<HeroProps> = () => {
             </a>
           </p>
           <HoverButton
+            target="_blank"
             title="참가 신청하기"
             href={applyLink}
             width={isMobile ? "100%" : 300}
