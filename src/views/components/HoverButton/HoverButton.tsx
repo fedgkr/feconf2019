@@ -25,8 +25,10 @@ const HoverButton: React.FC<HoverButtonProps> = ({
       className={cc([css.HoverButton, 'kr-text', filled ? css.filled : ''])}
       style={{ ...style, width }}
       onClick={e => {
-        e.preventDefault();
-        onClick();
+        if (href === '#') {
+          e.preventDefault();
+          onClick();
+        }
       }}
     >
       <span>{title}</span>

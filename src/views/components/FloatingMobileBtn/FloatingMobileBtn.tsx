@@ -1,6 +1,7 @@
 import React from 'react';
 import cc from 'classcat';
 import css from './FloatingMobileBtn.scss';
+import {applyLink} from "../../../shared/data";
 
 interface FloatingMobileBtnProps {
   visible: boolean
@@ -9,7 +10,7 @@ interface FloatingMobileBtnProps {
 const FloatingMobileBtn: React.FC<FloatingMobileBtnProps> = ({ visible }) => {
   return (
     <a
-      href="#"
+      href={applyLink}
       className={cc([css.FloatingMobileBtn, 'kr-text', visible ? css.visible : ''])}
     >
       참가 신청하기

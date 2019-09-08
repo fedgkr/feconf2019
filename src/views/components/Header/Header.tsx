@@ -4,6 +4,7 @@ import css from './Header.scss';
 import HoverButton from "../HoverButton/HoverButton";
 import useResponsive from "../../../shared/hooks/useResponsive";
 import {useModal} from "../../../shared/store";
+import {applyLink} from "../../../shared/data";
 
 interface HeaderProps {
 }
@@ -37,7 +38,7 @@ const Header: React.FC<HeaderProps> = () => {
               fontSize: 14,
               padding: '14px 0 13px 0'
             }}
-            href="/apply"
+            href={applyLink}
             title="신청하기"
             width={103}
             filled={false}

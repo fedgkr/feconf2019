@@ -1,5 +1,7 @@
 import {Company, Speaker, SponsorGrade, Track, TrackType} from "./interfaces";
 
+export const applyLink = 'https://booking.naver.com/booking/5/bizes/263881/items/3170721';
+
 export const timeRange = '2019년 10월 26일 토요일, 10AM - 6:20PM';
 
 export const titleWords = [

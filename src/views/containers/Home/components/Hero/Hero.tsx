@@ -5,7 +5,7 @@ import {animated} from "react-spring";
 import { MainImage } from "../../../../../static/images/main";
 import HoverButton from "../../../../components/HoverButton/HoverButton";
 import useResponsive from "../../../../../shared/hooks/useResponsive";
-import {titleWords} from "../../../../../shared/data";
+import {applyLink, titleWords} from "../../../../../shared/data";
 
 interface HeroProps {
 }
@@ -35,6 +35,7 @@ const Hero: React.FC<HeroProps> = () => {
           </p>
           <HoverButton
             title="참가 신청하기"
+            href={applyLink}
             width={isMobile ? "100%" : 300}
           />
         </div>

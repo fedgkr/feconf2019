@@ -2,7 +2,7 @@ import React from 'react';
 import cc from 'classcat';
 import css from './HomeBanner.scss';
 import HoverButton from "../../../../components/HoverButton/HoverButton";
-import {titleWords} from "../../../../../shared/data";
+import {applyLink, titleWords} from "../../../../../shared/data";
 import {useInteraction} from "../../../../components/Viewable/Viewable";
 
 interface HomeBannerProps {
@@ -27,6 +27,7 @@ const HomeBanner: React.FC<HomeBannerProps> = () => {
       <div className={css.ButtonWrap}>
         <HoverButton
           title="FEConf2019 참가 신청하기"
+          href={applyLink}
         />
       </div>
     </div>
