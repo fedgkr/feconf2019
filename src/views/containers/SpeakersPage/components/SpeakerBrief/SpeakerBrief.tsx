@@ -33,7 +33,7 @@ const SpeakerBrief: React.FC<SpeakerBriefProps> = ({ speaker, order }) => {
             <div className={cc([css.ProfileImage])} style={cssDelay}>
               <img
                 ref={ref}
-                src={`static/images/speakers/${speaker.image}`}
+                src={`/static/images/speakers/${speaker.image}`}
                 alt={speaker.name}
                 onLoad={() => setLoaded(true)}
               />

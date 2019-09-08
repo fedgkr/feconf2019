@@ -31,7 +31,7 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
         <div className={css.LeftWrap}>
           <div className={cc([css.ProfileWrap])}>
             <div className={css.ProfileImage}>
-              <img src={`static/images/speakers/${speaker.image}`} alt={speaker.nameEn}/>
+              <img src={`/static/images/speakers/${speaker.image}`} alt={speaker.nameEn}/>
             </div>
             <div className={css.ProfileTextWrap}>
               <h1 className={css.ProfileName}>

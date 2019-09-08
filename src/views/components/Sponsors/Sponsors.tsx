@@ -32,7 +32,7 @@ const Sponsors: React.FC<SponsorsProps> = () => {
               <div key={idx} className={cc([css.SponsorList, css[row.grade]])}>
                 {list.map(s => (
                   <a key={s.name} href={s.link} target="_blank">
-                    <img src={'static/images/sponsors/' + s.image} alt={s.name}/>
+                    <img src={'/static/images/sponsors/' + s.image} alt={s.name}/>
                   </a>
                 ))}
               </div>
