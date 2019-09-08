@@ -105,7 +105,7 @@ export const companies: Company[] = [
     link: 'https://www.peoplefund.co.kr',
     image: 'peoplefund.svg',
     sponsor: {
-      grade: SponsorGrade.Platinum,
+      grade: SponsorGrade.Gold,
     },
   },
   {
