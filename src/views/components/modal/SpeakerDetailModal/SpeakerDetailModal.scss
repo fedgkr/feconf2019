@@ -5,6 +5,15 @@
   position: relative;
   width: 100%;
   height: 100%;
+  .MobileCloseBtn {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 16px;
+    right: 18px;
+    opacity: .7;
+    display: none;
+  }
   .BottomWrap {
     position: absolute;
     display: flex;
@@ -213,6 +222,9 @@
     }
   }
   @include mobile {
+    .MobileCloseBtn {
+      display: flex;
+    }
     .BottomWrap {
       display: block;
       padding: 32px 24px;
@@ -265,7 +277,6 @@
       .RightWrap {
         width: auto;
         margin-top: 24px;
-        margin-bottom: 46px;
         .NavWrap {
           display: none;
         }
@@ -282,6 +293,50 @@
           .TrackTitle {
             margin-top: 12px;
             font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  @include small {
+    .BottomWrap {
+      .LeftWrap {
+        .ProfileWrap {
+          .ProfileImage {
+            width: 60px;
+            height: 60px;
+          }
+          .ProfileTextWrap {
+            .ProfileName {
+              font-size: 12px;
+            }
+            .ProfileInfo {
+              font-size: 12px;
+            }
+          }
+          .ProfileSnsWrap {
+            a {
+              display: inline-block;
+              img {
+                width: 16px;
+              }
+            }
+          }
+        }
+      }
+      .RightWrap {
+        margin-top: 14px;
+        .ProfileWrap {
+          .ProfileDesc {
+            line-height: 17px;
+          }
+          .TrackTime {
+            margin-top: 12px;
+            font-size: 12px;
+          }
+          .TrackTitle {
+            margin-top: 12px;
+            font-size: 16px;
           }
         }
       }

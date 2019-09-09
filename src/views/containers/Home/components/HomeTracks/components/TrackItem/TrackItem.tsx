@@ -3,6 +3,7 @@ import cc from 'classcat';
 import css from './TrackItem.scss';
 import {Speaker} from "../../../../../../../shared/interfaces";
 import {timetable} from "../../../../../../../shared/data";
+import {useModal} from "../../../../../../../shared/store";
 
 interface TrackItemProps {
   speaker?: Speaker;
@@ -10,9 +11,13 @@ interface TrackItemProps {
 }
 
 const TrackItem: React.FC<TrackItemProps> = ({ speaker, isMain }) => {
+  const { openSpeakerDetailModal } = useModal();
   return (
     <div className={cc([css.TrackItem, isMain ? css.isMain : ''])}>
-      <div className={css.Info}>
+      <a className={css.Info} href="#" onClick={e => {
+        e.preventDefault();
+        openSpeakerDetailModal({ speakerDetail: true }, speaker);
+      }}>
         {isMain ?
           <>
             <div className={css.Name}>
@@ -31,13 +36,16 @@ const TrackItem: React.FC<TrackItemProps> = ({ speaker, isMain }) => {
             </div>
           </>
         }
-      </div>
+      </a>
       {isMain ?
         <div className={css.Time}>
           { speaker ? timetable[speaker.track.order] : '10:00 - 10:50' }
         </div> : null
       }
-      <div className={css.Mobile}>
+      <a className={css.Mobile} href="#" onClick={e => {
+        e.preventDefault();
+        openSpeakerDetailModal({ speakerDetail: true }, speaker);
+      }}>
         <div className={css.MobileTime}>
           <span>{ speaker ? timetable[speaker.track.order] : '10:00 - 10:50' }</span>
           <span className={css.Name}>{speaker.name}</span>
@@ -45,7 +53,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ speaker, isMain }) => {
         <div className={css.TrackName}>
           {speaker.track.title}
         </div>
-      </div>
+      </a>
     </div>
   );
 }

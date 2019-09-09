@@ -3,6 +3,7 @@ import Link from 'next/link';
 import cc from 'classcat';
 import css from './MobileMenuModal.scss';
 import {useModal} from "../../../../shared/store";
+import CloseBtn from "../../CloseBtn/CloseBtn";
 
 interface MobileMenuModalProps {
 }
@@ -21,11 +22,7 @@ const MobileMenuModal: React.FC<MobileMenuModalProps> = () => {
           e.preventDefault();
           closeModal();
         }}>
-          <div className={css.Hamburger}>
-            <div/>
-            <div/>
-            <div/>
-          </div>
+          <CloseBtn/>
         </a>
       </div>
       <ul className={css.Menu}>

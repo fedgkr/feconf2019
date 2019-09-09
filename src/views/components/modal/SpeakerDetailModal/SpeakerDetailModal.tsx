@@ -4,13 +4,14 @@ import css from './SpeakerDetailModal.scss';
 import {Speaker} from "../../../../shared/interfaces";
 import {timetable} from "../../../../shared/data";
 import {useModal} from "../../../../shared/store";
+import CloseBtn from "../../CloseBtn/CloseBtn";
 
 interface SpeakerDetailModalProps {
   speaker: Speaker;
 }
 
 const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
-  const { changeSpeaker } = useModal();
+  const { changeSpeaker, closeModal } = useModal();
   const [rendered, setRendered] = useState(true);
   const onChangeSpeaker = useCallback((e, val) => {
     e.preventDefault();
@@ -27,6 +28,12 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
         className={cc([css.BottomWrap, 'kr-text'])}
         onClick={e => e.stopPropagation()}
       >
+        <a className={css.MobileCloseBtn} href="#" onClick={e => {
+          e.preventDefault();
+          closeModal();
+        }}>
+          <CloseBtn/>
+        </a>
         <div className={css.LeftBg}/>
         <div className={css.LeftWrap}>
           <div className={cc([css.ProfileWrap])}>

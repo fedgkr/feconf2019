@@ -26,7 +26,7 @@ class FEConf2019 extends App {
     return (
       <>
         <Head>
-          <title>Welcome to FEConf 2019 - FEConf Korea</title>
+          <title>FEConf 2019</title>
           <meta
             name="description"
             content="2019 FEConf Korea 행사의 일정 및 스피커 그리고 각 세션을 소개합니다. 올해 세번째 열리는 FEConf! 많은 관심과 성원 부탁드립니다."

@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState} from 'react';
-import Link from 'next/link';
 import css from './SpeakerBrief.scss';
 import cc from "classcat";
 import {Speaker} from "../../../../../shared/interfaces";

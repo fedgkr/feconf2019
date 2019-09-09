@@ -1,0 +1,49 @@
+@import '~styles/variable';
+@import '~styles/mixin';
+
+.CloseBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 16px;
+  & > div {
+    width: 20px;
+    height: 4px;
+    background: $fc-main;
+    &:nth-child(1) {
+      animation: rotateRight .4s ease-in forwards;
+    }
+    &:nth-child(2) {
+      animation: fadeOut .3s ease-in forwards;
+    }
+    &:nth-child(3) {
+      animation: rotateLeft .4s ease-in forwards;
+    }
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+@keyframes rotateRight {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, 6px) rotate(45deg);
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, -6px) rotate(-45deg);
+  }
+}

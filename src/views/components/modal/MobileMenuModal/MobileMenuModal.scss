@@ -69,26 +69,3 @@
     display: block;
   }
 }
-
-@keyframes fadeOut {
-  0% { opacity: 1 }
-  100% { opacity: 0 }
-}
-
-@keyframes rotateRight {
-  0% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  100% {
-    transform: translate(0px, 6px) rotate(45deg);
-  }
-}
-
-@keyframes rotateLeft {
-  0% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  100% {
-    transform: translate(0px, -6px) rotate(-45deg);
-  }
-}
