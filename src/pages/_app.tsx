@@ -56,7 +56,14 @@ class FEConf2019 extends App {
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          <link rel="icon" href="static/images/favicon.ico" />
+          <link rel="icon" href="/static/images/favicon.ico" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68676515-5"/>
+          <script dangerouslySetInnerHTML={{ __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-68676515-5');
+          ` }}/>
         </Head>
         <div className="wrap">
           <Header/>
