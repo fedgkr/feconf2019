@@ -47,7 +47,7 @@ export const companies: Company[] = [
     },
   },
   {
-    name: 'Lunit Inc',
+    name: 'Lunit Inc.',
     link: 'https://www.lunit.io',
   },
   {
@@ -69,7 +69,7 @@ export const companies: Company[] = [
   {
     name: '비바리퍼블리카',
     link: 'https://toss.im',
-    image: 'toss.png',
+    image: 'toss2.png',
     sponsor: {
       grade: SponsorGrade.Diamond,
     },
@@ -140,6 +140,14 @@ export const companies: Company[] = [
     image: 'yanolja.png',
     sponsor: {
       grade: SponsorGrade.Platinum,
+    },
+  },
+  {
+    name: '제이펍',
+    link: 'http://jpub.kr',
+    image: 'jpub.jpeg',
+    sponsor: {
+      grade: SponsorGrade.ETC,
     },
   },
 ];
@@ -312,7 +320,7 @@ export const speakers: Speaker[] = [
     nameEn: 'sangyeob',
     description: 'React와 자율출퇴근을 사랑하는 프론트엔드 개발자입니다.',
     image: 'sangyeob.jpg',
-    company: getCompany('Lunit Inc'),
+    company: getCompany('Lunit Inc.'),
     track: getTrack(TrackType.A, 3),
     sns: {
       link: 'https://medium.com/@Dev_Bono',
@@ -364,7 +372,7 @@ export const speakers: Speaker[] = [
     name: '곽희범',
     nameEn: 'heebeom',
     description: '리눅스용 클라이언트 개발과 Node.js 서버 개발을 하다 JavaScript가 좋아서 프런트엔드 개발을 시작하게 되었습니다. 현재는 LINE Financial Plus에서 주로 글로벌 파이낸셜 서비스를 만들고 있습니다.',
-    image: 'heebeom.jpg',
+    image: 'heebeom.png',
     company: getCompany('LINE Financial Plus'),
     track: getTrack(TrackType.B, 5),
     sns: {
