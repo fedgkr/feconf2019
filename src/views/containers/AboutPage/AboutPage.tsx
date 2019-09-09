@@ -11,17 +11,19 @@ interface AboutPageProps {
 
 const AboutPage: React.FC<AboutPageProps> = () => {
   return (
-    <div className={css.AboutPage}>
-      <div className={cc(['container', css.HomeInfo])}>
-        <TitleHero
-          title="FE Conference"
-          subTitle="Event Information"
-        />
-        <Intro/>
-        <CoC/>
+    <>
+      <div className={css.AboutPage}>
+        <div className={cc(['container', css.HomeInfo])}>
+          <TitleHero
+            title="FE Conference"
+            subTitle="Event Information"
+          />
+          <Intro/>
+          <CoC/>
+        </div>
       </div>
       <Footer/>
-    </div>
+    </>
   );
 }
 

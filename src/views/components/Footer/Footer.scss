@@ -2,7 +2,6 @@
 @import '~styles/mixin';
 
 .Footer {
-  margin-top: 86px;
   border-top: 2px solid #efecec;
   .Content {
     display: flex;
@@ -32,11 +31,9 @@
     }
   }
   @include mobile {
-    margin-top: 60px;
     .Content {
       flex-direction: column;
       padding: 24px;
-      margin-bottom: 84px;
       .Info {
         .Links {
           display: flex;

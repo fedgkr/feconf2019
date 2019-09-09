@@ -10,13 +10,15 @@ interface SponsorsPageProps {
 
 const SponsorsPage: React.FC<SponsorsPageProps> = () => {
   return (
-    <div className={cc(['container', css.SponsorsPage])}>
-      <TitleHero title="2019" subTitle="Our Proud Sponsors"/>
-      <div className={css.SponsorList}>
-        <Sponsors/>
+    <>
+      <div className={cc(['container', css.SponsorsPage])}>
+        <TitleHero title="2019" subTitle="Our Proud Sponsors"/>
+        <div className={css.SponsorList}>
+          <Sponsors/>
+        </div>
       </div>
       <Footer/>
-    </div>
+    </>
   );
 }
 

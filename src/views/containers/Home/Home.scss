@@ -1,4 +1,14 @@
 @import '~styles/variable';
+@import '~styles/mixin';
 
 .Home {
+  .FooterWrap {
+    margin-top: 86px;
+  }
+  @include mobile {
+    .FooterWrap {
+      margin-top: 60px;
+      margin-bottom: 84px;
+    }
+  }
 }

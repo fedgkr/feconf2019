@@ -42,7 +42,9 @@ const Home: React.FC<Props> = () => {
       <HomeSponsors/>
       <HomeInfo/>
       <HomeBanner/>
-      <Footer/>
+      <div className={css.FooterWrap}>
+        <Footer/>
+      </div>
       <FloatingMobileBtn visible={visible}/>
     </div>
   );

@@ -12,15 +12,17 @@ interface SchedulePageProps {
 
 const SchedulePage: React.FC<SchedulePageProps> = () => {
   return (
-    <div className={cc(['container', css.SchedulePage])}>
-      <TitleHero title="2 Tracks" subTitle={`${speakers.length} Talks`}/>
-      <p className={css.Date}>
-        { timeRange }
-      </p>
-      <PreTrack/>
-      <Tracks isFold={false}/>
+    <>
+      <div className={cc(['container', css.SchedulePage])}>
+        <TitleHero title="2 Tracks" subTitle={`${speakers.length} Talks`}/>
+        <p className={css.Date}>
+          { timeRange }
+        </p>
+        <PreTrack/>
+        <Tracks isFold={false}/>
+      </div>
       <Footer/>
-    </div>
+    </>
   );
 }
 
