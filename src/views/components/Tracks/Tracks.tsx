@@ -39,7 +39,7 @@ const Tracks: React.FC<TracksProps> = ({ isFold }) => {
           </a>
         </div>
         <div>
-          <span>({selectedTrack === 1 ? '오디토리움' : '컨퍼런스룸'})</span>
+          <span>({selectedTrack === 1 ? '오디토리움' : '컨퍼런스A룸'})</span>
         </div>
       </div>
       <div className={css.TrackWrap}>

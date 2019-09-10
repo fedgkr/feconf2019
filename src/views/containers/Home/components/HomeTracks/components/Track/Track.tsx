@@ -18,7 +18,7 @@ const Track: React.FC<TrackProps> = ({ title, isMain, isFold, speakers, selected
     <div className={cc([css.Track, selected ? css.selected : ''])}>
       <div className={css.Title}>
         {title}<br/>
-        <span>({ isMain ? '오디토리움' : '컨퍼런스룸' })</span>
+        <span>({ isMain ? '오디토리움' : '컨퍼런스A룸' })</span>
       </div>
       <div className={css.TimeTable}>
         {(isFold ? spliced : speakers).map(s => <TrackItem isMain={isMain} speaker={s} key={s.nameEn}/>)}
