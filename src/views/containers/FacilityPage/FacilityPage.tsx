@@ -3,6 +3,7 @@ import css from './FacilityPage.scss';
 import cc from "classcat";
 import Footer from "../../components/Footer/Footer";
 import TitleHero from "../../components/TitleHero/TitleHero";
+import ConventionMap from "./components/ConventionMap/ConventionMap";
 
 interface FacilityPageProps {
 }
@@ -12,6 +13,12 @@ const FacilityPage: React.FC<FacilityPageProps> = () => {
     <>
       <div className={cc(['container', css.FacilityPage])}>
         <TitleHero title="SKY 31 Convention" subTitle="Facility Guide"/>
+        <div className={css.Item}>
+          <h2>Convention Map</h2>
+          <div className={css.MapWrap}>
+            <ConventionMap/>
+          </div>
+        </div>
         <div className={css.Item}>
           <h2>공간 안내</h2>
           <ul>
