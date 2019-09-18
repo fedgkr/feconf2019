@@ -33,6 +33,7 @@ const Header: React.FC<HeaderProps> = () => {
           <li><Link href="/speakers"><a>Speakers</a></Link></li>
           <li><Link href="/schedule"><a>Schedule</a></Link></li>
           <li><Link href="/sponsors"><a>Sponsors</a></Link></li>
+          <li><Link href="/facility"><a>Facility Guide</a></Link></li>
           <HoverButton
             style={{
               fontSize: 14,

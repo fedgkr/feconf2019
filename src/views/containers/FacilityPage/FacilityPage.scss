@@ -1,0 +1,36 @@
+@import '~styles/variable';
+
+.FacilityPage {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .Item {
+    margin: 32px 0;
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 24px;
+      margin: 24px 0;
+      color: $fc-black;
+      img {
+        max-width: 100%;
+      }
+      a {
+        color: $fc-main;
+      }
+    }
+    ul {
+      margin: 32px 0;
+      padding-left: 40px;
+      font-size: 17px;
+      li {
+        margin-bottom: 12px;
+        a {
+          color: $fc-black;
+        }
+      }
+    }
+  }
+}
