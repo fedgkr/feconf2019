@@ -21,6 +21,7 @@ module.exports = sass({
       '/speakers/index': { page: '/speakers' },
       '/schedule/index': { page: '/schedule' },
       '/sponsors/index': { page: '/sponsors' },
+      '/facility/index': { page: '/facility' },
     }
   }
 });
