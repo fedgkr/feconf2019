@@ -40,36 +40,16 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
   const [currentIdx, setIdx] = useState(0);
   const getSize = useCallback(() =>
     Math.min(600, ref.current.parentElement.offsetWidth), []);
-  useEffect(() => {
+  const draw = useCallback((alpha, clipIdx?) => {
     const canvas = ref.current;
     const ctx = canvas.getContext('2d');
     const size = getSize();
-    imageRef.current = new Image();
     canvas.width = size;
     canvas.height = size;
-    imageRef.current.onload = () => {
-      fadeIn(Date.now());
-      imageLoaded.current = true;
-    };
-    imageRef.current.src = '/static/images/map.jpg';
-    function fadeIn(ts) {
-      const progress = Math.pow((Date.now() - ts) / 800, 3);
-      ctx.globalAlpha = progress;
-      ctx.drawImage(imageRef.current, 0, 0, size, size);
-      rafId.current = progress <= 1 && requestAnimationFrame(() => fadeIn(ts));
-    }
-  }, []);
-  const onClickBtn = useCallback((e, idx) => {
-    e.preventDefault();
-    cancelAnimationFrame(rafId.current);
-    const canvas = ref.current;
-    const ctx = canvas.getContext('2d');
-    const size = getSize();
-    ctx.globalAlpha = 1;
+    ctx.globalAlpha = alpha;
     ctx.drawImage(imageRef.current, 0, 0, size, size);
-    setIdx(idx);
-    if (idx !== 0) {
-      const { x, y, w, h } = rects[idx - 1];
+    if (clipIdx) {
+      const { x, y, w, h } = rects[clipIdx - 1];
       const imgSize = imageRef.current.naturalWidth;
       ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
       ctx.fillRect(0, 0, size, size);
@@ -85,6 +65,40 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
         size * h,
       );
     }
+  }, [currentIdx]);
+  useEffect(() => {
+    imageRef.current = new Image();
+    imageRef.current.onload = () => {
+      fadeIn(Date.now());
+      imageLoaded.current = true;
+    };
+    imageRef.current.src = '/static/images/map.jpg';
+    function fadeIn(ts) {
+      const progress = Math.pow((Date.now() - ts) / 800, 3);
+      draw(progress);
+      rafId.current = progress <= 1 && requestAnimationFrame(() => fadeIn(ts));
+    }
+  }, []);
+  useEffect(() => {
+    const onResize = () => {
+      const canvas = ref.current;
+      const size = getSize();
+      if (canvas.width !== size) {
+        canvas.width = size;
+        canvas.height = size;
+        draw(1, currentIdx);
+      }
+    }
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, [currentIdx]);
+  const onClickBtn = useCallback((e, idx) => {
+    e.preventDefault();
+    cancelAnimationFrame(rafId.current);
+    setIdx(idx);
+    draw(1, idx);
   }, []);
 
   return (
@@ -96,7 +110,9 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
         <a href="#" className={currentIdx === 3 ? css.active : ''} onClick={(e) => onClickBtn(e, 3)}>흡연실</a>
         <a href="#" className={currentIdx === 4 ? css.active : ''} onClick={(e) => onClickBtn(e, 4)}>유아휴게실</a>
       </div>
-      <canvas ref={ref}/>
+      <div className={css.CanvasWrap}>
+        <canvas className="extended" ref={ref}/>
+      </div>
     </div>
   );
 }

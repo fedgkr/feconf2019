@@ -1,4 +1,5 @@
 @import '~styles/variable';
+@import '~styles/mixin';
 
 .FacilityPage {
   position: relative;
@@ -15,6 +16,7 @@
       line-height: 24px;
       margin: 24px 0;
       color: $fc-black;
+      word-break: keep-all;
       img {
         max-width: 600px;
         width: 100%;
@@ -32,6 +34,21 @@
         a {
           color: $fc-black;
         }
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    .Item {
+      margin: 32px 0;
+
+      h2 {
+        font-size: 19px;
+      }
+
+      p {
+
       }
     }
   }
