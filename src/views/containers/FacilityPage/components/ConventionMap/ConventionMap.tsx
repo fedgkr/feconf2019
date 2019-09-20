@@ -38,7 +38,7 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const rafId = useRef<number>(null);
   const [currentIdx, setIdx] = useState(0);
-  const size = 830;
+  const size = 825;
   const draw = useCallback((alpha, clipIdx?) => {
     const canvas = ref.current;
     const ctx = canvas.getContext('2d');
@@ -70,7 +70,7 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
       fadeIn(Date.now());
       imageLoaded.current = true;
     };
-    imageRef.current.src = '/static/images/map.jpg';
+    imageRef.current.src = '/static/images/map.png';
     function fadeIn(ts) {
       const progress = Math.pow((Date.now() - ts) / 350, 3);
       draw(progress);
