@@ -21,6 +21,10 @@
   .CanvasWrap {
     position: relative;
     padding-bottom: 100%;
+    max-width: 600px;
+    & > canvas {
+      width: 100%;
+    }
   }
   @include mobile {
     min-height: 280px;

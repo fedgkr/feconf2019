@@ -38,12 +38,10 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const rafId = useRef<number>(null);
   const [currentIdx, setIdx] = useState(0);
-  const getSize = useCallback(() =>
-    Math.min(600, ref.current.parentElement.offsetWidth), []);
+  const size = 830;
   const draw = useCallback((alpha, clipIdx?) => {
     const canvas = ref.current;
     const ctx = canvas.getContext('2d');
-    const size = getSize();
     canvas.width = size;
     canvas.height = size;
     ctx.globalAlpha = alpha;
@@ -51,7 +49,7 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
     if (clipIdx) {
       const { x, y, w, h } = rects[clipIdx - 1];
       const imgSize = imageRef.current.naturalWidth;
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
       ctx.fillRect(0, 0, size, size);
       ctx.drawImage(
         imageRef.current,
@@ -74,7 +72,7 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
     };
     imageRef.current.src = '/static/images/map.jpg';
     function fadeIn(ts) {
-      const progress = Math.pow((Date.now() - ts) / 800, 3);
+      const progress = Math.pow((Date.now() - ts) / 350, 3);
       draw(progress);
       rafId.current = progress <= 1 && requestAnimationFrame(() => fadeIn(ts));
     }
@@ -82,7 +80,6 @@ const ConventionMap: React.FC<ConventionMapProps> = () => {
   useEffect(() => {
     const onResize = () => {
       const canvas = ref.current;
-      const size = getSize();
       if (canvas.width !== size) {
         canvas.width = size;
         canvas.height = size;
