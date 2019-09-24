@@ -27,6 +27,14 @@ export const companies: Company[] = [
     link: 'https://erion.kr',
   },
   {
+    name: 'Programmers',
+    link: 'https://programmers.co.kr',
+    image: 'programmers.png',
+    sponsor: {
+      grade: SponsorGrade.Gold,
+    },
+  },
+  {
     name: '우아한형제들',
     link: 'https://www.woowahan.com',
     image: 'woowahan.png',

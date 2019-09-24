@@ -18,7 +18,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          /** Thanks to Ko */
         </body>
       </html>
     );
