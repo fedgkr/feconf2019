@@ -9,10 +9,10 @@ interface SponsorsProps {
 
 const sponsors = getSponsors();
 const grades = [
-  { grade: 'DIAMOND', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.Diamond) },
-  { grade: 'PLATINUM', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.Platinum) },
-  { grade: 'GOLD', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.Gold) },
-  { grade: 'ETC', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.ETC) },
+  { itemCnt: 3, grade: 'DIAMOND', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.Diamond) },
+  { itemCnt: 3, grade: 'PLATINUM', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.Platinum) },
+  { itemCnt: 2, grade: 'GOLD', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.Gold) },
+  { itemCnt: 3, grade: 'ETC', sponsors: sponsors.filter(s => s.sponsor.grade === SponsorGrade.ETC) },
 ];
 
 const Sponsors: React.FC<SponsorsProps> = () => {
@@ -23,7 +23,7 @@ const Sponsors: React.FC<SponsorsProps> = () => {
           <div key={row.grade} className={cc([css.Row, row.grade])}>
             <h2>{row.grade}</h2>
             {row.sponsors.reduce((acc, item, idx) => {
-              if (idx % 3 === 0) {
+              if (idx % row.itemCnt === 0) {
                 acc.push([]);
               }
               acc[acc.length - 1].push(item);

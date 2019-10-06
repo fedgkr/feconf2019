@@ -151,6 +151,14 @@ export const companies: Company[] = [
     },
   },
   {
+    name: 'Robert Walters',
+    link: 'https://www.robertwalters.co.kr',
+    image: 'robert.png',
+    sponsor: {
+      grade: SponsorGrade.Gold,
+    },
+  },
+  {
     name: '제이펍',
     link: 'http://jpub.kr',
     image: 'jpub.jpeg',
