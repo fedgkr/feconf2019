@@ -32,7 +32,7 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
           e.preventDefault();
           closeModal();
         }}>
-          <CloseBtn/>
+          <CloseBtn isStatic={true}/>
         </a>
         <div className={css.LeftBg}/>
         <div className={css.LeftWrap}>
