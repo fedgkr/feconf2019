@@ -16,20 +16,26 @@ export const modalStore = create((set, get) => ({
   modalOpened: false,
   types: modalTypes,
   selectedSpeaker: null,
-  openModal: (param: ModalTypeParam) => set(state => ({
-    types: {
-      ...modalTypes,
-      ...param,
-    },
-    modalOpened: true,
-  })),
-  closeModal: (param: ModalTypeParam) => set(state => ({
-    types: {
-      ...modalTypes,
-      ...param,
-    },
-    modalOpened: false,
-  })),
+  openModal: (param: ModalTypeParam) => set(state => {
+    document.body.classList.add('fixed');
+    return {
+      types: {
+        ...modalTypes,
+        ...param,
+      },
+      modalOpened: true,
+    };
+  }),
+  closeModal: (param: ModalTypeParam) => set(state => {
+    document.body.classList.remove('fixed');
+    return {
+      types: {
+        ...modalTypes,
+        ...param,
+      },
+      modalOpened: false,
+    };
+  }),
   openSpeakerDetailModal: (param: ModalTypeParam, speaker: Speaker) => set(() => {
     (get() as any).openModal(param);
     return {

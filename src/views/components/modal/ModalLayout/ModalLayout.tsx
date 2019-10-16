@@ -8,7 +8,11 @@ interface ModalLayoutProps {
 const ModalLayout: React.FC<ModalLayoutProps> = ({ children }) => {
   const { closeModal } = useModal();
   return (
-    <div className={css.ModalLayout} onClick={() => closeModal()}>
+    <div
+      className={css.ModalLayout}
+      onClick={() => closeModal()}
+      onTouchMove={e => e.preventDefault()}
+    >
       {children}
     </div>
   );

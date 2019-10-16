@@ -12,6 +12,9 @@ a {
 }
 
 :global {
+  body.fixed {
+    overflow: hidden;
+  }
   .wrap {
     padding-top: 131px;
   }
