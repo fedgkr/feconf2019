@@ -11,6 +11,7 @@ export interface Speaker {
     facebook?: string;
     link?: string;
   },
+  documentUrl?: string;
 }
 
 export interface Company {

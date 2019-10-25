@@ -98,6 +98,14 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
               Track {speaker.track.type === 'A' ? 1 : 2}
             </p>
             <h2 className={css.TrackTitle}>{speaker.track.title}</h2>
+            {
+              speaker.documentUrl ?
+                <h2 className={css.Document}>
+                  <a target="_blank" href={speaker.documentUrl}>
+                    [발표자료]
+                  </a>
+                </h2> : null
+            }
           </div>
         </div>
       </div>

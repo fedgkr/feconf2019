@@ -278,6 +278,7 @@ export const speakers: Speaker[] = [
     company: getCompany('우아한형제들'),
     track: getTrack(TrackType.A, 0),
     sns: {},
+    documentUrl: 'https://drive.google.com/file/d/1k5odHdfXP1yz1uGktTx0BNzDH1kCVRGD/view',
   },
   {
     name: '이소영',
@@ -289,6 +290,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/SoYoung210',
     },
+    documentUrl: 'https://drive.google.com/open?id=1o8TDZKDxId-fgdkRPs12xCI_dOGpFGBo',
   },
   {
     name: '유인동',
@@ -311,6 +313,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/seokju-na',
     },
+    documentUrl: 'https://slides.com/seokjume/observable',
   },
   {
     name: '오창영',
@@ -320,6 +323,7 @@ export const speakers: Speaker[] = [
     company: getCompany('Wave Corporation'),
     track: getTrack(TrackType.A, 2),
     sns: {},
+    documentUrl: 'https://drive.google.com/file/d/1Sbl9fgjLdK-WgbF1He_Bo_-9UD39Qv9w/view',
   },
   {
     name: '조화수',
@@ -330,6 +334,7 @@ export const speakers: Speaker[] = [
     sns: {
       twitter: 'https://twitter.com/developerhenry',
     },
+    documentUrl: 'https://slides.com/hwasoocho/angular-ionic',
   },
   {
     name: '유상엽',
@@ -341,6 +346,7 @@ export const speakers: Speaker[] = [
     sns: {
       link: 'https://medium.com/@Dev_Bono',
     },
+    documentUrl: 'https://slides.com/sangyeobyu/html-canvas',
   },
   {
     name: '원지혁',
@@ -352,6 +358,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/tonyfromundefined',
     },
+    documentUrl: 'https://drive.google.com/file/d/1WCqUEDG0snDgEqIkHifANfap0OWu5nRu/view',
   },
   {
     name: '천민호',
@@ -361,6 +368,7 @@ export const speakers: Speaker[] = [
     company: getCompany('PUBG'),
     track: getTrack(TrackType.A, 4),
     sns: {},
+    documentUrl: 'https://drive.google.com/open?id=11yerMj6DPPAbU1ibhA4YllJ0k18eKs05',
   },
   {
     name: '최연규',
@@ -372,6 +380,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/daybrush',
     },
+    documentUrl: 'https://drive.google.com/open?id=1VFOUWWaz9NH_niu3caxJ8yTxgVVTgPMT',
   },
   {
     name: '김동우',
@@ -383,6 +392,7 @@ export const speakers: Speaker[] = [
     sns: {
       facebook: 'https://www.facebook.com/woo.gim',
     },
+    documentUrl: 'https://docs.google.com/presentation/d/1KSB7zKHX_2h1B50Fcjf4PobPDy9naF4Z4QdW965Y_zg/edit?usp=sharing',
   },
   {
     name: '곽희범',
@@ -394,6 +404,7 @@ export const speakers: Speaker[] = [
     sns: {
       link: 'https://norux.me',
     },
+    documentUrl: 'https://drive.google.com/open?id=1abjV5imziJNg62ZE5dH5LS4VJK0f3nZf',
   },
   {
     name: '한장현',
@@ -405,6 +416,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/han41858',
     },
+    documentUrl: 'https://drive.google.com/open?id=1-THrwIm6vBIC0qBWi7QM90prCi1PZfBy',
   },
   {
     name: '장기효',
@@ -416,6 +428,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/joshua1988/',
     },
+    documentUrl: 'https://drive.google.com/open?id=0B3AcM_ZW0sOceDJVNHZYTHR6MlVRbWt2LXRCWVAzLTMyTHNN',
   },
 ];
 
