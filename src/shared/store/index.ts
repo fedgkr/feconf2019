@@ -57,3 +57,8 @@ export const modalStore = create((set, get) => ({
 
 export const useModal = modalStore[0];
 export const useModalApi = modalStore[1];
+
+export const closeModal = () => {
+  useModalApi.setState({ modalOpened: false });
+  document.body.classList.remove('fixed');
+}

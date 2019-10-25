@@ -5,7 +5,7 @@ import React from 'react';
 import 'core-js/es/object/assign';
 import '../styles/style.scss';
 import Header from "../views/components/Header/Header";
-import {useModalApi} from "../shared/store";
+import {closeModal} from "../shared/store";
 import ModalPortal from "../views/components/modal/ModalPortal/ModalPortal";
 
 if (typeof window === 'object') {
@@ -16,9 +16,7 @@ class FEConf2019 extends App {
   public props: any;
 
   componentDidMount() {
-    Router.events.on('routeChangeStart', () => {
-      useModalApi.setState({ modalOpened: false });
-    });
+    Router.events.on('routeChangeStart', () => closeModal());
   }
 
   public render() {
