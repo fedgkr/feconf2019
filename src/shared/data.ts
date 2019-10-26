@@ -323,7 +323,7 @@ export const speakers: Speaker[] = [
     company: getCompany('Wave Corporation'),
     track: getTrack(TrackType.A, 2),
     sns: {},
-    documentUrl: 'https://drive.google.com/file/d/1Sbl9fgjLdK-WgbF1He_Bo_-9UD39Qv9w/view',
+    documentUrl: 'https://drive.google.com/open?id=1nISpM3-i-XqMYch3jV899tQNDI3bCmCu',
   },
   {
     name: '조화수',
@@ -416,7 +416,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/han41858',
     },
-    documentUrl: 'https://drive.google.com/open?id=1-THrwIm6vBIC0qBWi7QM90prCi1PZfBy',
+    documentUrl: 'https://drive.google.com/open?id=1arm3SbaiwzkXnCg37R0nfqcJZzoPpxJp',
   },
   {
     name: '장기효',
