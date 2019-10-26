@@ -358,7 +358,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/tonyfromundefined',
     },
-    documentUrl: 'https://drive.google.com/file/d/1WCqUEDG0snDgEqIkHifANfap0OWu5nRu/view',
+    documentUrl: 'https://drive.google.com/open?id=1WCqUEDG0snDgEqIkHifANfap0OWu5nRu',
   },
   {
     name: '천민호',
