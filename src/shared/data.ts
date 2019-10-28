@@ -278,7 +278,7 @@ export const speakers: Speaker[] = [
     company: getCompany('우아한형제들'),
     track: getTrack(TrackType.A, 0),
     sns: {},
-    documentUrl: 'https://drive.google.com/file/d/1k5odHdfXP1yz1uGktTx0BNzDH1kCVRGD/view',
+    documentUrl: 'https://drive.google.com/open?id=19uBXeN3eCowVQFHNAfBZsrB08na1rLro',
   },
   {
     name: '이소영',
