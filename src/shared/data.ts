@@ -302,6 +302,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/indongyoo',
     },
+    documentUrl: 'https://github.com/indongyoo/FEConf2019',
   },
   {
     name: '나석주',
