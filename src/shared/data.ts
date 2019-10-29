@@ -290,7 +290,7 @@ export const speakers: Speaker[] = [
     sns: {
       github: 'https://github.com/SoYoung210',
     },
-    documentUrl: 'https://drive.google.com/open?id=1o8TDZKDxId-fgdkRPs12xCI_dOGpFGBo',
+    documentUrl: 'https://speakerdeck.com/soyoung210/heonjibjulge-saejibdao-riaegteu-peurojegteu-gujojojeong',
   },
   {
     name: '유인동',
