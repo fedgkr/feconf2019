@@ -37,6 +37,7 @@ export interface Track {
   order: number;
   title: string;
   description: string;
+  videoUrl: string;
   target?: string;
 }
 

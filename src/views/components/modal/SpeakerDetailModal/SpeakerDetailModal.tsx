@@ -104,6 +104,9 @@ const SpeakerDetailModal: React.FC<SpeakerDetailModalProps> = ({ speaker }) => {
                   <a target="_blank" href={speaker.documentUrl}>
                     [발표자료]
                   </a>
+                  <a target="_blank" href={speaker.track.videoUrl}>
+                    [발표영상]
+                  </a>
                 </h2> : null
             }
           </div>

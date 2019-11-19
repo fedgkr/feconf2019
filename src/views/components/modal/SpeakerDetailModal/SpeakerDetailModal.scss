@@ -150,6 +150,9 @@
           opacity: 0;
           a {
             color: $fc-main;
+            &:first-child {
+              margin-right: 4px;
+            }
           }
         }
       }
